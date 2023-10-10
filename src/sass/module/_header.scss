@@ -21,16 +21,30 @@
   }
 }
 .header__logo{
+  width: rem(102);
+  height: rem(38);
   z-index: 100; // 2nd
+  @include mq("md"){
+  width: rem(133);
+  height: rem(50);
+  }
 }
 // .header__logo.is-open{
 //   z-index: 100;
 // }
 .header__logo-link{
-
+  
 }
 .header__logo-link img{
-  width: rem(102);
-  height: rem(48);
-  padding-top: rem(10);
+  width: 100%;
+  height: 100%;
+}
+.header__drawer{
+
+}
+.header__sp-nav{
+
+}
+.header__pc-nav{
+  
 }

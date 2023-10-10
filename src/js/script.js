@@ -17,7 +17,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $('.js-hamburger').addClass('is-open');
       $('.js-sp-nav').fadeIn(250);
     }
-    // $('html').toggleClass('is-fixed');
   });
 
 });
