@@ -44,13 +44,13 @@
 .footer__nav{
 
 }
-.footer__copy-rights{
+.footer__copyrights{
   text-align: center;
   @include mq("md"){
     margin-top: rem(40);
   }
 }
-.footer__copy-rights small{
+.footer__copyrights small{
   display: inherit;
   color: $white;
   font-size: rem(12);

@@ -29,19 +29,20 @@
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
-  <header class="header">
+  <header class="header js-header">
     <div class="header__inner">
-      <h1 class="header__logo js-header__logo">
+      <h1 class="header__logo">
         <a class="header__logo-link" href="">
           <img src="./assets/images/svg/CodeUps.svg" alt="CodeUps">
         </a>
-      </h1>
-      <div class="header__drawer hamburger js-hamburger u-mobile">
+      </h1><!-- /.header__logo -->
+      <div class="header__hamburger hamburger js-hamburger u-mobile">
         <span></span>
         <span></span>
         <span></span>
-      </div>
-      <nav class="header__sp-nav sp-nav js-sp-nav u-mobile">
+      </div><!-- /.header__hamburger .hamburger -->
+      <div class="header__background js-background"></div><!-- /.header__background -->
+      <nav class="header__sp-nav sp-nav u-mobile">
         <ul class="sp-nav__items">
           <li class="sp-nav__item">
             <a href="">キャンペーン</a>
@@ -137,37 +138,41 @@
         </ul>
       </nav><!-- /.header__pc-nav .pc-nav -->
     </div><!-- /.header__inner -->
-  </header>
+  </header><!-- /.header -->
   <main>
-    <div class="section-header">
-      <h2 class="section-header__title">campaign</h2>
-      <p class="section-header__subtitle">キャンペーン</p>
-    </div>
+    <section class="campaign">
+      <div class="campaign inner">
+        <div class="section-header">
+          <h2 class="section-header__title">campaign</h2>
+          <p class="section-header__subtitle">キャンペーン</p>
+        </div>
+        
+        <a href="#" class="button">view more<span></span></a>
+      </div>
+    </section>
 
     <div class="section-header">
       <h2 class="section-header__title section-header__title--white">blog</h2>
       <p class="section-header__subtitle section-header__subtitle--white">ブログ</p>
     </div>
-
-    <a href="#" class="button">view more<span></span></a>
-
-  </main>
+    
+  </main><!-- /.main -->
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__heading">
         <figure class="footer__logo">
           <img src="./assets/images/svg/CodeUps.svg" alt="CodeUps">
-        </figure>
+        </figure><!-- /.footer__logo -->
         <div class="footer__sns footer-sns">
           <ul class="footer-sns__items">
             <li class="footer-sns__item">
               <a class="footer-sns__item-link" href="">
-                <img src="./assets/images/sns/Facebook_Logo_Secondary.png" alt="Facebook">
+                <img src="./assets/images/sns/Facebook_Logo_Secondary.png" alt="facebook">
               </a>
             </li>
             <li class="footer-sns__item">
               <a class="footer-sns__item-link" href="">
-                <img src="./assets/images/sns/Instagram_Glyph_White.png" alt="Instagram">
+                <img src="./assets/images/sns/Instagram_Glyph_White.png" alt="instagram">
               </a>
             </li>
           </ul>
@@ -240,11 +245,11 @@
           </li>
         </ul>
       </div><!-- /.footer__nav .footer-nav -->
-      <p class="footer__copy-rights">
+      <p class="footer__copyrights">
         <small>Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
-      </p>
+      </p><!-- /.footer__copyrights -->
     </div><!-- /.footer__inner -->
-  </footer>
+  </footer><!-- /.footer -->
 </body>
 
 </html>

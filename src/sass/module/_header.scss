@@ -1,12 +1,20 @@
 @use "global" as *;
 
 .header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: rem(80);
   background-color: $black;
   opacity: 0.68;
+  z-index: 1;
   @include mq("md"){
     height: rem(90);
   }
+}
+.is-open.header{
+  opacity: 1;
 }
 .header__inner{
   display: flex;
@@ -23,15 +31,12 @@
 .header__logo{
   width: rem(102);
   height: rem(38);
-  z-index: 100; // 2nd
+  z-index: 4;
   @include mq("md"){
   width: rem(133);
   height: rem(50);
   }
 }
-// .header__logo.is-open{
-//   z-index: 100;
-// }
 .header__logo-link{
   
 }
@@ -39,11 +44,25 @@
   width: 100%;
   height: 100%;
 }
-.header__drawer{
+.header__hamburger{
 
 }
+.header__background{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+  opacity: 0.8;
+  z-index: 2;
+}
+.is-open .header__background{
+  display: block;
+}
 .header__sp-nav{
-
+  padding-top: rem(80);
 }
 .header__pc-nav{
   
