@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.swiper-button-prev, .swiper-button-next{
+  display: none;
+  @include mq("md"){
+    display: block;
+    width: rem(80);
+    height: rem(80);
+    border: 1px solid $accent;
+    border-radius: 50%;
+  }
+}
+.swiper-button-prev, .swiper-button-next::before{
+  
+}
+.swiper-button-prev, .swiper-button-next::after{
+
+}

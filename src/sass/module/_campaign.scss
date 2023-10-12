@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.campaign{
+  margin-top: rem(40);
+  @include mq("md"){
+    margin-top: rem(120);
+  }
+}
+.campaign__inner{
+  padding-left: rem(15);
+  @include mq("md"){
+    position: relative;
+    width: vw(1440, 1260);
+    margin-left: auto;
+  }
+}
+.campaign__slider{
+  padding-bottom: rem(40);
+  margin-top: rem(24);
+  @include mq("md"){
+    padding-bottom: rem(80);
+    margin-top: rem(40);
+  }
+}
+.campaign__card{
+
+}
+.campaign__button{
+  text-align: center;
+}

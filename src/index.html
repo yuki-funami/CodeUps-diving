@@ -21,11 +21,14 @@
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
@@ -141,15 +144,88 @@
   </header><!-- /.header -->
   <main>
     <section class="campaign">
-      <div class="campaign inner">
+      <div class="campaign__inner">
         <div class="section-header">
           <h2 class="section-header__title">campaign</h2>
           <p class="section-header__subtitle">キャンペーン</p>
         </div>
-        
-        <a href="#" class="button">view more<span></span></a>
-      </div>
-    </section>
+        <div class="swiper js-campaign-swiper campaign__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="" class="campaign__card card">
+                <figure class="card__image">
+                  <img src="./assets/images/common/campaign1.png" alt="campaign1">
+                </figure>
+                <div class="card__content">
+                  <div class="card__category">ライセンス講習</div>
+                  <div class="card__title">ライセンス講習</div>
+                  <p class="card__text">全部コミコミ(お一人様)</p>
+                  <div class="card__price">
+                    <p class="card__original-price">&yen;56,000</p>
+                    <p class="card__discount-price">&yen;46,000</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="" class="campaign__card card">
+                <figure class="card__image">
+                  <img src="./assets/images/common/campaign2.png" alt="campaign2">
+                </figure>
+                <div class="card__content">
+                  <div class="card__category">体験ダイビング</div>
+                  <div class="card__title">貸切体験ダイビング</div>
+                  <p class="card__text">全部コミコミ(お一人様)</p>
+                  <div class="card__price">
+                    <p class="card__original-price">&yen;24,000</p>
+                    <p class="card__discount-price">&yen;18,000</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="" class="campaign__card card">
+                <figure class="card__image">
+                  <img src="./assets/images/common/campaign3.png" alt="campaign3">
+                </figure>
+                <div class="card__content">
+                  <div class="card__category">体験ダイビング</div>
+                  <div class="card__title">ナイトダイビング</div>
+                  <p class="card__text">全部コミコミ(お一人様)</p>
+                  <div class="card__price">
+                    <p class="card__original-price">&yen;10,000</p>
+                    <p class="card__discount-price">&yen;8,000</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="" class="campaign__card card">
+                <figure class="card__image">
+                  <img src="./assets/images/common/campaign4.png" alt="campaign4">
+                </figure>
+                <div class="card__content">
+                  <div class="card__category">ファンダイビング</div>
+                  <div class="card__title">貸切ファンダイビング</div>
+                  <p class="card__text">全部コミコミ(お一人様)</p>
+                  <div class="card__price">
+                    <p class="card__original-price">&yen;20,000</p>
+                    <p class="card__discount-price">&yen;16,000</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div><!-- /.swiper -->
+        <div class="swiper-button-prev js-campaign-button-prev"></div>
+        <div class="swiper-button-next js-campaign-button-next"></div>
+        <!-- If we need navigation buttons -->
+
+        <div class="campaign__button">
+          <a href="#" class="button">view more<span></span></a>
+        </div>
+      </div><!-- /.campaign_inner .inner -->
+    </section><!-- /.campaign -->
 
     <div class="section-header">
       <h2 class="section-header__title section-header__title--white">blog</h2>

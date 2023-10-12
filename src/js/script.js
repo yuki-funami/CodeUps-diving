@@ -9,5 +9,28 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $('.js-header').removeClass('is-open');
   });
 
+  // swiper
+  new Swiper('.js-campaign-swiper', {
+    loop: true,
+    loopedSlides: 4,
+    speed: 500,
+    spaceBetween: 24,
+    width: 280,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      waitForTransition: false,
+    },
+    navigation: {
+      prevEl: '.js-campaign-button-prev',
+      nextEl: '.js-campaign-button-next',
+    },
+    breakpoints: {
+      768: {
+        spaceBetween: 40,
+        width: 333,
+      },
+    },
+  });
 
 });
