@@ -18,10 +18,19 @@
   color: $accent;
 }
 .section-header__title--white{
-  color: $white;
+  color: $black;
+  @include mq("md"){
+    color: $white;
+  }
 }
 .section-header__title--white::first-letter{
-  color: $pastel;
+  color: $accent;
+  @include mq("md"){
+    color: $pastel;
+  }
+}
+.section-header__title--about-us::first-letter{
+  text-transform: uppercase;
 }
 .section-header__subtitle{
   color: $accent;
@@ -30,5 +39,8 @@
   line-height: calc(18 / 12);
 }
 .section-header__subtitle--white{
-  color: $white;
+  color: $accent;
+  @include mq("md"){
+    color: $white;
+  }
 }

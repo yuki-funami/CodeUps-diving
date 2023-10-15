@@ -1,18 +1,63 @@
 @use "global" as *;
 
-.swiper-button-prev, .swiper-button-next{
+.swiper-button-prev{
   display: none;
   @include mq("md"){
     display: block;
+    position: absolute;
+    top: 4%;
+    left: 68%;
     width: rem(80);
     height: rem(80);
+    background-color: $white;
     border: 1px solid $accent;
     border-radius: 50%;
   }
 }
-.swiper-button-prev, .swiper-button-next::before{
-  
+.swiper-button-next{
+  display: none;
+  @include mq("md"){
+    display: block;
+    position: absolute;
+    width: rem(80);
+    height: rem(80);
+    background-color: $white;
+    border: 1px solid $accent;
+    border-radius: 50%;
+    top: 4%;
+    left: 80%;
+  }
 }
-.swiper-button-prev, .swiper-button-next::after{
-
+.swiper-button-prev::before, .swiper-button-next::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(40);
+  height: rem(1);
+  background-color: $accent;
+  border-radius: rem(1);
+}
+.swiper-button-prev::after{
+  content: "";
+  position: absolute;
+  top: 46%;
+  transform: rotate(-45deg);
+  left: rem(18);
+  width: rem(8);
+  height: rem(1);
+  background-color: $accent;
+  border-radius: rem(1);
+}
+.swiper-button-next::after{
+  content: "";
+  position: absolute;
+  top: 46%;
+  transform: rotate(45deg);
+  right: rem(18);
+  width: rem(8);
+  height: rem(1);
+  background-color: $accent;
+  border-radius: rem(1);
 }

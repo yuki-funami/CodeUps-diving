@@ -1,0 +1,106 @@
+@use "global" as *;
+
+.about{
+  margin-top: rem(80);
+  @include mq("md"){
+    position: relative;
+    margin-top: rem(140);
+  }
+}
+.about::after{
+  @include mq("md"){
+    content: "";
+    position: absolute;
+    bottom: -22%;
+    right: 6%;
+    width: rem(194);
+    height: rem(181);
+    background-image: url(../images/svg/_サンゴとイソギンチャク.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.about__inner{
+  @include mq("md"){
+    position: relative;
+  }
+}
+.about__images{
+  margin-top: rem(50);
+  @include mq("md"){
+    position: relative;
+    margin-top: rem(120);
+  }
+}
+.about__images img:first-child{
+  width: calc(100% - ((64 / 345) * 100%));
+  margin-left: auto;
+  object-fit: cover;
+  @include mq("md"){
+    width: calc(100% - ((200 / 1080) * 100%));
+  }
+}
+.about__images img:last-child{
+  width: calc(100% - ((217 / 345) * 100%));
+  margin-top: calc(-50% - ((26 / 212) * 100%));
+  object-fit: cover;
+  @include mq("md"){
+    width: calc(100% - ((680 / 1080) * 100%));
+  }
+}
+.about__content{
+  margin-top: rem(58);
+  @include mq("md"){
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    top: 40%;
+    left: calc(100% - ((840 / 1080) * 100%) - 25px);
+    width: calc(100% - ((240 / 1080) * 100%));
+    margin-top: 0;
+  }
+}
+.about__content-left{
+  @include mq("md"){
+    width: 101%;
+  }
+}
+.about__content-right{
+  margin-top: rem(16);
+  @include mq("md"){
+    width: 100%;
+    padding-left: rem(40);
+    padding-right: rem(40);
+    margin-top: 0;
+  }
+}
+.about__title{
+  color: $accent;
+  font-size: rem(40);
+  font-weight: $regular;
+  line-height: 1;
+  font-family: $english-font-family;
+  @include mq("md"){
+    color: $white;
+    font-size: rem(80);
+    line-height: calc(100 / 80);
+    width: inherit;
+  }
+}
+.about__text{
+  color: $black;
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(24 / 16);
+  @include mq("md"){
+    color: $white;
+  }
+}
+.about__button{
+  text-align: center;
+  padding-bottom: rem(3);
+  margin-top: rem(50);
+  @include mq("md"){
+    margin-top: rem(40);
+  }
+}

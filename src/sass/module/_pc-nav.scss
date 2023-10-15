@@ -13,8 +13,8 @@
   margin-left: rem(40);
 }
 .pc-nav__item a{
-  position: relative;
   display: inline-block;
+  position: relative;
   color: $white;
   font-size: rem(18);
   font-weight: $regular;
@@ -25,11 +25,11 @@
   content: "";
   position: absolute;
   width: 100%;
+  bottom: 0;
+  left: 0;
   height: rem(1);
   background-color: $white;
   border-radius: rem(1);
-  bottom: 0;
-  left: 0;
   transition: all 0.3s;
   transform: scale(0, 1);
   transform-origin: center top;

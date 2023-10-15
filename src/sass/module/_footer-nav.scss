@@ -16,8 +16,8 @@
   margin-bottom: rem(40);
 }
 .footer-nav__item >a{
-  position: relative;
   display: inherit;
+  position: relative;
   width: 100%;
   color: $white;
   font-size: rem(16);
@@ -33,13 +33,13 @@
 .footer-nav__item >a::before{
   content: "";
   position: absolute;
+  top: rem(3);
+  left: rem(-22);
   width: rem(18);
   height: rem(18);
   background-image: url(../images/svg/_ヒトデ.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  top: rem(3);
-  left: rem(-22);
 }
 .footer-nav__small-items{
 

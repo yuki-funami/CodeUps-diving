@@ -15,7 +15,7 @@
     padding-right: rem(40);
   }
 }
-.footer__heading{
+.footer__upper{
   @include mq("md"){
     display: flex;
     align-items: flex-end;
