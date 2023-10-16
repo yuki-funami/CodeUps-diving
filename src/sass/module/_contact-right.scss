@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.contact-right{
+
+}
+.contact-right__link{
+  display: block;
+  color: $accent;
+  font-size: rem(14);
+  font-weight: $regular;
+  line-height: calc(18 / 14);
+  text-align: center;
+  padding-top: rem(8);
+}
+.contact-right__button{
+  text-align: center;
+  padding-bottom: rem(3);
+  margin-top: rem(40);
+}

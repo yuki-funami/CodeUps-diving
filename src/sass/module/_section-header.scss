@@ -32,6 +32,13 @@
 .section-header__title--about-us::first-letter{
   text-transform: uppercase;
 }
+.section-header__title--large{
+  font-size: rem(80);
+  line-height: 1;
+  @include mq("md"){
+    font-size: rem(80);
+  }
+}
 .section-header__subtitle{
   color: $accent;
   font-size: rem(12);
@@ -43,4 +50,7 @@
   @include mq("md"){
     color: $white;
   }
+}
+.section-header__subtitle--large{
+  margin-top: rem(-6);
 }

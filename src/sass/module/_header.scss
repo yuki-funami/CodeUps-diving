@@ -33,8 +33,8 @@
   height: rem(38);
   z-index: 4;
   @include mq("md"){
-  width: rem(133);
-  height: rem(50);
+    width: rem(133);
+    height: rem(50);
   }
 }
 .header__logo-link{

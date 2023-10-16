@@ -10,6 +10,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // swiper
+  new Swiper('.js-mv-swiper', {
+    loop: true,
+    loopedSlides: 3,
+    speed: 500,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      waitForTransition: false,
+    },
+  });
+
   new Swiper('.js-campaign-swiper', {
     loop: true,
     loopedSlides: 4,

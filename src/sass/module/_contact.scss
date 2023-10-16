@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.contact{
+  position: relative;
+}
+.contact::before{
+  content: "";
+  position: absolute;
+  top: 6.1%;
+  right: 4%;
+  width: rem(109);
+  height: rem(50);
+  background-image: url(../images/svg/_キンギョハナダイ_accent.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mq("md"){
+    top: 14%;
+    right: 3.4%;
+    width: rem(301);
+    height: rem(138);
+  }
+}
+.contact__inner{
+  padding-top: rem(80);
+  padding-bottom: rem(100);
+  @include mq("md"){
+    padding-top: rem(140);
+    padding-bottom: rem(160);
+  }
+}
+.contact__body{
+  @include mq("md"){
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    padding: rem(80) rem(50);
+  }
+}
+.contact__left-body{
+  @include mq("md"){
+    padding-right: vw(1440, 80);
+    border-right: 1px solid $accent;
+  }
+}
+.contact__right-body{
+  margin-top: rem(40);
+  @include mq("md"){
+    padding-left: vw(1440, 80);
+    margin-top: 0;
+  }
+}
