@@ -1,10 +1,10 @@
 @use "global" as *;
 
 .about{
-  margin-top: rem(80);
+  padding-top: rem(80);
   @include mq("md"){
     position: relative;
-    margin-top: rem(140);
+    padding-top: rem(140);
   }
 }
 .about::after{
@@ -42,7 +42,7 @@
 }
 .about__images img:last-child{
   width: calc(100% - ((217 / 345) * 100%));
-  margin-top: calc(-50% - ((26 / 212) * 100%));
+  margin-top: calc(-49% - ((26 / 212) * 100%));
   object-fit: cover;
   @include mq("md"){
     width: calc(100% - ((680 / 1080) * 100%));
@@ -88,6 +88,10 @@
   }
 }
 .about__text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
   color: $black;
   font-size: rem(16);
   font-weight: $regular;

@@ -29,6 +29,9 @@
     color: $pastel;
   }
 }
+.section-header__title--about-us{
+  text-transform: none;
+}
 .section-header__title--about-us::first-letter{
   text-transform: uppercase;
 }
@@ -43,7 +46,7 @@
   color: $accent;
   font-size: rem(12);
   font-weight: $regular;
-  line-height: calc(18 / 12);
+  line-height: calc(26 / 12);
 }
 .section-header__subtitle--white{
   color: $accent;
@@ -52,5 +55,5 @@
   }
 }
 .section-header__subtitle--large{
-  margin-top: rem(-6);
+  margin-top: rem(-11);
 }

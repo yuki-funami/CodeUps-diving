@@ -1,10 +1,6 @@
 @use "global" as *;
 
 .to-top{
-
-}
-.to-top a{
-  display: block;
   position: fixed;
   bottom: rem(16);
   right: rem(15);
@@ -21,7 +17,14 @@
     height: rem(80);
   }
 }
-.to-top a::before{
+.to-top.is-active{
+  position: absolute;
+  bottom: calc(rem(728) + rem(16));
+  @include mq("md"){
+    bottom: calc(rem(559) + rem(20));
+  }
+}
+.to-top::before{
   content: "";
   position: absolute;
   top: 50%;
@@ -37,7 +40,7 @@
     height: rem(1.4);
   }
 }
-.to-top a::after{
+.to-top::after{
   content: "";
   position: absolute;
   top: 27%;

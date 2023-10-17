@@ -6,7 +6,7 @@
 .contact::before{
   content: "";
   position: absolute;
-  top: 6.1%;
+  top: 6.6%;
   right: 4%;
   width: rem(109);
   height: rem(50);
@@ -20,9 +20,9 @@
     height: rem(138);
   }
 }
-.contact__inner{
+.contact .contact__inner{
   padding-top: rem(80);
-  padding-bottom: rem(100);
+  padding-bottom: rem(98);
   @include mq("md"){
     padding-top: rem(140);
     padding-bottom: rem(160);
@@ -38,6 +38,8 @@
   }
 }
 .contact__left-body{
+  padding-left: vw(375, 25);
+  padding-right: vw(375, 25);
   @include mq("md"){
     padding-right: vw(1440, 80);
     border-right: 1px solid $accent;

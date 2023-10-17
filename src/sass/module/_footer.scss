@@ -22,8 +22,9 @@
   }
 }
 .footer__logo{
-  width: rem(120);
-  height: rem(45);
+  width: rem(127);
+  height: rem(53);
+  margin-left: rem(-1.6);
   @include mq("md"){
     width: rem(200);
     height: rem(75);

@@ -9,10 +9,12 @@
   font-weight: $regular;
   line-height: calc(22 / 14);
   font-family: $english-font-family;
-  width: rem(200);
   background-color: $accent;
   border: 1px solid $accent;
-  padding: rem(16) rem(40);
+  padding-top: rem(16);
+  padding-bottom: rem(16);
+  padding-left: rem(36.8);
+  padding-right: rem(89.6);
   z-index: 1;
 }
 .button::before{
@@ -51,9 +53,9 @@
 .button span::before{
   content: "";
   position: absolute;
-  top: 50%;
+  top: 52%;
   transform: translateY(-50%);
-  right: rem(35);
+  right: rem(40);
   width: rem(40);
   height: rem(1);
   background-color: $white;
@@ -65,9 +67,9 @@
 .button span::after{
   content: "";
   position: absolute;
-  top: 44%;
+  top: 46%;
   transform: rotate(45deg);
-  right: rem(34);
+  right: rem(39);
   width: rem(8);
   height: rem(1);
   background-color: $white;

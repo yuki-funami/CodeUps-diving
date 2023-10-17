@@ -29,6 +29,7 @@
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./assets/js/jquery.inview.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 
@@ -36,7 +37,7 @@
   <header class="header js-header">
     <div class="header__inner">
       <h1 class="header__logo">
-        <a class="header__logo-link" href="">
+        <a class="header__logo-link" href="#">
           <img src="./assets/images/svg/CodeUps.svg" alt="CodeUps">
         </a>
       </h1>
@@ -120,28 +121,28 @@
       <nav class="header__pc-nav pc-nav u-desktop">
         <ul class="pc-nav__items">
           <li class="pc-nav__item">
-            <a href="">campaign<span>キャンペーン</span></a>
+            <a href="#campaign">campaign<span>キャンペーン</span></a>
           </li>
           <li class="pc-nav__item">
-            <a href="">about us<span>私たちについて</span></a>
+            <a href="#about">about us<span>私たちについて</span></a>
           </li>
           <li class="pc-nav__item">
-            <a href="">information<span>ダイビング情報</span></a>
+            <a href="#information">information<span>ダイビング情報</span></a>
           </li>
           <li class="pc-nav__item">
-            <a href="">blog<span>ブログ</span></a>
+            <a href="#blog">blog<span>ブログ</span></a>
           </li>
           <li class="pc-nav__item">
-            <a href="">voice<span>お客様の声</span></a>
+            <a href="#voice">voice<span>お客様の声</span></a>
           </li>
           <li class="pc-nav__item">
-            <a href="">price<span>料金一覧</span></a>
+            <a href="#price">price<span>料金一覧</span></a>
           </li>
           <li class="pc-nav__item">
             <a href="">faq<span>よくある質問</span></a>
           </li>
           <li class="pc-nav__item">
-            <a href="">contact<span>お問い合わせ</span></a>
+            <a href="#contact">contact<span>お問い合わせ</span></a>
           </li>
         </ul>
       </nav>
@@ -152,7 +153,7 @@
   <!-- /.header -->
 
   <main>
-    <div class="mv">
+    <div class="mv js-mv">
       <div class="swiper js-mv-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -175,7 +176,7 @@
     </div>
     <!-- /.mv -->
 
-    <section class="campaign">
+    <section id="campaign" class="campaign">
       <div class="campaign__inner">
         <div class="section-header">
           <h2 class="section-header__title">campaign</h2>
@@ -264,7 +265,7 @@
     </section>
     <!-- /.campaign -->
 
-    <section class="about">
+    <section id="about" class="about">
       <div class="about__inner inner">
         <div class="section-header">
           <h2 class="section-header__title section-header__title--about-us">about us</h2>
@@ -281,7 +282,8 @@
             <h3 class="about__title">Dive into<br>the Ocean</h3>
           </div>
           <div class="about__content-right">
-            <p class="about__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+            <p class="about__text">
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
             <div class="about__button">
               <a href="#" class="button">view more<span></span></a>
@@ -294,7 +296,7 @@
     </section>
     <!-- /.about -->
 
-    <section class="information">
+    <section id="information" class="information">
       <div class="information__inner inner">
         <div class="section-header">
           <h2 class="section-header__title">information</h2>
@@ -303,7 +305,10 @@
         <!-- /.section-header -->
         <div class="information__body">
           <figure class="information__image">
-            <img src="./assets/images/common/information.png" alt="">
+            <div class="color-box">
+              <img src="./assets/images/common/information.png" alt="">
+            </div>
+            <!-- /.color-box -->
           </figure>
           <!-- /.information__image -->
           <div class="information__content">
@@ -322,7 +327,7 @@
     </section>
     <!-- /.information -->
 
-    <section class="blog">
+    <section id="blog" class="blog">
       <div class="blog__inner inner">
         <div class="section-header">
           <h2 class="section-header__title section-header__title--white">blog</h2>
@@ -379,7 +384,7 @@
     </section>
     <!-- /.blog -->
     
-    <section class="voice">
+    <section id="voice" class="voice">
       <div class="voice__inner inner">
         <div class="section-header">
           <h2 class="section-header__title">voice</h2>
@@ -400,8 +405,12 @@
                 </div>
                 <!-- /.voice-card__heading -->
                 <figure class="voice-card__image">
-                  <img src="./assets/images/common/voice1.png" alt="女性">
+                  <div class="color-box">
+                    <img src="./assets/images/common/voice1.png" alt="女性">
+                  </div>
+                  <!-- /.color-box -->
                 </figure>
+                <!-- /.voice-card__image -->
               </div>
               <!-- /.voice-card__upper -->
               <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
@@ -424,8 +433,12 @@
                 </div>
                 <!-- /.voice-card__heading -->
                 <figure class="voice-card__image">
-                  <img src="./assets/images/common/voice2.png" alt="男性">
+                  <div class="color-box">
+                    <img src="./assets/images/common/voice2.png" alt="男性">
+                  </div>
+                  <!-- /.color-box -->
                 </figure>
+                <!-- /.voice-card__image -->
               </div>
               <!-- /.voice-card__upper -->
               <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
@@ -445,7 +458,7 @@
     </section>
     <!-- /.voice -->
 
-    <section class="price">
+    <section id="price" class="price">
       <div class="price__inner inner">
         <div class="section-header">
           <h2 class="section-header__title">price</h2>
@@ -454,10 +467,13 @@
         <!-- /.section-header -->
         <div class="price__body">
           <figure class="price__image">
-            <picture>
-              <source media="(max-width: 767px)" srcset="./assets/images/common/price-sp.png">
-              <img src="./assets/images/common/price-pc.png" alt="">
-            </picture>
+            <div class="color-box">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./assets/images/common/price-sp.png">
+                <img src="./assets/images/common/price-pc.png" alt="">
+              </picture>
+            </div>
+            <!-- /.color-box -->
           </figure>
           <!-- /.price__image -->
           <div class="price__content">
@@ -537,7 +553,7 @@
     </section>
     <!-- /.price -->
 
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="contact__inner inner">
         <div class="contact__body">
           <div class="contact__left-body contact-left">
@@ -581,7 +597,7 @@
   </main>
   <!-- /.main -->
 
-  <footer class="footer">
+  <footer class="footer js-footer">
     <div class="footer__inner">
       <div class="footer__upper">
         <figure class="footer__logo">
@@ -680,7 +696,7 @@
   </footer>
   <!-- /.footer -->
 
-  <div class="to-top">
+  <div class="to-top js-to-top">
     <a href="#"></a>
   </div>
 </body>

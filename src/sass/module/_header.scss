@@ -29,8 +29,10 @@
   }
 }
 .header__logo{
-  width: rem(102);
-  height: rem(38);
+  width: rem(108);
+  height: rem(50);
+  padding-top: 6px;
+  margin-left: -3px;
   z-index: 4;
   @include mq("md"){
     width: rem(133);

@@ -46,6 +46,7 @@
   font-family: $sub-english-font-family;
   text-transform: uppercase;
   text-align: center;
+  padding-left: rem(20);
   @include mq("md"){
     font-size: rem(80);
     line-height: calc(100 / 80);

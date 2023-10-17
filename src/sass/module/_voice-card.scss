@@ -44,7 +44,7 @@
   font-weight: $regular;
   line-height: calc(22 / 12);
   border: 1px solid $accent;
-  padding: rem(4) rem(12);
+  padding: rem(3.2) rem(11.2);
   @include mq("md"){
     padding: rem(6) rem(16);
   }
@@ -54,7 +54,6 @@
   font-size: rem(16);
   font-weight: $medium;
   line-height: calc(24 / 16);
-  padding-top: rem(4);
   padding-bottom: rem(4);
   border-bottom: 1px solid $accent;
   @include mq("md"){
@@ -83,7 +82,7 @@
   font-size: rem(16);
   font-weight: $regular;
   line-height: calc(24 / 16);
-  padding-top: rem(16);
+  padding-top: rem(14.4);
   @include mq("md"){
     padding-top: rem(40);
   }

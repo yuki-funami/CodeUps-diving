@@ -1,17 +1,17 @@
 @use "global" as *;
 
 .voice{
-  margin-top: rem(80);
+  padding-top: rem(80);
   @include mq("md"){
     position: relative;
-    margin-top: rem(140);
+    padding-top: rem(140);
   }
 }
 .voice::before{
   @include mq("md"){
     content: "";
     position: absolute;
-    top: -19.6%;
+    top: 2.4%;
     left: 7%;
     width: rem(301);
     height: rem(138);
