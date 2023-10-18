@@ -12,7 +12,7 @@
   @include mq("md"){
     content: "";
     position: absolute;
-    top: 2%;
+    top: 3%;
     left: 7%;
     width: rem(437);
     height: rem(201);
@@ -35,21 +35,26 @@
     z-index: -1;
   }
 }
-.blog .blog__inner{
-  padding-left: rem(21);
-  padding-right: rem(21);
+.blog__inner{
+
 }
 .blog__cards{
   margin-top: rem(24);
   @include mq("md"){
     display: flex;
     justify-content: space-between;
-    margin-top: rem(80);
+    margin-top: rem(76.8);
   }
 }
 .blog__card{
   margin-left: auto;
   margin-right: auto;
+}
+.blog__card:first-child{
+  margin-left: 0;
+}
+.blog__card:last-child{
+  margin-right: 0;
 }
 .blog__card:not(:first-child){
   margin-top: rem(40);

@@ -7,9 +7,9 @@
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
 }
 .campaign-card__image{
-  aspect-ratio: (280 / 188);
+  aspect-ratio: 280 / 188;
   @include mq("md"){
-    aspect-ratio: (333 / 223);
+    aspect-ratio: 333 / 223;
   }
 }
 .campaign-card__image img{
@@ -32,7 +32,7 @@
   border: 1px solid $accent;
   padding: rem(3.2) rem(11.2);
   @include mq("md"){
-    padding: rem(6) rem(16);
+    padding: rem(4.8) rem(15.2);
   }
 }
 .campaign-card__title{
@@ -51,11 +51,18 @@
   font-weight: $regular;
   line-height: calc(24 / 14);
   padding-top: rem(6.4);
+  @include mq("md"){
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    padding-top: rem(16);
+    margin-left: rem(-20);
+  }
 }
 .campaign-card__price{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-end;
+  padding-left: rem(17);
 }
 .campaign-card__original-price{
   position: relative;
@@ -67,6 +74,7 @@
   padding-top: rem(19.2);
   @include mq("md"){
     font-size: rem(24);
+    padding-bottom: rem(2.4);
   }
 }
 .campaign-card__original-price::after{
@@ -87,5 +95,7 @@
   padding-left: rem(18);
   @include mq("md"){
     font-size: rem(40);
+    padding-top: rem(8);
+    padding-left: rem(25.6);
   }
 }

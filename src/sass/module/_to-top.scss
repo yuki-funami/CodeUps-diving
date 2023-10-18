@@ -19,7 +19,7 @@
 }
 .to-top.is-active{
   position: absolute;
-  bottom: calc(rem(728) + rem(16));
+  bottom: calc(rem(742) + rem(16));
   @include mq("md"){
     bottom: calc(rem(559) + rem(20));
   }

@@ -5,8 +5,8 @@
 }
 .footer-nav__items{
   column-count: 2;
-  column-gap: rem(32);
-  padding-top: rem(24);
+  column-gap: rem(36);
+  padding-top: rem(41.6);
   padding-left: rem(23);
   @include mq("md"){
     column-count: 4;
@@ -33,7 +33,7 @@
 .footer-nav__item >a::before{
   content: "";
   position: absolute;
-  top: rem(3);
+  top: 0;
   left: rem(-22);
   width: rem(18);
   height: rem(18);

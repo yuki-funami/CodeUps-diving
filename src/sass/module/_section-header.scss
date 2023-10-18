@@ -47,6 +47,9 @@
   font-size: rem(12);
   font-weight: $regular;
   line-height: calc(26 / 12);
+  @include mq("md"){
+    padding-top: rem(3);
+  }
 }
 .section-header__subtitle--white{
   color: $accent;

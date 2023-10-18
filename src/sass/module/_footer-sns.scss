@@ -7,13 +7,13 @@
   display: flex;
 }
 .footer-sns__item{
-  width: rem(24);
+  width: rem(21);
   @include mq("md"){
     width: rem(26);
   }
 }
 .footer-sns__item:not(:first-child){
-  margin-left: rem(16);
+  margin-left: rem(21);
   @include mq("md"){
     margin-left: rem(19);
   }

@@ -7,7 +7,7 @@
   margin-top: rem(80);
   @include mq("md"){
     position: relative;
-    padding-top: rem(100);
+    padding-top: rem(99.2);
     padding-bottom: rem(100);
     margin-top: rem(140);
   }
@@ -35,13 +35,13 @@
     flex-direction: row-reverse;
     align-items: flex-start;
     justify-content: space-between;
-    margin-top: rem(40);
+    margin-top: rem(36.8);
   }
 }
 .price__image{
-  aspect-ratio: (345 / 227);
+  aspect-ratio: 345 / 227;
   @include mq("md"){
-    aspect-ratio: (492 / 746);
+    aspect-ratio: 492 / 746;
     margin-left: vw(1440, 93);
   }
 }

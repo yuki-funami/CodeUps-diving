@@ -9,8 +9,8 @@
   @include mq("md"){
     display: block;
     position: absolute;
-    top: 4%;
-    left: 68%;
+    top: 17.8%;
+    left: 70.8%;
     width: rem(80);
     height: rem(80);
     background-color: rgba($color: $white, $alpha: 0.8);
@@ -29,8 +29,8 @@
     background-color: rgba($color: $white, $alpha: 0.8);
     border: 1px solid $accent;
     border-radius: 50%;
-    top: 4%;
-    left: 80%;
+    top: 17.8%;
+    left: 82%;
     z-index: 1;
   }
 }

@@ -45,7 +45,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     breakpoints: {
       768: {
         spaceBetween: 40,
-        width: 333,
+        width: 348,
       },
     },
   });

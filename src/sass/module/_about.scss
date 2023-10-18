@@ -11,8 +11,8 @@
   @include mq("md"){
     content: "";
     position: absolute;
-    bottom: -22%;
-    right: 6%;
+    bottom: -17%;
+    right: 5.8%;
     width: rem(194);
     height: rem(181);
     background-image: url(../images/svg/_サンゴとイソギンチャク.svg);
@@ -29,7 +29,7 @@
   margin-top: rem(50);
   @include mq("md"){
     position: relative;
-    margin-top: rem(120);
+    margin-top: rem(116);
   }
 }
 .about__images img:first-child{
@@ -54,7 +54,7 @@
     display: flex;
     align-items: flex-start;
     position: absolute;
-    top: 40%;
+    top: 43%;
     left: calc(100% - ((840 / 1080) * 100%) - 25px);
     width: calc(100% - ((240 / 1080) * 100%));
     margin-top: 0;
@@ -69,7 +69,7 @@
   margin-top: rem(16);
   @include mq("md"){
     width: 100%;
-    padding-left: rem(40);
+    padding-left: rem(8);
     padding-right: rem(40);
     margin-top: 0;
   }

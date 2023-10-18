@@ -46,7 +46,7 @@
   border: 1px solid $accent;
   padding: rem(3.2) rem(11.2);
   @include mq("md"){
-    padding: rem(6) rem(16);
+    padding: rem(6) rem(14.4);
   }
 }
 .voice-card__title{
@@ -60,14 +60,15 @@
     font-size: rem(24);
     line-height: calc(36 / 24);
     padding-top: rem(8);
+    padding-bottom: 0;
   }
 }
 .voice-card__image{
-  aspect-ratio: (151 / 117);
+  aspect-ratio: 151 / 117;
   max-width: rem(151);
   margin-left: rem(13);
   @include mq("md"){
-    aspect-ratio: (180 / 140);
+    aspect-ratio: 180 / 140;
     max-width: rem(181);
     margin-left: rem(16);
   }

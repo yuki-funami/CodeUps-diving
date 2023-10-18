@@ -35,7 +35,7 @@
   height: 100%;
 }
 .footer__sns{
-  padding-top: rem(16);
+  padding-top: rem(10);
   @include mq("md"){
     padding-top: 0;
     padding-bottom: rem(15);
@@ -56,6 +56,6 @@
   color: $white;
   font-size: rem(12);
   font-weight: $regular;
-  line-height: calc(18 / 12);
+  line-height: calc(24 / 12);
   font-family: $english-font-family;
 }
