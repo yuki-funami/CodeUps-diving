@@ -11,6 +11,7 @@
   opacity: 0;
   transition: opacity 0.4s, left 0.4s;
   z-index: 3;
+  overflow: scroll;
 }
 .is-open .sp-nav{
   opacity: 1;

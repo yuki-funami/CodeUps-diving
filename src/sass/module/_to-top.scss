@@ -35,7 +35,7 @@
   background-color: $accent;
   border-radius: rem(1);
   @include mq("md"){
-    left: 23%;
+    left: 26%;
     width: rem(40);
     height: rem(1.4);
   }
@@ -52,7 +52,7 @@
   border-radius: rem(1);
   @include mq("md"){
     top: 28%;
-    left: 39%;
+    left: 42%;
     width: rem(10);
   }
 }

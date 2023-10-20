@@ -51,10 +51,14 @@
   margin-right: auto;
 }
 .blog__card:first-child{
-  margin-left: 0;
+  @include mq("md"){
+    margin-left: 0;
+  }
 }
 .blog__card:last-child{
-  margin-right: 0;
+  @include mq("md"){
+    margin-right: 0;
+  }
 }
 .blog__card:not(:first-child){
   margin-top: rem(40);

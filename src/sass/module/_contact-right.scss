@@ -11,6 +11,9 @@
   line-height: calc(18 / 14);
   text-align: center;
   padding-top: rem(4.8);
+  @include mq("md"){
+    padding-top: 0;
+  }
 }
 .contact-right__button{
   text-align: center;

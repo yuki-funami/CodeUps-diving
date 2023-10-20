@@ -3,12 +3,41 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   /*==========================
   # hamburger
   ==========================*/
-  $('.js-hamburger').on('click', function () {
-    $('.js-header').toggleClass('is-open');
-    // $('html').toggleClass('is-fixed');
+  $(function () {
+    $('.js-hamburger').on('click', function () {
+      let scrollPosition = window.scrollY || window.pageYOffset;
+      $('body').toggleClass('is-fixed');
+      $('.js-header').toggleClass('is-open');
+      if ($('body').hasClass('is-fixed')) {
+        $('body').css('top', '-' + scrollPosition + 'px');
+      } else {
+        let scrollPos = parseInt($('body').css('top'));
+        $('body').css('top', '');
+        window.scrollTo(0, -scrollPos);
+      }
+    });
+  
+    $('.js-background').on('click', function () {
+      let scrollPosition = window.scrollY || window.pageYOffset;
+      $('body').toggleClass('is-fixed');
+      $('.js-header').toggleClass('is-open');
+      if ($('body').hasClass('is-fixed')) {
+        $('body').css('top', '-' + scrollPosition + 'px');
+      } else {
+        let scrollPos = parseInt($('body').css('top'));
+        $('body').css('top', '');
+        window.scrollTo(0, -scrollPos);
+      }
+    });
   });
-  $('.js-background').on('click', function() {
-    $('.js-header').removeClass('is-open');
+
+  // spナビメニューをクリックでページ遷移
+  $('nav a').on('click', function () {
+    if ($('body').hasClass('is-fixed')) {
+      $('body').css('top', '');
+      $('body').removeClass('is-fixed');
+      $('.js-header').removeClass('is-open');
+    }
   });
 
   /*==========================
@@ -69,7 +98,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       {
         scrollTop: 0,
       },
-      500
+      'fast'
     );
     return false;
   });
@@ -138,7 +167,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       {
         scrollTop: position,
       },
-      500
+      'fast'
     );
     return false;
   });
