@@ -25,9 +25,6 @@
     background-size: cover;
   }
 }
-.price__inner{
-
-}
 .price__body{
   margin-top: rem(24);
   @include mq("md"){
@@ -57,9 +54,6 @@
     width: 100%;
     margin-top: 0;
   }
-}
-.price__menu{
-
 }
 .price__menu:not(:first-child){
   margin-top: rem(38.6);

@@ -34,9 +34,6 @@
     background-size: cover;
   }
 }
-.voice__inner{
-
-}
 .voice__cards{
   margin-top: rem(40);
   @include mq("md"){
@@ -44,9 +41,6 @@
     justify-content: space-between;
     margin-top: rem(25.6);
   }
-}
-.voice__card{
-
 }
 .voice__card:not(:first-child){
   margin-top: rem(40);

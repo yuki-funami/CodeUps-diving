@@ -80,11 +80,14 @@
 .campaign-card__original-price::after{
   content: "";
   position: absolute;
-  bottom: rem(9);
+  bottom: rem(8);
   left: 0;
   width: 100%;
   height: 3px;
   background-color: $red;
+  @include mq("md"){
+    bottom: rem(12.8);
+  }
 }
 .campaign-card__discount-price{
   color: $accent;

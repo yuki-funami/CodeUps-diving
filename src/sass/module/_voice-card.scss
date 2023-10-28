@@ -21,9 +21,6 @@
   align-items: flex-end;
   justify-content: space-between;
 }
-.voice-card__heading{
-
-}
 .voice-card__meta{
   @include mq("md"){
     display: flex;

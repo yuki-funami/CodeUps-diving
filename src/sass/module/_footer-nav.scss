@@ -1,8 +1,5 @@
 @use "global" as *;
 
-.footer-nav{
-
-}
 .footer-nav__items{
   column-count: 2;
   column-gap: rem(36);
@@ -10,6 +7,8 @@
   padding-left: rem(23);
   @include mq("md"){
     column-count: 4;
+    column-gap: rem(41.6);
+    padding-top: rem(11.2);
   }
 }
 .footer-nav__item{
@@ -40,9 +39,6 @@
   background-image: url(../images/svg/_ヒトデ.svg);
   background-size: cover;
   background-repeat: no-repeat;
-}
-.footer-nav__small-items{
-
 }
 .footer-nav__small-item{
   margin-top: rem(24);

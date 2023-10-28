@@ -10,9 +10,9 @@
   padding-right: rem(14);
   @include mq("md"){
     padding-top: rem(80);
-    padding-bottom: rem(60);
-    padding-left: rem(40);
-    padding-right: rem(40);
+    padding-bottom: rem(76);
+    padding-left: vw(1440, 178.56);
+    padding-right: vw(1440, 178.56);
   }
 }
 .footer__upper{
@@ -26,8 +26,8 @@
   height: rem(53);
   margin-left: rem(-1.6);
   @include mq("md"){
-    width: rem(200);
-    height: rem(75);
+    width: rem(208);
+    height: rem(89.6);
   }
 }
 .footer__logo img{
@@ -38,12 +38,9 @@
   padding-top: rem(10);
   @include mq("md"){
     padding-top: 0;
-    padding-bottom: rem(15);
-    padding-left: rem(40);
+    padding-bottom: rem(20.8);
+    padding-left: rem(38.4);
   }
-}
-.footer__nav{
-
 }
 .footer__copyrights{
   text-align: center;
@@ -58,4 +55,7 @@
   font-weight: $regular;
   line-height: calc(24 / 12);
   font-family: $english-font-family;
+  @include mq("md"){
+    letter-spacing: 0.084em;
+  }
 }

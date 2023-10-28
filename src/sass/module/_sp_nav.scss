@@ -45,16 +45,13 @@
 .sp-nav__item >a::before{
   content: "";
   position: absolute;
-  top: rem(3);
+  top: 0;
   left: rem(-22);
   width: rem(18);
   height: rem(18);
   background-image: url(../images/svg/_ヒトデ.svg);
   background-size: cover;
   background-repeat: no-repeat;
-}
-.sp-nav__small-items{
-
 }
 .sp-nav__small-item{
   margin-top: rem(24);

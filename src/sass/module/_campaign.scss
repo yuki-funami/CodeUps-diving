@@ -7,11 +7,8 @@
   }
 }
 .campaign__inner{
-  // padding-top: rem(40);
   @include mq("md"){
     position: relative;
-    overflow: hidden;
-    // padding-top: rem(120);
   }
 }
 .campaign__slider{
@@ -21,7 +18,7 @@
   @include mq("md"){
     margin-top: rem(37);
     margin-left: calc(50% - 38.4017vw);
-    width: 100vw;
+    width: calc(100vw - (50% - 38.4017vw));
   }
 }
 .campaign__button{

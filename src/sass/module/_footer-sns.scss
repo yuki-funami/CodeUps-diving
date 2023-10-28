@@ -1,8 +1,5 @@
 @use "global" as *;
 
-.footer-sns{
-  
-}
 .footer-sns__items{
   display: flex;
 }
@@ -15,11 +12,8 @@
 .footer-sns__item:not(:first-child){
   margin-left: rem(21);
   @include mq("md"){
-    margin-left: rem(19);
+    margin-left: rem(20.8);
   }
-}
-.footer-sns__item-link{
-
 }
 .footer-sns__item-link img{
   width: 100%;
