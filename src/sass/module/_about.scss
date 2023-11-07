@@ -12,17 +12,20 @@
     content: "";
     position: absolute;
     bottom: -17%;
-    right: 5.8%;
+    right: 5.75%;
     width: rem(194);
     height: rem(181);
-    background-image: url(../images/svg/_サンゴとイソギンチャク.svg);
+    background-image: url(../images/svg/coral_sea-anemone.svg);
     background-size: cover;
     background-repeat: no-repeat;
   }
 }
 .about__inner{
+  max-width: rem(600);
+  width: 100%;
   @include mq("md"){
     position: relative;
+    max-width: $inner + strip-unit($padding-pc) * 2;
   }
 }
 .about__images{
@@ -61,15 +64,13 @@
   }
 }
 .about__content-left{
-  @include mq("md"){
-    width: 101%;
-  }
+  width: 100%;
 }
 .about__content-right{
+  width: 100%;
   margin-top: rem(16);
   @include mq("md"){
-    width: 100%;
-    padding-left: rem(8);
+    padding-left: rem(11.2);
     padding-right: rem(40);
     margin-top: 0;
   }
@@ -102,7 +103,7 @@
 }
 .about__button{
   text-align: center;
-  padding-bottom: rem(3);
+  padding-bottom: rem(3.2);
   margin-top: rem(50);
   @include mq("md"){
     margin-top: rem(40);

@@ -2,7 +2,7 @@
 
 .footer-nav__items{
   column-count: 2;
-  column-gap: rem(36);
+  column-gap: rem(34);
   padding-top: rem(41.6);
   padding-left: rem(23);
   @include mq("md"){
@@ -36,9 +36,12 @@
   left: rem(-22);
   width: rem(18);
   height: rem(18);
-  background-image: url(../images/svg/_ヒトデ.svg);
+  background-image: url(../images/svg/starfish.svg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+.footer-nav__item >a:hover{
+  opacity: 0.7;
 }
 .footer-nav__small-item{
   margin-top: rem(24);
@@ -50,4 +53,7 @@
   font-size: rem(16);
   font-weight: $regular;
   line-height: calc(18 / 16);
+}
+.footer-nav__small-item >a:hover{
+  opacity: 0.7;
 }

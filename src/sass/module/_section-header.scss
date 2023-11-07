@@ -38,8 +38,10 @@
 .section-header__title--large{
   font-size: rem(80);
   line-height: 1;
+  margin-left: rem(-9);
   @include mq("md"){
     font-size: rem(80);
+    margin-left: rem(-3.2);
   }
 }
 .section-header__subtitle{
@@ -59,4 +61,7 @@
 }
 .section-header__subtitle--large{
   margin-top: rem(-11);
+  @include mq("md"){
+    margin-top: rem(-16);
+  }
 }

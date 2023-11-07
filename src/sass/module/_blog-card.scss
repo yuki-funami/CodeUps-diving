@@ -2,24 +2,28 @@
 
 .blog-card{
   display: block;
-  max-width: rem(333);
   width: 100%;
   background-color: $white;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
   @include mq("md"){
-    width: calc((333 / 1080) * 100%);
+    width: calc((100% - vw(1080, 60)) / 3);
   }
 }
 .blog-card__inner{
   padding: rem(16) rem(16) rem(24);
+  background-color: $white;
 }
 .blog-card__image{
-  aspect-ratio: 301 / 201;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 .blog-card__image img{
+  aspect-ratio: 301 / 201;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s;
 }
 .blog-card__content{
   padding-top: rem(16);

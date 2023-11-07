@@ -4,15 +4,14 @@
   background-color: $accent;
 }
 .footer__inner{
+  max-width: rem(600);
+  width: 100%;
   padding-top: rem(48);
   padding-bottom: rem(56);
-  padding-left: rem(14);
-  padding-right: rem(14);
   @include mq("md"){
+    max-width: $inner + strip-unit($padding-pc) * 2;
     padding-top: rem(80);
     padding-bottom: rem(76);
-    padding-left: vw(1440, 178.56);
-    padding-right: vw(1440, 178.56);
   }
 }
 .footer__upper{
@@ -55,6 +54,7 @@
   font-weight: $regular;
   line-height: calc(24 / 12);
   font-family: $english-font-family;
+  letter-spacing: -0.003em;
   @include mq("md"){
     letter-spacing: 0.084em;
   }

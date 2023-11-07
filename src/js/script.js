@@ -61,7 +61,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     loopedSlides: 4,
     speed: 500,
     spaceBetween: 24,
-    width: 295,
+    width: 280,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
@@ -74,7 +74,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     breakpoints: {
       768: {
         spaceBetween: 40,
-        width: 348,
+        width: 333,
       },
     },
   });
@@ -155,10 +155,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
-
+  /*==========================
+  # smooth scroll
+  ==========================*/
   $('a[href^="#"]').on("click", function () {
     const id = $(this).attr("href");
     let position = 0;
+    let speed = 350;
 
     if (id != "#") {
       position = $(id).offset().top;
@@ -167,10 +170,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       {
         scrollTop: position,
       },
-      'fast'
+      speed
     );
     return false;
   });
-
 
 });

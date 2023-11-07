@@ -12,11 +12,11 @@
   @include mq("md"){
     content: "";
     position: absolute;
-    top: 3%;
+    top: 2.9%;
     left: 7%;
     width: rem(437);
     height: rem(201);
-    background-image: url(../images/svg/_キンギョハナダイ.svg);
+    background-image: url(../images/svg/sea-goldie.svg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -35,26 +35,37 @@
     z-index: -1;
   }
 }
+.blog .blog__inner{
+  padding-left: rem(21);
+  padding-right: rem(21);
+  @include mq("md"){
+    padding-left: rem(25.6);
+    padding-right: rem(25.6);
+  }
+}
+.blog__inner{
+  max-width: rem(600);
+  width: 100%;
+  @include mq("md"){
+    max-width: $inner + strip-unit($padding-pc) * 2;
+  }
+}
 .blog__cards{
   margin-top: rem(24);
   @include mq("md"){
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: rem(76.8);
   }
 }
 .blog__card{
-  margin-left: auto;
-  margin-right: auto;
+  @include mq("md"){
+    margin-left: vw(1080, 30);
+  }
 }
 .blog__card:first-child{
   @include mq("md"){
     margin-left: 0;
-  }
-}
-.blog__card:last-child{
-  @include mq("md"){
-    margin-right: 0;
   }
 }
 .blog__card:not(:first-child){
@@ -63,10 +74,28 @@
     margin-top: 0;
   }
 }
+.blog__card:nth-child(3n + 1){
+  @include mq("md"){
+    margin-left: 0;
+  }
+}
+.blog__card:nth-child(n + 4){
+  @include mq("md"){
+    margin-top: rem(40);
+  }
+}
+.blog__card:hover{
+  .blog-card__inner{
+    opacity: 0.7;
+  }
+  .blog-card__image img{
+    transform: scale(1.1);
+  }
+}
 .blog__button{
   text-align: center;
-  padding-bottom: rem(3);
-  margin-top: rem(40);
+  padding-bottom: rem(3.2);
+  margin-top: rem(38.4);
   @include mq("md"){
     margin-top: rem(80);
   }

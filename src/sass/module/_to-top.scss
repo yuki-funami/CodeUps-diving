@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .to-top{
+  cursor: pointer;
   position: fixed;
   bottom: rem(16);
   right: rem(15);
@@ -55,4 +56,13 @@
     left: 42%;
     width: rem(10);
   }
+}
+.to-top:hover{
+  border: 1.5px solid $accent;
+}
+.to-top:hover::before{
+  height: rem(1.5);
+}
+.to-top:hover::after{
+  height: rem(1.5);
 }

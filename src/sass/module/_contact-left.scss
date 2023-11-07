@@ -10,7 +10,7 @@
   padding-bottom: rem(4.8);
   border-bottom: 1px solid $accent;
   @include mq("md"){
-    padding-bottom: rem(8);
+    padding-bottom: rem(6.4);
   }
 }
 .contact-left__logo{
@@ -19,7 +19,7 @@
   margin: 0 auto;
   @include mq("md"){
     width: rem(200);
-    height: rem(75);
+    height: rem(75.2);
   }
 }
 .contact-left__logo img{
@@ -29,7 +29,7 @@
 .contact-left__content{
   @include mq("md"){
     display: flex;
-    padding-top: rem(24);
+    padding-top: rem(22.4);
   }
 }
 .contact-left__address{
@@ -40,7 +40,7 @@
   text-align: center;
   padding-top: rem(14.4);
   @include mq("md"){
-    width: rem(150);
+    width: rem(248);
     text-align: left;
     padding-top: 0;
   }
@@ -51,9 +51,7 @@
   padding-top: rem(14.4);
   @include mq("md"){
     max-width: rem(273);
-    width: calc(100% - rem(150));
     padding-top: 0;
-    margin-left: vw(1440, 21);
   }
 }
 .contact-left__map-inner{

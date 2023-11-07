@@ -11,11 +11,11 @@
   @include mq("md"){
     content: "";
     position: absolute;
-    top: 2.4%;
+    top: 2.5%;
     left: 7%;
     width: rem(301);
     height: rem(138);
-    background-image: url(../images/svg/_キンギョハナダイ_accent.svg);
+    background-image: url(../images/svg/sea-goldie_accent.svg);
     background-repeat: no-repeat;
     background-size: cover;
     transform: scale(-1, 1);
@@ -25,19 +25,27 @@
   @include mq("md"){
     content: "";
     position: absolute;
-    bottom: -8.5%;
+    bottom: -8.6%;
     right: 12.5%;
     width: rem(71);
     height: rem(162);
-    background-image: url(../images/svg/_イバラタツ.svg);
+    background-image: url(../images/svg/seahorse.svg);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+.voice__inner{
+  max-width: rem(600);
+  width: 100%;
+  @include mq("md"){
+    max-width: $inner + strip-unit($padding-pc) * 2;
   }
 }
 .voice__cards{
   margin-top: rem(40);
   @include mq("md"){
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: rem(25.6);
   }
@@ -48,10 +56,18 @@
     margin-top: 0;
   }
 }
+.voice__card:nth-child(n + 3){
+  @include mq("md"){
+    margin-top: rem(40);
+  }
+}
+.voice__card:hover{
+  opacity: 0.7;
+}
 .voice__button{
   text-align: center;
-  padding-bottom: rem(3);
-  margin-top: rem(40);
+  padding-bottom: rem(3.2);
+  margin-top: rem(38.4);
   @include mq("md"){
     margin-top: rem(80);
   }
