@@ -29,6 +29,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         window.scrollTo(0, -scrollPos);
       }
     });
+    return false;
   });
 
   // spナビメニューをクリックでページ遷移
@@ -38,6 +39,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $('body').removeClass('is-fixed');
       $('.js-header').removeClass('is-open');
     }
+    return false;
   });
 
   /*==========================
@@ -112,6 +114,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     } else {
       toTop.removeClass('is-active');
     }
+    return false;
   });
 
   /*==========================
@@ -153,6 +156,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         counter = 1;
       }
     });
+    return false;
   });
 
   /*==========================
