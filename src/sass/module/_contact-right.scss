@@ -7,9 +7,9 @@
   font-weight: $regular;
   line-height: calc(18 / 14);
   text-align: center;
-  padding-top: rem(4.8);
+  margin-top: rem(4.8);
   @include mq("md"){
-    padding-top: rem(6);
+    margin-top: rem(6);
   }
 }
 .contact-right__button{

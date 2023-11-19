@@ -50,7 +50,7 @@
   font-weight: $regular;
   line-height: calc(26 / 12);
   @include mq("md"){
-    padding-top: rem(3);
+    margin-top: rem(3);
   }
 }
 .section-header__subtitle--white{

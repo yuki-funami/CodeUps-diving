@@ -46,12 +46,12 @@
   font-family: $sub-english-font-family;
   text-transform: uppercase;
   text-align: center;
-  padding-left: rem(19.2);
+  text-indent: 0.54em;
   @include mq("md"){
     font-size: rem(80);
     line-height: calc(100 / 80);
     letter-spacing: 0.53em;
-    padding-left: rem(41.6);
+    text-indent: 0.53em;
   }
 }
 .mv__text{

@@ -57,12 +57,15 @@
     width: rem(10);
   }
 }
-.to-top:hover{
-  border: 1.5px solid $accent;
-}
-.to-top:hover::before{
-  height: rem(1.5);
-}
-.to-top:hover::after{
-  height: rem(1.5);
+@media (hover){
+  .to-top:hover{
+    background-color: rgba($color: $accent, $alpha: 0.8);
+    border: 1px solid $white;
+  }
+  .to-top:hover::before{
+    background-color: $white;
+  }
+  .to-top:hover::after{
+    background-color: $white;
+  }
 }

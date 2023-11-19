@@ -8,13 +8,15 @@
   height: rem(80);
   background-color: $black;
   opacity: 0.68;
-  z-index: 2;
+  z-index: 10;
+  transition: background-color 0.35s;
   @include mq("md"){
     height: rem(90);
   }
 }
-.is-open.header{
+.header.is-open{
   opacity: 1;
+  background-color: $accent;
 }
 .header__inner{
   display: flex;
@@ -23,40 +25,26 @@
   height: inherit;
   padding-left: rem(15);
   padding-right: rem(15);
+  margin-left: auto;
+  margin-right: auto;
   @include mq("md"){
     padding-left: rem(40);
     padding-right: rem(40);
+    max-width: 1440px;
   }
 }
 .header__logo{
-  width: rem(108);
-  height: rem(50);
-  padding-top: 6px;
-  margin-left: -3px;
-  z-index: 4;
-  @include mq("md"){
-    width: rem(139);
-    height: rem(60);
-  }
+  height: inherit;
+  z-index: 10;
+}
+.header__logo-link{
+  display: flex;
+  align-items: center;
+  height: inherit;
 }
 .header__logo-link img{
-  width: 100%;
-  height: 100%;
-}
-.header__background{
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $black;
-  opacity: 0.8;
-  z-index: 2;
-}
-.is-open .header__background{
-  display: block;
-}
-.header__sp-nav{
-  padding-top: rem(80);
+  width: rem(102);
+  @include mq("md") {
+    width: rem(133);
+  }
 }

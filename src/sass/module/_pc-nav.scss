@@ -5,14 +5,12 @@
 }
 .pc-nav__items{
   display: flex;
+  gap: rem(40);
   height: inherit;
 }
 .pc-nav__item{
   height: inherit;
   text-align: center;
-}
-.pc-nav__item:not(:first-child){
-  margin-left: rem(40);
 }
 .pc-nav__item a{
   display: flex;
@@ -20,10 +18,6 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: $white;
-  font-size: rem(10);
-  font-weight: $regular;
-  line-height: calc(15 / 10);
   height: inherit;
 }
 .pc-nav__item a::after{
@@ -39,20 +33,28 @@
   transform: scale(0, 1);
   transform-origin: center top;
 }
-.pc-nav__item a:hover::after{
-  transform: scale(1, 1);
+@media (hover){
+  .pc-nav__item a:hover::after{
+    transform: scale(1, 1);
+  }
 }
-.pc-nav__item span{
+.pc-nav__item p{
   color: $white;
   font-size: rem(18);
   font-weight: $regular;
   line-height: 1;
   font-family: $english-font-family;
-  padding-bottom: rem(3.2);
 }
-.pc-nav__item a span::first-letter{
+.pc-nav__item p::first-letter{
   text-transform: uppercase;
 }
-.pc-nav__item:nth-child(7) a span{
+.pc-nav__item:nth-child(7) p{
   text-transform: uppercase;
+}
+.pc-nav__item span{
+  color: $white;
+  font-size: rem(10);
+  font-weight: $regular;
+  line-height: calc(15 / 10);
+  margin-top: rem(3.2);
 }

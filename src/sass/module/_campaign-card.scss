@@ -46,9 +46,9 @@
   font-size: rem(16);
   font-weight: $medium;
   line-height: calc(24 / 16);
-  padding-top: rem(4);
   padding-bottom: rem(8);
   border-bottom: 1px solid $accent;
+  margin-top: rem(4);
 }
 .campaign-card__text{
   text-align: center;
@@ -56,11 +56,11 @@
   font-size: rem(14);
   font-weight: $regular;
   line-height: calc(24 / 14);
-  padding-top: rem(6.4);
+  margin-top: rem(6.4);
   @include mq("md"){
     font-size: rem(16);
     line-height: calc(24 / 16);
-    padding-top: rem(16);
+    margin-top: rem(16);
     margin-left: rem(-16);
   }
 }
@@ -68,7 +68,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  padding-left: rem(19.2);
+  margin-left: rem(19.2);
 }
 .campaign-card__original-price{
   position: relative;
@@ -77,10 +77,10 @@
   font-weight: $bold;
   line-height: 1;
   font-family: $sub-english-font-family;
-  padding-top: rem(19.2);
+  margin-top: rem(19.2);
   @include mq("md"){
     font-size: rem(24);
-    padding-bottom: rem(2.4);
+    margin-bottom: rem(2.4);
   }
 }
 .campaign-card__original-price::after{
@@ -101,10 +101,10 @@
   font-weight: $bold;
   line-height: 1;
   font-family: $sub-english-font-family;
-  padding-left: rem(18);
+  margin-left: rem(18);
   @include mq("md"){
     font-size: rem(40);
-    padding-top: rem(8);
-    padding-left: rem(25.6);
+    margin-top: rem(8);
+    margin-left: rem(25.6);
   }
 }

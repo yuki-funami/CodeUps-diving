@@ -13,7 +13,7 @@
   @include mq("md"){
     display: block;
     position: absolute;
-    top: 3.5%;
+    top: 3.85%;
     left: 76.55%;
     width: rem(80);
     height: rem(80);
@@ -28,13 +28,13 @@
   @include mq("md"){
     display: block;
     position: absolute;
+    top: 3.85%;
+    left: 90.7%;
     width: rem(80);
     height: rem(80);
     background-color: rgba($color: $white, $alpha: 0.8);
     border: 1px solid $accent;
     border-radius: 50%;
-    top: 3.5%;
-    left: 90.7%;
     z-index: 1;
   }
 }

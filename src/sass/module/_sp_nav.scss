@@ -3,19 +3,20 @@
 .sp-nav{
   position: fixed;
   top: 0;
-  left: -100vw;
-  width: 100%;
-  max-width: rem(375);
-  height: 100vh;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - rem(80));
   background-color: $accent;
+  margin-top: rem(80);
   opacity: 0;
-  transition: opacity 0.4s, left 0.4s;
-  z-index: 3;
-  overflow: scroll;
+  visibility: hidden;
+  transition: opacity 0.35s;
+  z-index: 9;
+  overflow-y: scroll;
 }
 .is-open .sp-nav{
   opacity: 1;
-  left: 0;
+  visibility: visible;
 }
 .sp-nav__items{
   column-count: 2;

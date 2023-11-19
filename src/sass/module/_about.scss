@@ -1,18 +1,18 @@
 @use "global" as *;
 
 .about{
-  padding-top: rem(80);
+  margin-top: rem(80);
   @include mq("md"){
     position: relative;
-    padding-top: rem(140);
+    margin-top: rem(140);
   }
 }
 .about::after{
   @include mq("md"){
     content: "";
     position: absolute;
-    bottom: -17%;
-    right: 5.75%;
+    bottom: -20.5%;
+    right: calc(50% - 39.8rem);
     width: rem(194);
     height: rem(181);
     background-image: url(../images/svg/coral_sea-anemone.svg);
@@ -70,9 +70,9 @@
   width: 100%;
   margin-top: rem(16);
   @include mq("md"){
-    padding-left: rem(11.2);
-    padding-right: rem(40);
     margin-top: 0;
+    margin-left: rem(36.8);
+    margin-right: rem(40);
   }
 }
 .about__title{

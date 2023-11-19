@@ -2,34 +2,28 @@
 
 .contact{
   position: relative;
+  margin-top: rem(80);
+  margin-bottom: rem(98);
+  @include mq("md"){
+    margin-top: rem(140);
+    margin-bottom: rem(160);
+  }
 }
 .contact::before{
   content: "";
   position: absolute;
-  top: 6.6%;
-  right: 4%;
+  top: -4.2%;
+  right: calc(50% - 10.8rem);
   width: rem(109);
   height: rem(50);
   background-image: url(../images/svg/sea-goldie_accent.svg);
   background-repeat: no-repeat;
   background-size: cover;
   @include mq("md"){
-    top: 13.9%;
-    right: 3.5%;
+    top: -10%;
+    right: calc(50% - 41.9rem);
     width: rem(301);
     height: rem(138);
-  }
-}
-.contact .contact__inner{
-  padding-top: rem(80);
-  padding-bottom: rem(98);
-  padding-left: rem(40);
-  padding-right: rem(40);
-  @include mq("md"){
-    padding-top: rem(140);
-    padding-bottom: rem(160);
-    padding-left: rem(25);
-    padding-right: rem(25);
   }
 }
 .contact__inner{
@@ -37,6 +31,14 @@
   width: 100%;
   @include mq("md"){
     max-width: $inner + strip-unit($padding-pc) * 2;
+  }
+}
+.contact__inner.inner{
+  padding-left: rem(40);
+  padding-right: rem(40);
+  @include mq("md") {
+    padding-left: rem(25);
+    padding-right: rem(25);
   }
 }
 .contact__body{
@@ -61,7 +63,7 @@
 .contact__right-body{
   margin-top: rem(40);
   @include mq("md"){
-    padding-left: rem(84.8);
     margin-top: rem(6);
+    margin-left: rem(84.8);
   }
 }

@@ -33,7 +33,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // spナビメニューをクリックでページ遷移
-  $('nav a').on('click', function () {
+  $('a').on('click', function () {
     if ($('body').hasClass('is-fixed')) {
       $('body').css('top', '');
       $('body').removeClass('is-fixed');

@@ -13,7 +13,7 @@
     content: "";
     position: absolute;
     top: 2.9%;
-    left: 7%;
+    left: calc(50% - 38.8rem);
     width: rem(437);
     height: rem(201);
     background-image: url(../images/svg/sea-goldie.svg);
@@ -84,12 +84,14 @@
     margin-top: rem(40);
   }
 }
-.blog__card:hover{
-  .blog-card__inner{
-    opacity: 0.7;
-  }
-  .blog-card__image img{
-    transform: scale(1.1);
+@media (hover){
+  .blog__card:hover{
+    .blog-card__inner{
+      opacity: 0.7;
+    }
+    .blog-card__image img{
+      transform: scale(1.1);
+    }
   }
 }
 .blog__button{

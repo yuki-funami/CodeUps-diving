@@ -29,7 +29,7 @@
 .contact-left__content{
   @include mq("md"){
     display: flex;
-    padding-top: rem(22.4);
+    margin-top: rem(22.4);
   }
 }
 .contact-left__address{
@@ -38,20 +38,20 @@
   font-weight: $regular;
   line-height: calc(28 / 16);
   text-align: center;
-  padding-top: rem(14.4);
+  margin-top: rem(14.4);
   @include mq("md"){
     width: rem(248);
     text-align: left;
-    padding-top: 0;
+    margin-top: 0;
   }
 }
 .contact-left__map{
   width: 100%;
   height: 100%;
-  padding-top: rem(14.4);
+  margin-top: rem(14.4);
   @include mq("md"){
     max-width: rem(273);
-    padding-top: 0;
+    margin-top: 0;
   }
 }
 .contact-left__map-inner{

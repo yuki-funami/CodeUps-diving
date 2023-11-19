@@ -41,12 +41,6 @@
   transition: 0.2s cubic-bezier(0.44, 0, 0.5, 1);
   z-index: -1;
 }
-.button:hover{
-  color: $accent;
-}
-.button:hover::after{
-  transform: scale(1, 1);
-}
 .button::first-letter{
   text-transform: uppercase;
 }
@@ -61,9 +55,6 @@
   background-color: $white;
   border-radius: rem(1);
 }
-.button:hover span::before{
-  background-color: $accent;
-}
 .button span::after{
   content: "";
   position: absolute;
@@ -75,6 +66,17 @@
   background-color: $white;
   border-radius: rem(1);
 }
-.button:hover span::after{
-  background-color: $accent;
+@media (hover){
+  .button:hover{
+    color: $accent;
+  }
+  .button:hover::after{
+    transform: scale(1, 1);
+  }
+  .button:hover span::before{
+    background-color: $accent;
+  }
+  .button:hover span::after{
+    background-color: $accent;
+  }
 }
