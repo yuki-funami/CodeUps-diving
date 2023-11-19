@@ -11,6 +11,7 @@
   border: 1px solid $accent;
   border-radius: 50%;
   z-index: 2;
+  transition: background-color 0.2s;
   @include mq("md"){
     bottom: rem(20);
     right: rem(20);
@@ -59,7 +60,7 @@
 }
 @media (hover){
   .to-top:hover{
-    background-color: rgba($color: $accent, $alpha: 0.8);
+    background-color: rgba($color: $accent, $alpha: 1);
     border: 1px solid $white;
   }
   .to-top:hover::before{

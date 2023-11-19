@@ -10,11 +10,9 @@
   column-count: 2;
   column-gap: rem(34);
   padding-left: rem(23);
-  // margin-top: rem(41.6);
   @include mq("md"){
     column-count: 4;
     column-gap: rem(41.6);
-    // margin-top: rem(11.2);
   }
 }
 .footer-nav__item{

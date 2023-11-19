@@ -12,7 +12,7 @@
     content: "";
     position: absolute;
     bottom: -20.5%;
-    right: calc(50% - 39.8rem);
+    right: max(calc(50% - 39.8rem), 10px);
     width: rem(194);
     height: rem(181);
     background-image: url(../images/svg/coral_sea-anemone.svg);

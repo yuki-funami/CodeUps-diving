@@ -21,7 +21,7 @@
   background-size: cover;
   @include mq("md"){
     top: -10%;
-    right: calc(50% - 41.9rem);
+    right: max(calc(50% - 41.9rem), 10px);
     width: rem(301);
     height: rem(138);
   }

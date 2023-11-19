@@ -22,6 +22,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: rem(1440);
+  width: 100%;
   height: inherit;
   padding-left: rem(15);
   padding-right: rem(15);
@@ -30,7 +32,6 @@
   @include mq("md"){
     padding-left: rem(40);
     padding-right: rem(40);
-    max-width: 1440px;
   }
 }
 .header__logo{
