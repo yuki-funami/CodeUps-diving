@@ -1,34 +1,36 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+
+  /*==========================
+  # loading-animation
+  ==========================*/
+  $(window).on('load', function () {
+    $('.loader__content').fadeIn(600);
+    $('.loader__content').delay(1200).fadeOut(600);
+    $('.loader').delay(1200).fadeOut(600);
+    setTimeout(function () {
+        $('.loader__content').fadeOut(600);
+        $('.loader').fadeOut(600);
+      },
+      5000
+    );
+  });
+
+
   /*==========================
   # hamburger
   ==========================*/
-  $(function () {
-    $('.js-hamburger').on('click', function () {
-      let scrollPosition = window.scrollY || window.pageYOffset;
-      $('body').toggleClass('is-fixed');
-      $('.js-header').toggleClass('is-open');
-      if ($('body').hasClass('is-fixed')) {
-        $('body').css('top', '-' + scrollPosition + 'px');
-      } else {
-        let scrollPos = parseInt($('body').css('top'));
-        $('body').css('top', '');
-        window.scrollTo(0, -scrollPos);
-      }
-    });
-  
-    $('.js-background').on('click', function () {
-      let scrollPosition = window.scrollY || window.pageYOffset;
-      $('body').toggleClass('is-fixed');
-      $('.js-header').toggleClass('is-open');
-      if ($('body').hasClass('is-fixed')) {
-        $('body').css('top', '-' + scrollPosition + 'px');
-      } else {
-        let scrollPos = parseInt($('body').css('top'));
-        $('body').css('top', '');
-        window.scrollTo(0, -scrollPos);
-      }
-    });
+  $('.js-hamburger').on('click', function () {
+    let scrollPosition = window.scrollY || window.pageYOffset;
+    $('body').toggleClass('is-fixed');
+    $('.js-header').toggleClass('is-open');
+    if ($('body').hasClass('is-fixed')) {
+      $('body').css('top', '-' + scrollPosition + 'px');
+    } else {
+      let scrollPos = parseInt($('body').css('top'));
+      $('body').css('top', '');
+      window.scrollTo(0, -scrollPos);
+    }
     return false;
   });
 
@@ -36,6 +38,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $('a').on('click', function () {
     if ($('body').hasClass('is-fixed')) {
       $('body').css('top', '');
+      $('body').removeClass('is-fixed');
+      $('.js-header').removeClass('is-open');
+    }
+    return false;
+  });
+
+  // spからpcに画面幅が切り替わった際に、sp-navを閉じる
+  $(window).resize(function () {
+    let windowWidth = $(window).width();
+    let pointWidth = 767;
+    if (pointWidth < windowWidth) {
       $('body').removeClass('is-fixed');
       $('.js-header').removeClass('is-open');
     }
@@ -156,7 +169,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         counter = 1;
       }
     });
-    return false;
   });
 
   /*==========================
