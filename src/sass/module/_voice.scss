@@ -1,10 +1,8 @@
 @use "global" as *;
 
 .voice{
-  margin-top: rem(80);
   @include mq("md"){
     position: relative;
-    margin-top: rem(140);
   }
 }
 .voice::before{
@@ -13,7 +11,7 @@
     position: absolute;
     top: -19.2%;
     left: 7%;
-    left: max(calc(50% - 38.7rem), 10px);
+    left: max(calc(50% - 38.7rem), rem(16));
     width: rem(301);
     height: rem(138);
     background-image: url(../images/svg/sea-goldie_accent.svg);
@@ -27,7 +25,7 @@
     content: "";
     position: absolute;
     bottom: -10.6%;
-    right: max(calc(50% - 33.7rem), 10px);
+    right: max(calc(50% - 33.7rem), rem(16));
     width: rem(71);
     height: rem(162);
     background-image: url(../images/svg/seahorse.svg);
@@ -45,26 +43,7 @@
 .voice__cards{
   margin-top: rem(40);
   @include mq("md"){
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin-top: rem(25.6);
-  }
-}
-.voice__card:not(:first-child){
-  margin-top: rem(40);
-  @include mq("md"){
-    margin-top: 0;
-  }
-}
-.voice__card:nth-child(n + 3){
-  @include mq("md"){
-    margin-top: rem(40);
-  }
-}
-@media (hover){
-  .voice__card:hover{
-    opacity: 0.7;
   }
 }
 .voice__button{

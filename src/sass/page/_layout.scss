@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.layout-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.layout-campaign{
+  margin-top: rem(40);
+  @include mq("md"){
+    margin-top: rem(120);
+  }
+}
+.layout-about{
+  margin-top: rem(80);
+  @include mq("md"){
+    margin-top: rem(140);
+  }
+}
+.layout-information{
+  margin-top: rem(70);
+  @include mq("md"){
+    margin-top: rem(140);
+  }
+}
+.layout-blog{
+  margin-top: rem(80);
+  @include mq("md"){
+    margin-top: 0;
+  }
+}
+.layout-voice{
+  margin-top: rem(80);
+  @include mq("md"){
+    margin-top: rem(140);
+  }
+}
+.layout-price{
+  margin-top: rem(80);
+  @include mq("md"){
+    margin-top: rem(140);
+  }
+}
+.layout-contact{
+  margin-top: rem(80);
+  @include mq("md"){
+    margin-top: rem(140);
+  }
+}
+.layout-footer{
+  margin-top: rem(98);
+  @include mq("md"){
+    margin-top: rem(160);
+  }
+}

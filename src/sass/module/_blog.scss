@@ -1,11 +1,9 @@
 @use "global" as *;
 
 .blog{
-  margin-top: rem(80);
   @include mq("md"){
     position: relative;
     padding-top: rem(100);
-    margin-top: 0;
   }
 }
 .blog::before{
@@ -13,7 +11,7 @@
     content: "";
     position: absolute;
     top: 2.9%;
-    left: max(calc(50% - 38.8rem), 10px);
+    left: max(calc(50% - 38.8rem), rem(16));
     width: rem(437);
     height: rem(201);
     background-image: url(../images/svg/sea-goldie.svg);
@@ -53,45 +51,7 @@
 .blog__cards{
   margin-top: rem(24);
   @include mq("md"){
-    display: flex;
-    flex-wrap: wrap;
     margin-top: rem(76.8);
-  }
-}
-.blog__card{
-  @include mq("md"){
-    margin-left: vw(1080, 30);
-  }
-}
-.blog__card:first-child{
-  @include mq("md"){
-    margin-left: 0;
-  }
-}
-.blog__card:not(:first-child){
-  margin-top: rem(40);
-  @include mq("md"){
-    margin-top: 0;
-  }
-}
-.blog__card:nth-child(3n + 1){
-  @include mq("md"){
-    margin-left: 0;
-  }
-}
-.blog__card:nth-child(n + 4){
-  @include mq("md"){
-    margin-top: rem(40);
-  }
-}
-@media (hover){
-  .blog__card:hover{
-    .blog-card__inner{
-      opacity: 0.7;
-    }
-    .blog-card__image img{
-      transform: scale(1.1);
-    }
   }
 }
 .blog__button{

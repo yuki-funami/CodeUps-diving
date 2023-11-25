@@ -4,12 +4,10 @@
   background-color: $pastel;
   padding-top: rem(80);
   padding-bottom: rem(80);
-  margin-top: rem(80);
   @include mq("md"){
     position: relative;
     padding-top: rem(99.2);
     padding-bottom: rem(100);
-    margin-top: rem(140);
   }
 }
 .price::before{
@@ -17,7 +15,7 @@
     content: "";
     position: absolute;
     bottom: 5.1%;
-    left: max(calc(50% - 38.8rem), 10px);
+    left: max(calc(50% - 38.8rem), rem(16));
     width: rem(437);
     height: rem(201);
     background-image: url(../images/svg/sea-goldie_accent.svg);

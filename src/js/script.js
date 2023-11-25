@@ -62,9 +62,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   new Swiper('.js-mv-swiper', {
     loop: true,
     loopedSlides: 3,
-    speed: 500,
+    effect: 'fade',
+    speed: 1800,
     autoplay: {
-      delay: 5000,
+      delay: 10000,
       disableOnInteraction: false,
       waitForTransition: false,
     },

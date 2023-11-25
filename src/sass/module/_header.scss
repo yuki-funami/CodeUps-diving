@@ -1,14 +1,9 @@
 @use "global" as *;
 
 .header{
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: rem(80);
-  background-color: $black;
-  opacity: 0.68;
-  z-index: 10;
+  background-color: rgba($color: $black, $alpha: 0.68);
   transition: background-color 0.35s;
   @include mq("md"){
     height: rem(90);
