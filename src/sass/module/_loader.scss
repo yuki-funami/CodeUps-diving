@@ -9,7 +9,83 @@
   background-color: $white;
   z-index: 9999;
 }
-.loader__content{
+.loader__image{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+}
+.loader__image-wrap{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+  height: inherit;
+}
+.loader__left-image{
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  width: 50vw;
+  height: inherit;
+  animation: loadingUpLeft 1s cubic-bezier(0.76, 0, 0.24, 1) forwards ;
+  @keyframes loadingUpLeft{
+    0%{
+      top: 100%;
+      left: 10%;
+      width: 30vw;
+    }
+    100%{
+      top: 0;
+      left: 0;
+      width: 50vw;
+    }
+  }
+}
+.loader__right-image{
+  position: absolute;
+  top: 100%;
+  right: 15%;
+  width: 50vw;
+  height: inherit;
+  animation: loadingUpRight 1s cubic-bezier(0.87, 0, 0.13, 1) 0.1s forwards ;
+  @keyframes loadingUpRight{
+    0%{
+      top: 100%;
+      right: 15%;
+      width: 20vw;
+    }
+    100%{
+      top: 0;
+      right: 0;
+      width: 50vw;
+    }
+  }
+}
+.loader__left-image img{
+  aspect-ratio: 345 / 227;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: right;
+  @include mq("md"){
+    aspect-ratio: 720 / 768;
+  }
+}
+.loader__right-image img{
+    aspect-ratio: 345 / 227;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: left;
+    @include mq("md"){
+      aspect-ratio: 720 / 768;
+    }
+}
+.loader__title-wrap{
   display: none;
   position: absolute;
   top: 50%;
@@ -41,25 +117,7 @@
   font-family: $english-font-family;
   text-align: center;
 }
-
-// 以下、調整中
-// .loader__image-box{
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-// .loader__image{
-//   // width: 100%;
-//   @include mq("md"){
-//     width: 50vw;
-//   }
-// }
-// .loader__image img{
-//   // aspect-ratio: 345 / 227;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-//   @include mq("md"){
-//     aspect-ratio: 720 / 768;
-//   }
-// }
+.is-loaded > .loader__title,
+.is-loaded > .loader__text{
+  color: $white;
+}

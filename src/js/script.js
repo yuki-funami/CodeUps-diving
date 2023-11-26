@@ -1,21 +1,29 @@
-
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
   /*==========================
   # loading-animation
   ==========================*/
   $(window).on('load', function () {
-    $('.loader__content').fadeIn(600);
-    $('.loader__content').delay(1200).fadeOut(600);
-    $('.loader').delay(1200).fadeOut(600);
+    let title = $('.loader__title-wrap');
+    let mv = $('.loader__image');
+
+    title.fadeIn(1000);
+    title.delay(800).fadeOut(1000);
+    mv.delay(2800).fadeIn('fast');
+    title.delay(2800).queue(function () {
+      $(this).addClass('is-loaded').dequeue();
+    });
+    title.fadeIn(1000);
+    $('.js-loader').delay(9000).fadeOut(1000);
+    
     setTimeout(function () {
-        $('.loader__content').fadeOut(600);
-        $('.loader').fadeOut(600);
-      },
-      5000
+      title.fadeOut(1000);
+      mv.fadeOut(1000);
+      $('.js-loader').fadeOut(1000);
+    },
+    12000
     );
   });
-
 
   /*==========================
   # hamburger
@@ -63,9 +71,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     loop: true,
     loopedSlides: 3,
     effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     speed: 1800,
     autoplay: {
-      delay: 10000,
+      delay: 8000,
       disableOnInteraction: false,
       waitForTransition: false,
     },
@@ -134,15 +145,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   /*==========================
   # color-box
   ==========================*/
-  //要素の取得とスピードの設定
-  const box = $('.color-box');
-  let speed = 700;
-
   //.color-boxの付いた全ての要素に対して下記の処理を行う
-  box.each(function () {
+  $('.color-box').each(function () {
     $(this).append('<div class="color"></div>');
     const color = $(this).find($('.color'));
     const image = $(this).find('img');
+    let speed = 700;
     let counter = 0;
 
     image.css('opacity', '0');
