@@ -31,18 +31,37 @@
   left: 10%;
   width: 50vw;
   height: inherit;
-  animation: loadingUpLeft 1s cubic-bezier(0.76, 0, 0.24, 1) forwards ;
-  @keyframes loadingUpLeft{
-    0%{
-      top: 100%;
-      left: 10%;
-      width: 30vw;
-    }
-    100%{
-      top: 0;
-      left: 0;
-      width: 50vw;
-    }
+  animation-name: loadingUpLeftSp;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+  animation-fill-mode: forwards;
+  @include mq("md") {
+    animation-name: loadingUpLeftPc;
+    animation-duration: 1.4s;
+    animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes loadingUpLeftSp{
+  0%{
+    top: 100%;
+    left: 0;
+  }
+  100%{
+    top: 0;
+    left: 0;
+  }
+}
+@keyframes loadingUpLeftPc{
+  0%{
+    top: 100%;
+    left: 10%;
+    width: 30vw;
+  }
+  100%{
+    top: 0;
+    left: 0;
+    width: 50vw;
   }
 }
 .loader__right-image{
@@ -51,18 +70,39 @@
   right: 15%;
   width: 50vw;
   height: inherit;
-  animation: loadingUpRight 1s cubic-bezier(0.87, 0, 0.13, 1) 0.1s forwards ;
-  @keyframes loadingUpRight{
-    0%{
-      top: 100%;
-      right: 15%;
-      width: 20vw;
-    }
-    100%{
-      top: 0;
-      right: 0;
-      width: 50vw;
-    }
+  animation-name: loadingUpRightSp;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+  animation-delay: 0.08s;
+  animation-fill-mode: forwards;
+  @include mq("md") {
+    animation-name: loadingUpRightPc;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes loadingUpRightSp{
+  0%{
+    top: 100%;
+    right: 0;
+  }
+  100%{
+    top: 0;
+    right: 0;
+  }
+}
+@keyframes loadingUpRightPc{
+  0%{
+    top: 100%;
+    right: 15%;
+    width: 20vw;
+  }
+  100%{
+    top: 0;
+    right: 0;
+    width: 50vw;
   }
 }
 .loader__left-image img{
