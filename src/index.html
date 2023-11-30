@@ -37,12 +37,14 @@
   <div class="loader js-loader">
     <div class="loader__image">
       <div class="loader__image-wrap">
-        <figure class="loader__left-image">
-          <img src="./assets/images/common/mv-left.png" alt="">
-        </figure>
-        <figure class="loader__right-image">
-          <img src="./assets/images/common/mv-right.png" alt="">
-        </figure>
+        <picture class="loader__left-image">
+          <source media="(max-width: 767px)" srcset="./assets/images/common/mv-left-sp.png">
+          <img src="./assets/images/common/mv-left-pc.png" alt="" width="720" height="768">
+        </picture>
+        <picture class="loader__right-image">
+          <source media="(max-width: 767px)" srcset="./assets/images/common/mv-right-sp.png">
+          <img src="./assets/images/common/mv-right-pc.png" alt="" width="720" height="768">
+        </picture>
       </div>
     </div>
     <div class="loader__title-wrap">
