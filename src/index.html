@@ -171,16 +171,25 @@
 
   <main>
     <div class="mv js-mv">
-      <div class="swiper js-mv-swiper">
+      <div class="mv__slider swiper js-mv-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="mv__image-1"></div>
+            <picture class="mv__image">
+              <source media="(max-width: 767px)" srcset="./assets/images/common/mv1-sp.png">
+              <img src="./assets/images/common/mv1-pc.png" alt="" width="1440" height="768">
+            </picture>
           </div>
           <div class="swiper-slide">
-            <div class="mv__image-2"></div>
+            <picture class="mv__image">
+              <source media="(max-width: 767px)" srcset="./assets/images/common/mv2-sp.png">
+              <img src="./assets/images/common/mv2-pc.png" alt="" width="1440" height="768">
+            </picture>
           </div>
           <div class="swiper-slide">
-            <div class="mv__image-3"></div>
+            <picture class="mv__image">
+              <source media="(max-width: 767px)" srcset="./assets/images/common/mv3-sp.png">
+              <img src="./assets/images/common/mv3-pc.png" alt="" width="1440" height="768">
+            </picture>
           </div>
         </div>
         <!-- /.swiper-wrapper -->
@@ -195,7 +204,7 @@
 
     <section id="campaign" class="campaign layout-campaign">
       <div class="campaign__inner inner">
-        <div class="section-header">
+        <div class="campaign__header section-header">
           <p class="section-header__title">campaign</p>
           <h2 class="section-header__subtitle">キャンペーン</h2>
         </div>
@@ -205,7 +214,7 @@
             <div class="swiper-slide">
               <a href="" class="campaign__card campaign-card">
                 <figure class="campaign-card__image">
-                  <img src="./assets/images/common/campaign1.png" alt="campaign1" loading="lazy">
+                  <img src="./assets/images/common/Numerous-colorful-tropical-fish.png" alt="数多くのカラフルな熱帯魚" loading="lazy">
                 </figure>
                 <div class="campaign-card__content">
                   <div class="campaign-card__category"><span>ライセンス講習</span></div>
@@ -221,7 +230,7 @@
             <div class="swiper-slide">
               <a href="" class="campaign__card campaign-card">
                 <figure class="campaign-card__image">
-                  <img src="./assets/images/common/campaign2.png" alt="campaign2" loading="lazy">
+                  <img src="./assets/images/common/Emerald-green-white-beach-and-boats.png" alt="エメラルドグリーンの白浜と船" loading="lazy">
                 </figure>
                 <div class="campaign-card__content">
                   <div class="campaign-card__category"><span>体験ダイビング</span></div>
@@ -237,7 +246,7 @@
             <div class="swiper-slide">
               <a href="" class="campaign__card campaign-card">
                 <figure class="campaign-card__image">
-                  <img src="./assets/images/common/campaign3.png" alt="campaign3" loading="lazy">
+                  <img src="./assets/images/common/School-of-jellyfish.png" alt="クラゲの群れ" loading="lazy">
                 </figure>
                 <div class="campaign-card__content">
                   <div class="campaign-card__category"><span>体験ダイビング</span></div>
@@ -253,7 +262,7 @@
             <div class="swiper-slide">
               <a href="" class="campaign__card campaign-card">
                 <figure class="campaign-card__image">
-                  <img src="./assets/images/common/campaign4.png" alt="campaign4" loading="lazy">
+                  <img src="./assets/images/common/Divers-on-the-sea-surface.png" alt="水面に浮かぶダイバーたち" loading="lazy">
                 </figure>
                 <div class="campaign-card__content">
                   <div class="campaign-card__category"><span>ファンダイビング</span></div>
@@ -275,7 +284,7 @@
         <!-- .swiper-button-xxx -->
 
         <div class="campaign__button">
-          <a href="#" class="button">view more<span></span></a>
+          <a href="./archive-campaign.html" class="button">view more<span></span></a>
         </div>
       </div>
       <!-- /.campaign_inner .inner -->
@@ -284,14 +293,14 @@
 
     <section id="about" class="about layout-about">
       <div class="about__inner inner">
-        <div class="section-header">
+        <div class="about__header section-header">
           <p class="section-header__title section-header__title--about-us">about us</p>
           <h2 class="section-header__subtitle">私たちについて</h2>
         </div>
         <!-- /.section-header -->
         <div class="about__images">
-          <img src="./assets/images/common/about2.png" alt="アライグマバタフライフィッシュ" loading="lazy">
-          <img src="./assets/images/common/about1.png" alt="青空とシーサー" loading="lazy">
+          <img src="./assets/images/common/Raccoon-butterflyfish.png" alt="チョウハン" loading="lazy">
+          <img src="./assets/images/common/Shisa-on-the-roof.png" alt="屋根上のシーサー" loading="lazy">
         </div>
         <!-- /.about__images -->
         <div class="about__content">
@@ -315,15 +324,15 @@
 
     <section id="information" class="information layout-information">
       <div class="information__inner inner">
-        <div class="section-header">
+        <div class="information__header section-header">
           <p class="section-header__title">information</p>
           <h2 class="section-header__subtitle">ダイビング情報</h2>
         </div>
         <!-- /.section-header -->
         <div class="information__body">
           <figure class="information__image">
-            <div class="color-box">
-              <img src="./assets/images/common/information.png" alt="ゴールデンバタフライフィッシュとサンゴ礁" loading="lazy">
+            <div class="color-box js-color-box">
+              <img src="./assets/images/common/top-information.png" alt="ゴールデンバタフライフィッシュとサンゴ礁" loading="lazy">
             </div>
             <!-- /.color-box -->
           </figure>
@@ -346,7 +355,7 @@
 
     <section id="blog" class="blog layout-blog">
       <div class="blog__inner inner">
-        <div class="section-header">
+        <div class="blog__header section-header">
           <p class="section-header__title section-header__title--white">blog</p>
           <h2 class="section-header__subtitle section-header__subtitle--white">ブログ</h2>
         </div>
@@ -355,7 +364,7 @@
           <a href="" class="blog-cards__item blog-card">
             <div class="blog-card__inner">
               <figure class="blog-card__image">
-                <img src="./assets/images/common/blog1.png" alt="サンゴ" width="301" height="201" loading="lazy">
+                <img src="./assets/images/common/Red-coral.png" alt="赤いサンゴ" width="301" height="201" loading="lazy">
               </figure>
               <div class="blog-card__content">
                 <time datetime="2023-11-17" class="blog-card__time">2023.11/17</time>
@@ -368,7 +377,7 @@
           <a href="" class="blog__card blog-card">
             <div class="blog-card__inner">
               <figure class="blog-card__image">
-                <img src="./assets/images/common/blog2.png" alt="ウミガメ" width="301" height="201" loading="lazy">
+                <img src="./assets/images/common/Sea-turtle.png" alt="ウミガメ" width="301" height="201" loading="lazy">
               </figure>
               <div class="blog-card__content">
                 <time datetime="2023-11-17" class="blog-card__time">2023.11/17</time>
@@ -381,7 +390,7 @@
           <a href="" class="blog__card blog-card">
             <div class="blog-card__inner">
               <figure class="blog-card__image">
-                <img src="./assets/images/common/blog3.png" alt="カクレクマノミ" width="301" height="201" loading="lazy">
+                <img src="./assets/images/common/Clownfish.png" alt="カクレクマノミ" width="301" height="201" loading="lazy">
               </figure>
               <div class="blog-card__content">
                 <time datetime="2023-11-17" class="blog-card__time">2023.11/17</time>
@@ -403,7 +412,7 @@
     
     <section id="voice" class="voice layout-voice">
       <div class="voice__inner inner">
-        <div class="section-header">
+        <div class="voice__header section-header">
           <p class="section-header__title">voice</p>
           <h2 class="section-header__subtitle">お客様の声</h2>
         </div>
@@ -422,8 +431,8 @@
                 </div>
                 <!-- /.voice-card__heading -->
                 <figure class="voice-card__image">
-                  <div class="color-box">
-                    <img src="./assets/images/common/voice1.png" alt="女性" loading="lazy">
+                  <div class="color-box js-color-box">
+                    <img src="./assets/images/common/voice1.png" alt="女性の顔" loading="lazy">
                   </div>
                   <!-- /.color-box -->
                 </figure>
@@ -450,8 +459,8 @@
                 </div>
                 <!-- /.voice-card__heading -->
                 <figure class="voice-card__image">
-                  <div class="color-box">
-                    <img src="./assets/images/common/voice2.png" alt="男性" loading="lazy">
+                  <div class="color-box js-color-box">
+                    <img src="./assets/images/common/voice2.png" alt="男性の顔" loading="lazy">
                   </div>
                   <!-- /.color-box -->
                 </figure>
@@ -477,17 +486,17 @@
 
     <section id="price" class="price layout-price">
       <div class="price__inner inner">
-        <div class="section-header">
+        <div class="price__header section-header">
           <p class="section-header__title">price</p>
           <h2 class="section-header__subtitle">料金一覧</h2>
         </div>
         <!-- /.section-header -->
         <div class="price__body">
           <figure class="price__image">
-            <div class="color-box">
+            <div class="color-box js-color-box">
               <picture>
-                <source media="(max-width: 767px)" srcset="./assets/images/common/price-sp.png">
-                <img src="./assets/images/common/price-pc.png" alt="サンゴ礁と赤い魚の群れ" width="492" height="746" loading="lazy">
+                <source media="(max-width: 767px)" srcset="./assets/images/common/top-price-sp.png">
+                <img src="./assets/images/common/Coral-reef-and-school-of-red-fish.png" alt="サンゴ礁と赤い魚の群れ" width="492" height="746" loading="lazy">
               </picture>
             </div>
             <!-- /.color-box -->
@@ -594,7 +603,7 @@
           </div>
           <!-- /.contact__left-body .contact-left -->
           <div class="contact__right-body contact-right">
-            <div class="section-header">
+            <div class="contact-right__header section-header">
               <p class="section-header__title section-header__title--large">contact</p>
               <h2 class="section-header__subtitle section-header__subtitle--large">お問い合わせ</h2>
             </div>
@@ -614,7 +623,7 @@
   </main>
   <!-- /.main -->
 
-  <footer class="footer layout-footer js-footer">
+  <footer class="footer layout-footer">
     <div class="footer__inner inner">
       <div class="footer__upper">
         <figure class="footer__logo">

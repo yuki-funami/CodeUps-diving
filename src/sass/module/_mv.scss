@@ -5,29 +5,9 @@
   width: 100vw;
   height: 100vh;
 }
-.mv__image-1, .mv__image-2, .mv__image-3{
+.mv__image{
   width: inherit;
   height: inherit;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.mv__image-1{
-  background-image: url(../images/common/mv1-sp.jpg);
-  @include mq("md"){
-    background-image: url(../images/common/mv1-pc.jpg);
-  }
-}
-.mv__image-2{
-  background-image: url(../images/common/mv2-sp.jpg);
-  @include mq("md"){
-    background-image: url(../images/common/mv2-pc.jpg);
-  }
-}
-.mv__image-3{
-  background-image: url(../images/common/mv3-sp.jpg);
-  @include mq("md"){
-    background-image: url(../images/common/mv3-pc.jpg);
-  }
 }
 .mv__content{
   position: absolute;

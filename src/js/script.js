@@ -133,7 +133,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(window).on('scroll', function () {
     const scrollHeight = $(document).height();
     const scrollPosition = $(window).height() + $(window).scrollTop();
-    const footHeight = $(".js-footer").innerHeight();
+    const footHeight = $(".footer").innerHeight();
     if (scrollHeight - scrollPosition <= footHeight) {
       toTop.addClass('is-active');
     } else {
@@ -145,8 +145,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   /*==========================
   # color-box
   ==========================*/
-  //.color-boxの付いた全ての要素に対して下記の処理を行う
-  $('.color-box').each(function () {
+  //.js-color-boxの付いた全ての要素に対して下記の処理を行う
+  $('.js-color-box').each(function () {
     $(this).append('<div class="color"></div>');
     const color = $(this).find($('.color'));
     const image = $(this).find('img');

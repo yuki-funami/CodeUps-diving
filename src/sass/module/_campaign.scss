@@ -25,3 +25,78 @@
     margin-top: rem(64);
   }
 }
+
+// swiper
+.campaign{
+  .swiper{
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide{
+    display: flex;
+    height: auto;
+  }
+  .swiper-button-prev{
+    display: none;
+    @include mq("md"){
+      display: block;
+      position: absolute;
+      top: 3.85%;
+      left: 76.55%;
+      width: rem(80);
+      height: rem(80);
+      background-color: rgba($color: $white, $alpha: 0.8);
+      border: 1px solid $accent;
+      border-radius: 50%;
+      z-index: 1;
+    }
+  }
+  .swiper-button-next{
+    display: none;
+    @include mq("md"){
+      display: block;
+      position: absolute;
+      top: 3.85%;
+      left: 90.7%;
+      width: rem(80);
+      height: rem(80);
+      background-color: rgba($color: $white, $alpha: 0.8);
+      border: 1px solid $accent;
+      border-radius: 50%;
+      z-index: 1;
+    }
+  }
+  .swiper-button-prev::before, .swiper-button-next::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(40);
+    height: rem(1);
+    background-color: $accent;
+    border-radius: rem(1);
+  }
+  .swiper-button-prev::after{
+    content: "";
+    position: absolute;
+    top: 46%;
+    left: rem(18);
+    transform: rotate(-45deg);
+    width: rem(8);
+    height: rem(1);
+    background-color: $accent;
+    border-radius: rem(1);
+  }
+  .swiper-button-next::after{
+    content: "";
+    position: absolute;
+    top: 46%;
+    right: rem(18);
+    transform: rotate(45deg);
+    width: rem(8);
+    height: rem(1);
+    background-color: $accent;
+    border-radius: rem(1);
+  }
+}
