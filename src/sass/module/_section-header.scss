@@ -1,67 +1,67 @@
 @use "global" as *;
 
-.section-header{
+.section-header {
   text-align: center;
 }
-.section-header__title{
+.section-header__title {
   text-transform: capitalize;
   font-size: rem(32);
   font-weight: $regular;
   line-height: calc(40 /32);
   font-family: $english-font-family;
-  @include mq("md"){
+  @include mq("md") {
     font-size: rem(40);
     line-height: 1;
   }
 }
-.section-header__title::first-letter{
+.section-header__title::first-letter {
   color: $accent;
 }
-.section-header__title--white{
+.section-header__title--white {
   color: $black;
-  @include mq("md"){
+  @include mq("md") {
     color: $white;
   }
 }
-.section-header__title--white::first-letter{
+.section-header__title--white::first-letter {
   color: $accent;
-  @include mq("md"){
+  @include mq("md") {
     color: $pastel;
   }
 }
-.section-header__title--about-us{
+.section-header__title--about-us {
   text-transform: none;
 }
-.section-header__title--about-us::first-letter{
+.section-header__title--about-us::first-letter {
   text-transform: uppercase;
 }
-.section-header__title--large{
+.section-header__title--large {
   font-size: rem(80);
   line-height: 1;
   margin-left: rem(-9);
-  @include mq("md"){
+  @include mq("md") {
     font-size: rem(80);
     margin-left: rem(-3.2);
   }
 }
-.section-header__subtitle{
+.section-header__subtitle {
   color: $accent;
   font-size: rem(12);
   font-weight: $regular;
   line-height: calc(26 / 12);
-  @include mq("md"){
+  @include mq("md") {
     margin-top: rem(3);
   }
 }
-.section-header__subtitle--white{
+.section-header__subtitle--white {
   color: $accent;
-  @include mq("md"){
+  @include mq("md") {
     color: $white;
   }
 }
-.section-header__subtitle--large{
+.section-header__subtitle--large {
   margin-top: rem(-11);
-  @include mq("md"){
+  @include mq("md") {
     margin-top: rem(-16);
   }
 }

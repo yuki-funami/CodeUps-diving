@@ -1,13 +1,13 @@
 @use "global" as *;
 
-.blog{
-  @include mq("md"){
+.blog {
+  @include mq("md") {
     position: relative;
     padding-top: rem(100);
   }
 }
-.blog::before{
-  @include mq("md"){
+.blog::before {
+  @include mq("md") {
     content: "";
     position: absolute;
     top: 2.9%;
@@ -19,8 +19,8 @@
     background-size: cover;
   }
 }
-.blog::after{
-  @include mq("md"){
+.blog::after {
+  @include mq("md") {
     content: "";
     position: absolute;
     top: 0;
@@ -33,32 +33,32 @@
     z-index: -1;
   }
 }
-.blog .blog__inner{
+.blog .blog__inner {
   padding-left: rem(21);
   padding-right: rem(21);
-  @include mq("md"){
+  @include mq("md") {
     padding-left: rem(25.6);
     padding-right: rem(25.6);
   }
 }
-.blog__inner{
+.blog__inner {
   max-width: rem(600);
   width: 100%;
-  @include mq("md"){
+  @include mq("md") {
     max-width: $inner + strip-unit($padding-pc) * 2;
   }
 }
-.blog__cards{
+.blog__cards {
   margin-top: rem(24);
-  @include mq("md"){
+  @include mq("md") {
     margin-top: rem(76.8);
   }
 }
-.blog__button{
+.blog__button {
   text-align: center;
   padding-bottom: rem(3.2);
   margin-top: rem(38.4);
-  @include mq("md"){
+  @include mq("md") {
     margin-top: rem(80);
   }
 }

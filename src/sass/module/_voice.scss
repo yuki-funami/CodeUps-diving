@@ -1,16 +1,15 @@
 @use "global" as *;
 
-.voice{
-  @include mq("md"){
+.voice {
+  @include mq("md") {
     position: relative;
   }
 }
-.voice::before{
-  @include mq("md"){
+.voice::before {
+  @include mq("md") {
     content: "";
     position: absolute;
     top: -19.2%;
-    left: 7%;
     left: max(calc(50% - 38.7rem), rem(16));
     width: rem(301);
     height: rem(138);
@@ -20,8 +19,8 @@
     transform: scale(-1, 1);
   }
 }
-.voice::after{
-  @include mq("md"){
+.voice::after {
+  @include mq("md") {
     content: "";
     position: absolute;
     bottom: -10.6%;
@@ -33,24 +32,24 @@
     background-size: cover;
   }
 }
-.voice__inner{
+.voice__inner {
   max-width: rem(600);
   width: 100%;
-  @include mq("md"){
+  @include mq("md") {
     max-width: $inner + strip-unit($padding-pc) * 2;
   }
 }
-.voice__cards{
+.voice__cards {
   margin-top: rem(40);
-  @include mq("md"){
+  @include mq("md") {
     margin-top: rem(25.6);
   }
 }
-.voice__button{
+.voice__button {
   text-align: center;
   padding-bottom: rem(3.2);
   margin-top: rem(38.4);
-  @include mq("md"){
+  @include mq("md") {
     margin-top: rem(80);
   }
 }

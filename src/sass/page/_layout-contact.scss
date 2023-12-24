@@ -1,8 +1,14 @@
 @use "global" as *;
 
-.layout-contact{
+.layout-contact {
   margin-top: rem(80);
-  @include mq("md"){
+  @include mq("md") {
+    margin-top: rem(140);
+  }
+}
+.layout-contact--subpage {
+  margin-top: rem(107.2);
+  @include mq("md") {
     margin-top: rem(140);
   }
 }

@@ -27,9 +27,9 @@
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="./assets/js/jquery.inview.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="./assets/js/jquery.inview.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 
@@ -37,14 +37,22 @@
   <div class="loader js-loader">
     <div class="loader__image">
       <div class="loader__image-wrap">
-        <picture class="loader__left-image">
-          <source media="(max-width: 767px)" srcset="./assets/images/common/mv-left-sp.png">
-          <img src="./assets/images/common/mv-left-pc.png" alt="" width="720" height="768">
-        </picture>
-        <picture class="loader__right-image">
-          <source media="(max-width: 767px)" srcset="./assets/images/common/mv-right-sp.png">
-          <img src="./assets/images/common/mv-right-pc.png" alt="" width="720" height="768">
-        </picture>
+        <div class="loader__left-image">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./assets/images/common/mv-left-sp.webp" type="image/webp" width="375" height="667">
+            <source media="(max-width: 767px)" srcset="./assets/images/common/mv-left-sp.png" type="image/png" width="375" height="667">
+            <source srcset="./assets/images/common/mv-left-pc.webp" type="image/webp" width="720" height="768">
+            <img src="./assets/images/common/mv-left-pc.png" alt="" width="720" height="768" loading="eager" decoding="async">
+          </picture>
+        </div>
+        <div class="loader__right-image">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./assets/images/common/mv-right-sp.webp" type="image/webp" width="375" height="667">
+            <source media="(max-width: 767px)" srcset="./assets/images/common/mv-right-sp.png" type="image/png" width="375" height="667">
+            <source srcset="./assets/images/common/mv-right-pc.webp" type="image/webp" width="720" height="768">
+            <img src="./assets/images/common/mv-right-pc.png" alt="" width="720" height="768" loading="eager" decoding="async">
+          </picture>
+        </div>
       </div>
     </div>
     <div class="loader__title-wrap">
@@ -57,7 +65,7 @@
     <div class="header__inner">
       <h1 class="header__logo">
         <a class="header__logo-link" href="#">
-          <img src="./assets/images/svg/CodeUps_logo.svg" alt="CodeUps">
+          <img src="./assets/images/svg/CodeUps_logo.svg" alt="CodeUps" width="133" height="50" loading="eager" decoding="async">
         </a>
       </h1>
       <!-- /.header__logo -->
@@ -84,7 +92,7 @@
             </ul>
           </li>
           <li class="sp-nav__item">
-            <a href="#about">私たちについて</a>
+            <a href="#about-us">私たちについて</a>
           </li>
           <li class="sp-nav__item">
             <a href="#information">ダイビング情報</a>
@@ -141,7 +149,7 @@
             <a href="#campaign"><p>campaign</p><span>キャンペーン</span></a>
           </li>
           <li class="pc-nav__item">
-            <a href="#about"><p>about us</p><span>私たちについて</span></a>
+            <a href="#about-us"><p>about us</p><span>私たちについて</span></a>
           </li>
           <li class="pc-nav__item">
             <a href="#information"><p>information</p><span>ダイビング情報</span></a>
@@ -174,22 +182,44 @@
       <div class="mv__slider swiper js-mv-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <picture class="mv__image">
-              <source media="(max-width: 767px)" srcset="./assets/images/common/mv1-sp.png">
-              <img src="./assets/images/common/mv1-pc.png" alt="" width="1440" height="768">
-            </picture>
+            <div class="mv__image">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./assets/images/common/mv0-sp.webp" type="image/webp" width="375" height="667">
+                <source media="(max-width: 767px)" srcset="./assets/images/common/mv0-sp.png" type="image/png" width="375" height="667">
+                <source srcset="./assets/images/common/mv0-pc.webp" type="image/webp" width="1440" height="768">
+                <img src="./assets/images/common/mv0-pc.png" alt="ウミガメ" width="1440" height="768" loading="eager" decoding="async">
+              </picture>
+            </div>
           </div>
           <div class="swiper-slide">
-            <picture class="mv__image">
-              <source media="(max-width: 767px)" srcset="./assets/images/common/mv2-sp.png">
-              <img src="./assets/images/common/mv2-pc.png" alt="" width="1440" height="768">
-            </picture>
+            <div class="mv__image">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./assets/images/common/mv1-sp.webp" type="image/webp" width="375" height="667">
+                <source media="(max-width: 767px)" srcset="./assets/images/common/mv1-sp.png" type="image/png" width="375" height="667">
+                <source srcset="./assets/images/common/mv1-pc.webp" type="image/webp" width="1440" height="768">
+                <img src="./assets/images/common/mv1-pc.png" alt="ダイバーとウミガメ" width="1440" height="768" loading="eager" decoding="async">
+              </picture>
+            </div>
           </div>
           <div class="swiper-slide">
-            <picture class="mv__image">
-              <source media="(max-width: 767px)" srcset="./assets/images/common/mv3-sp.png">
-              <img src="./assets/images/common/mv3-pc.png" alt="" width="1440" height="768">
-            </picture>
+            <div class="mv__image">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./assets/images/common/mv2-sp.webp" type="image/webp" width="375" height="667">
+                <source media="(max-width: 767px)" srcset="./assets/images/common/mv2-sp.png" type="image/png" width="375" height="667">
+                <source srcset="./assets/images/common/mv2-pc.webp" type="image/webp" width="1440" height="768">
+                <img src="./assets/images/common/mv2-pc.png" alt="島と船" width="1440" height="768" loading="eager" decoding="async">
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="mv__image">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./assets/images/common/mv3-sp.webp" type="image/webp" width="375" height="667">
+                <source media="(max-width: 767px)" srcset="./assets/images/common/mv3-sp.png" type="image/png" width="375" height="667">
+                <source srcset="./assets/images/common/mv3-pc.webp" type="image/webp" width="1440" height="768">
+                <img src="./assets/images/common/mv3-pc.png" alt="白浜" width="1440" height="768" loading="eager" decoding="async">
+              </picture>
+            </div>
           </div>
         </div>
         <!-- /.swiper-wrapper -->
@@ -209,12 +239,15 @@
           <h2 class="section-header__subtitle">キャンペーン</h2>
         </div>
         <!-- /.section-header -->
-        <div class="swiper js-campaign-swiper campaign__slider">
+        <div class="swiper campaign__slider js-campaign-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a href="" class="campaign__card campaign-card">
                 <figure class="campaign-card__image">
-                  <img src="./assets/images/common/Numerous-colorful-tropical-fish.png" alt="数多くのカラフルな熱帯魚" loading="lazy">
+                  <picture>
+                    <source srcset="./assets/images/common/Numerous-colorful-tropical-fish.webp" type="image/webp" width="333" height="223">
+                    <img src="./assets/images/common/Numerous-colorful-tropical-fish.png" alt="数多くのカラフルな熱帯魚" width="333" height="223" loading="lazy" decoding="async">
+                  </picture>
                 </figure>
                 <div class="campaign-card__content">
                   <div class="campaign-card__category"><span>ライセンス講習</span></div>
@@ -230,7 +263,10 @@
             <div class="swiper-slide">
               <a href="" class="campaign__card campaign-card">
                 <figure class="campaign-card__image">
-                  <img src="./assets/images/common/Emerald-green-white-beach-and-boats.png" alt="エメラルドグリーンの白浜と船" loading="lazy">
+                  <picture>
+                    <source srcset="./assets/images/common/Emerald-green-white-beach-and-boats.webp" type="image/webp" width="333" height="223">
+                    <img src="./assets/images/common/Emerald-green-white-beach-and-boats.png" alt="エメラルドグリーンの白浜と船" width="333" height="223" loading="lazy" decoding="async">
+                  </picture>
                 </figure>
                 <div class="campaign-card__content">
                   <div class="campaign-card__category"><span>体験ダイビング</span></div>
@@ -246,7 +282,10 @@
             <div class="swiper-slide">
               <a href="" class="campaign__card campaign-card">
                 <figure class="campaign-card__image">
-                  <img src="./assets/images/common/School-of-jellyfish.png" alt="クラゲの群れ" loading="lazy">
+                  <picture>
+                    <source srcset="./assets/images/common/School-of-jellyfish.webp" type="image/webp" width="333" height="223">
+                    <img src="./assets/images/common/School-of-jellyfish.png" alt="クラゲの群れ" width="333" height="223" loading="lazy" decoding="async">
+                  </picture>
                 </figure>
                 <div class="campaign-card__content">
                   <div class="campaign-card__category"><span>体験ダイビング</span></div>
@@ -262,7 +301,10 @@
             <div class="swiper-slide">
               <a href="" class="campaign__card campaign-card">
                 <figure class="campaign-card__image">
-                  <img src="./assets/images/common/Divers-on-the-sea-surface.png" alt="水面に浮かぶダイバーたち" loading="lazy">
+                  <picture>
+                    <source srcset="./assets/images/common/Divers-on-the-sea-surface.webp" type="image/webp" width="333" height="223">
+                    <img src="./assets/images/common/Divers-on-the-sea-surface.png" alt="水面に浮かぶダイバーたち" width="333" height="223" loading="lazy" decoding="async">
+                  </picture>
                 </figure>
                 <div class="campaign-card__content">
                   <div class="campaign-card__category"><span>ファンダイビング</span></div>
@@ -291,36 +333,42 @@
     </section>
     <!-- /.campaign -->
 
-    <section id="about" class="about layout-about">
-      <div class="about__inner inner">
-        <div class="about__header section-header">
+    <section id="about-us" class="about-us layout-about-us">
+      <div class="about-us__inner inner">
+        <div class="about-us__header section-header">
           <p class="section-header__title section-header__title--about-us">about us</p>
           <h2 class="section-header__subtitle">私たちについて</h2>
         </div>
         <!-- /.section-header -->
-        <div class="about__images">
-          <img src="./assets/images/common/Raccoon-butterflyfish.png" alt="チョウハン" loading="lazy">
-          <img src="./assets/images/common/Shisa-on-the-roof.png" alt="屋根上のシーサー" loading="lazy">
+        <div class="about-us__images">
+          <picture>
+            <source srcset="./assets/images/common/Raccoon-butterflyfish.webp" type="image/webp" width="880" height="581">
+            <img src="./assets/images/common/Raccoon-butterflyfish.png" alt="チョウハン" width="880" height="581" loading="lazy" decoding="async">
+          </picture>
+          <picture>
+            <source srcset="./assets/images/common/Shisa-on-the-roof.webp" type="image/webp" width="400" height="606">
+            <img src="./assets/images/common/Shisa-on-the-roof.png" alt="屋根上のシーサー" width="400" height="606" loading="lazy" decoding="async">
+          </picture>
         </div>
-        <!-- /.about__images -->
-        <div class="about__content">
-          <div class="about__content-left">
-            <h3 class="about__title">Dive into<br>the Ocean</h3>
+        <!-- /.about-us__images -->
+        <div class="about-us__content">
+          <div class="about-us__content-left">
+            <h3 class="about-us__title">Dive&nbsp;into<br>the&nbsp;Ocean</h3>
           </div>
-          <div class="about__content-right">
-            <p class="about__text">
+          <div class="about-us__content-right">
+            <p class="about-us__text">
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-            <div class="about__button">
-              <a href="#" class="button">view more<span></span></a>
+            <div class="about-us__button">
+              <a href="./page-about-us.html" class="button">view more<span></span></a>
             </div>
           </div>
         </div>
-        <!-- /.about__content -->
+        <!-- /.about-us__content -->
       </div>
-      <!-- /.about__inner .inner -->
+      <!-- /.about-us__inner .inner -->
     </section>
-    <!-- /.about -->
+    <!-- /.about-us -->
 
     <section id="information" class="information layout-information">
       <div class="information__inner inner">
@@ -330,12 +378,15 @@
         </div>
         <!-- /.section-header -->
         <div class="information__body">
-          <figure class="information__image">
+          <div class="information__image">
             <div class="color-box js-color-box">
-              <img src="./assets/images/common/top-information.png" alt="ゴールデンバタフライフィッシュとサンゴ礁" loading="lazy">
+              <picture>
+                <source srcset="./assets/images/common/top-information.webp" type="image/webp" width="540" height="356">
+                <img src="./assets/images/common/top-information.png" alt="ゴールデンバタフライフィッシュとサンゴ礁" width="540" height="356" loading="lazy" decoding="async">
+              </picture>
             </div>
             <!-- /.color-box -->
-          </figure>
+          </div>
           <!-- /.information__image -->
           <div class="information__content">
             <h3 class="information__title">ライセンス講習</h3>
@@ -364,7 +415,10 @@
           <a href="" class="blog-cards__item blog-card">
             <div class="blog-card__inner">
               <figure class="blog-card__image">
-                <img src="./assets/images/common/Red-coral.png" alt="赤いサンゴ" width="301" height="201" loading="lazy">
+                <picture>
+                  <source srcset="./assets/images/common/Red-coral.webp" type="image/webp" width="301" height="201">
+                  <img src="./assets/images/common/Red-coral.png" alt="赤いサンゴ" width="301" height="201" loading="lazy" decoding="async">
+                </picture>
               </figure>
               <div class="blog-card__content">
                 <time datetime="2023-11-17" class="blog-card__time">2023.11/17</time>
@@ -377,7 +431,10 @@
           <a href="" class="blog__card blog-card">
             <div class="blog-card__inner">
               <figure class="blog-card__image">
-                <img src="./assets/images/common/Sea-turtle.png" alt="ウミガメ" width="301" height="201" loading="lazy">
+                <picture>
+                  <source srcset="./assets/images/common/Sea-turtle.webp" type="image/webp" width="301" height="201">
+                  <img src="./assets/images/common/Sea-turtle.png" alt="ウミガメ" width="301" height="201" loading="lazy" decoding="async">
+                </picture>
               </figure>
               <div class="blog-card__content">
                 <time datetime="2023-11-17" class="blog-card__time">2023.11/17</time>
@@ -390,7 +447,10 @@
           <a href="" class="blog__card blog-card">
             <div class="blog-card__inner">
               <figure class="blog-card__image">
-                <img src="./assets/images/common/Clownfish.png" alt="カクレクマノミ" width="301" height="201" loading="lazy">
+                <picture>
+                  <source srcset="./assets/images/common/Clownfish.webp" type="image/webp" width="301" height="201">
+                  <img src="./assets/images/common/Clownfish.png" alt="カクレクマノミ" width="301" height="201" loading="lazy" decoding="async">
+                </picture>
               </figure>
               <div class="blog-card__content">
                 <time datetime="2023-11-17" class="blog-card__time">2023.11/17</time>
@@ -432,7 +492,10 @@
                 <!-- /.voice-card__heading -->
                 <figure class="voice-card__image">
                   <div class="color-box js-color-box">
-                    <img src="./assets/images/common/voice1.png" alt="女性の顔" loading="lazy">
+                    <picture>
+                      <source srcset="./assets/images/common/voice1.webp" type="image/webp" width="180" height="140">
+                      <img src="./assets/images/common/voice1.png" alt="女性の顔" width="180" height="140" loading="lazy" decoding="async">
+                    </picture>
                   </div>
                   <!-- /.color-box -->
                 </figure>
@@ -460,7 +523,10 @@
                 <!-- /.voice-card__heading -->
                 <figure class="voice-card__image">
                   <div class="color-box js-color-box">
-                    <img src="./assets/images/common/voice2.png" alt="男性の顔" loading="lazy">
+                    <picture>
+                      <source srcset="./assets/images/common/voice2.webp" type="image/webp" width="180" height="140">
+                      <img src="./assets/images/common/voice2.png" alt="男性の顔" width="180" height="140" loading="lazy" decoding="async">
+                    </picture>
                   </div>
                   <!-- /.color-box -->
                 </figure>
@@ -492,15 +558,17 @@
         </div>
         <!-- /.section-header -->
         <div class="price__body">
-          <figure class="price__image">
+          <div class="price__image">
             <div class="color-box js-color-box">
               <picture>
-                <source media="(max-width: 767px)" srcset="./assets/images/common/top-price-sp.png">
-                <img src="./assets/images/common/Coral-reef-and-school-of-red-fish.png" alt="サンゴ礁と赤い魚の群れ" width="492" height="746" loading="lazy">
+                <source media="(max-width: 767px)" srcset="./assets/images/common/top-price-sp.webp" type="image/webp" width="345" height="227">
+                <source media="(max-width: 767px)" srcset="./assets/images/common/top-price-sp.png" type="image/png" width="345" height="227">
+                <source srcset="./assets/images/common/Coral-reef-and-school-of-red-fish.webp" type="image/webp" width="492" height="746">
+                <img src="./assets/images/common/Coral-reef-and-school-of-red-fish.png" alt="サンゴ礁と赤い魚の群れ" width="492" height="746" loading="lazy" decoding="async">
               </picture>
             </div>
             <!-- /.color-box -->
-          </figure>
+          </div>
           <!-- /.price__image -->
           <div class="price__content">
             <dl class="price__menu price-menu">
@@ -585,7 +653,7 @@
           <div class="contact__left-body contact-left">
             <div class="contact-left__upper">
               <div class="contact-left__logo">
-                <img src="./assets/images/svg/CodeUps_accent.svg" alt="CodeUps" loading="lazy">
+                <img src="./assets/images/svg/CodeUps_accent.svg" alt="CodeUps" width="200" height="75" loading="lazy" decoding="async">
               </div>
             </div>
             <div class="contact-left__content">
@@ -596,7 +664,7 @@
               </p>
               <div class="contact-left__map">
                 <div class="contact-left__map-inner">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d11953.626157735102!2d127.68305550218774!3d26.216620135949825!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1697440792418!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d11953.626157735102!2d127.68305550218774!3d26.216620135949825!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1697440792418!5m2!1sja!2sjp" title="google maps" width="600" height="450" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               </div>
             </div>
@@ -627,18 +695,18 @@
     <div class="footer__inner inner">
       <div class="footer__upper">
         <figure class="footer__logo">
-          <img src="./assets/images/svg/CodeUps_logo.svg" alt="CodeUps" loading="lazy">
+          <img src="./assets/images/svg/CodeUps_logo.svg" alt="CodeUps" width="200" height="75" loading="lazy" decoding="async">
         </figure>
         <div class="footer__sns footer-sns">
           <ul class="footer-sns__items">
             <li class="footer-sns__item">
               <a class="footer-sns__item-link" href="">
-                <img src="./assets/images/sns/Facebook_Logo_Secondary.png" alt="facebook" loading="lazy">
+                <img src="./assets/images/sns/Facebook_Logo_Secondary.png" alt="facebook" width="26" height="26" loading="lazy" decoding="async">
               </a>
             </li>
             <li class="footer-sns__item">
               <a class="footer-sns__item-link" href="">
-                <img src="./assets/images/sns/Instagram_Glyph_White.png" alt="instagram" loading="lazy">
+                <img src="./assets/images/sns/Instagram_Glyph_White.png" alt="instagram" width="26" height="26" loading="lazy" decoding="async">
               </a>
             </li>
           </ul>

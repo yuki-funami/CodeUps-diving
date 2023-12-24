@@ -1,24 +1,24 @@
 @use "global" as *;
 
-.footer-nav{
+.footer-nav {
   margin-top: rem(41);
   @include mq("md") {
     margin-top: rem(25.6);
   }
 }
-.footer-nav__items{
+.footer-nav__items {
   column-count: 2;
   column-gap: rem(34);
   padding-left: rem(23);
-  @include mq("md"){
+  @include mq("md") {
     column-count: 4;
     column-gap: rem(41.6);
   }
 }
-.footer-nav__item{
+.footer-nav__item {
   margin-bottom: rem(40);
 }
-.footer-nav__item >a{
+.footer-nav__item >a {
   display: inherit;
   position: relative;
   width: 100%;
@@ -27,7 +27,7 @@
   font-weight: $bold;
   line-height: calc(18 / 16);
 }
-.footer-nav__item >a::before{
+.footer-nav__item >a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -38,15 +38,15 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media (hover){
-  .footer-nav__item >a:hover{
+@media (hover) {
+  .footer-nav__item >a:hover {
     opacity: 0.7;
   }
 }
-.footer-nav__small-item{
+.footer-nav__small-item {
   margin-top: rem(24);
 }
-.footer-nav__small-item >a{
+.footer-nav__small-item >a {
   display: inherit;
   width: 100%;
   color: $white;
@@ -54,8 +54,8 @@
   font-weight: $regular;
   line-height: calc(18 / 16);
 }
-@media (hover){
-  .footer-nav__small-item >a:hover{
+@media (hover) {
+  .footer-nav__small-item >a:hover {
     opacity: 0.7;
   }
 }

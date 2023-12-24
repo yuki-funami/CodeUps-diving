@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.side-campaign .side-campaign__inner {
+  padding-left: rem(25.6);
+  padding-right: rem(25.6);
+  @include mq("md") {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.side-campaign__inner {
+  max-width: rem(600);
+  width: 100%;
+  @include mq("md") {
+    max-width: $inner + strip-unit($padding-pc) * 2;
+  }
+}
+.side-campaign__cards {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  margin-top: rem(24);
+}
+.side-campaign-card__button {
+  text-align: center;
+  padding-bottom: rem(3.2);
+  margin-top: rem(40);
+}

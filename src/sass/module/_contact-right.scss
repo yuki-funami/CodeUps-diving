@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.contact-right__link{
+.contact-right__link {
   display: block;
   color: $accent;
   font-size: rem(14);
@@ -8,11 +8,11 @@
   line-height: calc(18 / 14);
   text-align: center;
   margin-top: rem(4.8);
-  @include mq("md"){
+  @include mq("md") {
     margin-top: rem(6);
   }
 }
-.contact-right__button{
+.contact-right__button {
   text-align: center;
   padding-bottom: rem(3.2);
   margin-top: rem(40);

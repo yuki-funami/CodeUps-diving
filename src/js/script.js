@@ -74,9 +74,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     fadeEffect: {
       crossFade: true
     },
-    speed: 1800,
+    speed: 2000,
     autoplay: {
-      delay: 8000,
+      delay: 12000,
       disableOnInteraction: false,
       waitForTransition: false,
     },
@@ -183,15 +183,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   /*==========================
   # smooth scroll
   ==========================*/
-  $('a[href^="#"]').on("click", function () {
-    const id = $(this).attr("href");
+  $('a[href^="#"]').on('click', function () {
+    const id = $(this).attr('href');
     let position = 0;
     let speed = 350;
 
-    if (id != "#") {
+    if (id != '#') {
       position = $(id).offset().top;
     }
-    $("html, body").animate(
+    $('html, body').animate(
       {
         scrollTop: position,
       },
@@ -199,5 +199,41 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     );
     return false;
   });
+
+  /*==========================
+  # modal
+  ==========================*/
+  const modalBackground = $('.modal-background');
+  // モーダル表示
+  $('.js-modal picture img').on('click', function () {
+    // 画像の HTML(<img>タグ全体)を、modal__background内にコピー
+    modalBackground.html($(this).prop('outerHTML'));
+    modalBackground.fadeIn(200);
+    $('html, body').css('overflow', 'hidden');
+    return false;
+  });
+
+  // モーダル非表示
+  modalBackground.on('click', function () {
+    modalBackground.fadeOut(200);
+    $('html, body').removeAttr('style');
+    return false;
+  });
+
+  /*==========================
+  # tab
+  ==========================*/
+  $('.js-tab').on('click', function () {
+    // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+    const index = $(this).index();
+
+    $('.js-tab').removeClass('is-current');
+    $(this).addClass('is-current');
+    $('page-information-card').removeClass('is-current');
+    // コンテンツを非表示にして、クリックしたタブのインデックス番号と同じコンテンツを表示
+    $('.page-information-card').hide().eq(index).fadeIn(300);
+    return false;
+  });
+
 
 });

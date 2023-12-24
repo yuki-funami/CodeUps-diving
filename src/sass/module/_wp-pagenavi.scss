@@ -1,0 +1,106 @@
+@use "global" as *;
+
+.wp-pagenavi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(12);
+}
+.previouspostslink {
+  position: relative;
+  margin-right: rem(28);
+}
+.nextpostslink {
+  position: relative;
+  margin-left: rem(28);
+}
+.previouspostslink::before {
+  content: "";
+  position: absolute;
+  top: 39%;
+  left: 30%;
+  transform: rotate(-45deg);
+  width: rem(12);
+  height: rem(1);
+  background-color: $accent;
+  border-radius: rem(1);
+}
+.previouspostslink::after {
+  content: "";
+  position: absolute;
+  top: 61%;
+  left: 30%;
+  transform: rotate(45deg);
+  width: rem(12);
+  height: rem(1);
+  background-color: $accent;
+  border-radius: rem(1);
+}
+.nextpostslink::before {
+  content: "";
+  position: absolute;
+  top: 39%;
+  left: 36%;
+  transform: rotate(45deg);
+  width: rem(12);
+  height: rem(1);
+  background-color: $accent;
+  border-radius: rem(1);
+}
+.nextpostslink::after {
+  content: "";
+  position: absolute;
+  top: 61%;
+  left: 36%;
+  transform: rotate(-45deg);
+  width: rem(12);
+  height: rem(1);
+  background-color: $accent;
+  border-radius: rem(1);
+}
+.wp-pagenavi a, .wp-pagenavi span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(38);
+  height: rem(38);
+  color: $accent;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1;
+  font-family: $sub-english-font-family;
+  border: 1px solid $accent;
+  transition: color 0.2s, background-color 0.2s, height 0.2s;
+}
+@media (hover) {
+  .wp-pagenavi a:hover {
+    color: $white;
+    background-color: $accent;
+  }
+  .previouspostslink:hover::before, .previouspostslink:hover::after {
+    background-color: $white;
+    height: rem(1.3);
+  }
+  .nextpostslink:hover::before, .nextpostslink:hover::after {
+    background-color: $white;
+    height: rem(1.3);
+  }
+}
+.wp-pagenavi .current {
+  color: $white;
+  background-color: $accent;
+}
+
+// WordPress化時に削除???
+.wp-pagenavi a:nth-child(6), .wp-pagenavi span:nth-child(6) {
+  display: none;
+  @include mq("md") {
+    display: inline-flex;
+  }
+}
+.wp-pagenavi a:nth-child(7), .wp-pagenavi span:nth-child(7) {
+  display: none;
+  @include mq("md") {
+    display: inline-flex;
+  }
+}

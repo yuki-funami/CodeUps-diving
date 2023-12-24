@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.button{
+.button {
   position: relative;
   display: inline-block;
   text-align: left;
@@ -11,13 +11,13 @@
   font-family: $english-font-family;
   background-color: $accent;
   border: 1px solid $accent;
-  padding-top: rem(16);
-  padding-bottom: rem(16);
+  padding-top: rem(15);
+  padding-bottom: rem(15);
   padding-left: rem(36.8);
   padding-right: rem(89.6);
   z-index: 1;
 }
-.button::before{
+.button::before {
   content: "";
   position: absolute;
   top: rem(4);
@@ -28,7 +28,7 @@
   border: 1px solid $accent;
   z-index: -1;
 }
-.button::after{
+.button::after {
   content: "";
   position: absolute;
   top: 0;
@@ -41,10 +41,10 @@
   transition: 0.2s cubic-bezier(0.44, 0, 0.5, 1);
   z-index: -1;
 }
-.button::first-letter{
+.button::first-letter {
   text-transform: uppercase;
 }
-.button span::before{
+.button span::before {
   content: "";
   position: absolute;
   top: 52%;
@@ -55,7 +55,7 @@
   background-color: $white;
   border-radius: rem(1);
 }
-.button span::after{
+.button span::after {
   content: "";
   position: absolute;
   top: 46%;
@@ -66,17 +66,17 @@
   background-color: $white;
   border-radius: rem(1);
 }
-@media (hover){
-  .button:hover{
+@media (hover) {
+  .button:hover {
     color: $accent;
   }
-  .button:hover::after{
+  .button:hover::after {
     transform: scale(1, 1);
   }
-  .button:hover span::before{
+  .button:hover span::before {
     background-color: $accent;
   }
-  .button:hover span::after{
+  .button:hover span::after {
     background-color: $accent;
   }
 }

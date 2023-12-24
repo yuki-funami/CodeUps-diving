@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.loader{
+.loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,7 +9,7 @@
   background-color: $white;
   z-index: 9999;
 }
-.loader__image{
+.loader__image {
   display: none;
   position: absolute;
   top: 0;
@@ -17,7 +17,7 @@
   width: inherit;
   height: inherit;
 }
-.loader__image-wrap{
+.loader__image-wrap {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -25,7 +25,7 @@
   width: inherit;
   height: inherit;
 }
-.loader__left-image{
+.loader__left-image {
   position: absolute;
   top: 100%;
   left: 10%;
@@ -42,29 +42,29 @@
     animation-fill-mode: forwards;
   }
 }
-@keyframes loadingUpLeftSp{
-  0%{
+@keyframes loadingUpLeftSp {
+  0% {
     top: 100%;
     left: 0;
   }
-  100%{
+  100% {
     top: 0;
     left: 0;
   }
 }
-@keyframes loadingUpLeftPc{
-  0%{
+@keyframes loadingUpLeftPc {
+  0% {
     top: 100%;
     left: 10%;
     width: 30vw;
   }
-  100%{
+  100% {
     top: 0;
     left: 0;
     width: 50vw;
   }
 }
-.loader__right-image{
+.loader__right-image {
   position: absolute;
   top: 100%;
   right: 15%;
@@ -83,56 +83,55 @@
     animation-fill-mode: forwards;
   }
 }
-@keyframes loadingUpRightSp{
-  0%{
+@keyframes loadingUpRightSp {
+  0% {
     top: 100%;
     right: 0;
   }
-  100%{
+  100% {
     top: 0;
     right: 0;
   }
 }
-@keyframes loadingUpRightPc{
-  0%{
+@keyframes loadingUpRightPc {
+  0% {
     top: 100%;
     right: 15%;
     width: 20vw;
   }
-  100%{
+  100% {
     top: 0;
     right: 0;
     width: 50vw;
   }
 }
-.loader__left-image img{
-  aspect-ratio: 345 / 227;
+.loader__left-image picture,
+.loader__right-image picture {
+  display: block;
+  width: inherit;
+  height: inherit;
+}
+.loader__left-image picture img,
+.loader__right-image picture img {
   width: inherit;
   height: inherit;
   object-fit: cover;
   object-position: right;
-  @include mq("md"){
-    aspect-ratio: 720 / 768;
-  }
 }
-.loader__right-image img{
-    aspect-ratio: 345 / 227;
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
-    object-position: left;
-    @include mq("md"){
-      aspect-ratio: 720 / 768;
-    }
+.loader__left-image picture img {
+  object-position: right;
 }
-.loader__title-wrap{
+.loader__right-image picture img {
+  object-position: left;
+}
+.loader__title-wrap {
   display: none;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.loader__title{
+.loader__title {
   color: $accent;
   font-size: rem(40);
   font-weight: $regular;
@@ -142,14 +141,14 @@
   text-transform: uppercase;
   text-align: center;
   text-indent: 0.54em;
-  @include mq("md"){
+  @include mq("md") {
     font-size: rem(80);
     line-height: calc(100 / 80);
     letter-spacing: 0.53em;
     text-indent: 0.53em;
   }
 }
-.loader__text{
+.loader__text {
   color: $accent;
   font-size: rem(20);
   font-weight: $regular;
@@ -158,6 +157,6 @@
   text-align: center;
 }
 .is-loaded > .loader__title,
-.is-loaded > .loader__text{
+.is-loaded > .loader__text {
   color: $white;
 }

@@ -27,9 +27,9 @@
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="./assets/js/jquery.inview.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="./assets/js/jquery.inview.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 
@@ -38,7 +38,7 @@
     <div class="header__inner">
       <h1 class="header__logo">
         <a class="header__logo-link" href="#">
-          <img src="./assets/images/svg/CodeUps_logo.svg" alt="CodeUps">
+          <img src="./assets/images/svg/CodeUps_logo.svg" alt="CodeUps" width="133" height="50" loading="eager" decoding="async">
         </a>
       </h1>
       <!-- /.header__logo -->
@@ -51,7 +51,7 @@
       <nav class="header__sp-nav sp-nav u-mobile">
         <ul class="sp-nav__items">
           <li class="sp-nav__item">
-            <a href="#campaign">キャンペーン</a>
+            <a href="#">キャンペーン</a>
             <ul class="sp-nav__small-items">
               <li class="sp-nav__small-item">
                 <a href="">ライセンス取得</a>
@@ -65,10 +65,10 @@
             </ul>
           </li>
           <li class="sp-nav__item">
-            <a href="#about">私たちについて</a>
+            <a href="">私たちについて</a>
           </li>
           <li class="sp-nav__item">
-            <a href="#information">ダイビング情報</a>
+            <a href="">ダイビング情報</a>
             <ul class="sp-nav__small-items">
               <li class="sp-nav__small-item">
                 <a href="">ライセンス講習</a>
@@ -82,13 +82,13 @@
             </ul>
           </li>
           <li class="sp-nav__item">
-            <a href="#blog">ブログ</a>
+            <a href="">ブログ</a>
           </li>
           <li class="sp-nav__item">
-            <a href="#voice">お客様の声</a>
+            <a href="">お客様の声</a>
           </li>
           <li class="sp-nav__item">
-            <a href="#price">料金一覧</a>
+            <a href="">料金一覧</a>
             <ul class="sp-nav__small-items">
               <li class="sp-nav__small-item">
                 <a href="">ライセンス講習</a>
@@ -119,28 +119,28 @@
       <nav class="header__pc-nav pc-nav u-desktop">
         <ul class="pc-nav__items">
           <li class="pc-nav__item">
-            <a href="#campaign"><p>campaign</p><span>キャンペーン</span></a>
+            <a href=""><p>campaign</p><span>キャンペーン</span></a>
           </li>
           <li class="pc-nav__item">
-            <a href="#about"><p>about us</p><span>私たちについて</span></a>
+            <a href=""><p>about us</p><span>私たちについて</span></a>
           </li>
           <li class="pc-nav__item">
-            <a href="#information"><p>information</p><span>ダイビング情報</span></a>
+            <a href=""><p>information</p><span>ダイビング情報</span></a>
           </li>
           <li class="pc-nav__item">
-            <a href="#blog"><p>blog</p><span>ブログ</span></a>
+            <a href=""><p>blog</p><span>ブログ</span></a>
           </li>
           <li class="pc-nav__item">
-            <a href="#voice"><p>voice</p><span>お客様の声</span></a>
+            <a href=""><p>voice</p><span>お客様の声</span></a>
           </li>
           <li class="pc-nav__item">
-            <a href="#price"><p>price</p><span>料金一覧</span></a>
+            <a href=""><p>price</p><span>料金一覧</span></a>
           </li>
           <li class="pc-nav__item">
             <a href=""><p>faq</p><span>よくある質問</span></a>
           </li>
           <li class="pc-nav__item">
-            <a href="#contact"><p>contact</p><span>お問い合わせ</span></a>
+            <a href=""><p>contact</p><span>お問い合わせ</span></a>
           </li>
         </ul>
       </nav>
@@ -151,46 +151,236 @@
   <!-- /.header -->
 
   <main>
+    <!-- 下層ページのメインビュー -->
+    <div class="sub-mv js-mv">
+      <div class="sub-mv__image">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./assets/images/common/head-campaign-sp.webp" type="image/webp" width="375" height="460">
+          <source media="(max-width: 767px)" srcset="./assets/images/common/head-campaign-sp.png" type="image/png" width="375" height="460">
+          <source srcset="./assets/images/common/head-campaign-pc.webp" type="image/webp" width="1440" height="548">
+          <img src="./assets/images/common/head-campaign-pc.png" alt="チョウハン" width="1440" height="548" loading="eager" decoding="async">
+        </picture>
+      </div>
+      <div class="sub-mv__content">
+        <h2 class="sub-mv__title">campaign</h2>
+      </div>
+    </div>
 
+    <!-- パンくず -->
+    <div class="breadcrumb">
+      <div class="inner">
+        <div>TOP &gt; キャンペーン</div>
+      </div>
+    </div>
+
+    <section class="archive-campaign layout-archive-campaign">
+      <div class="archive-campaign__inner inner">
+        <div class="archive-campaign__category-list category-list">
+          <ul class="category-list__items">
+            <li class="category-list__item is-current">all</li>
+            <li class="category-list__item">ライセンス講習</li>
+            <li class="category-list__item">ファンダイビング</li>
+            <li class="category-list__item">体験ダイビング</li>
+          </ul>
+        </div>
+
+        <div class="archive-campaign__cards archive-campaign-cards">
+          <article class="archive-campaign-cards__card campaign-card">
+            <figure class="campaign-card__image campaign-card__image--archive">
+              <picture>
+                <source srcset="./assets/images/common/Numerous-colorful-tropical-fish.webp" type="image/webp" width="520" height="347">
+                <img src="./assets/images/common/Numerous-colorful-tropical-fish.png" alt="数多くのカラフルな熱帯魚" width="520" height="347" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="campaign-card__content campaign-card__content--archive">
+              <div class="campaign-card__category"><span>ライセンス講習</span></div>
+              <div class="campaign-card__title campaign-card__title--archive">ライセンス取得</div>
+              <p class="campaign-card__text campaign-card__text--archive">全部コミコミ(お一人様)</p>
+              <div class="campaign-card__price">
+                <p class="campaign-card__original-price">&yen;56,000</p>
+                <p class="campaign-card__discount-price campaign-card__discount-price--archive">&yen;46,000</p>
+              </div>
+              <div class="campaign-card__archive u-desktop">
+                <p class="campaign-card__archive-text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+                <time class="campaign-card__archive-date" datetime="2023-06-01">2023/6/1-9/30</time>
+                <a href="" class="campaign-card__archive-link">ご予約・お問い合わせはコチラ</a>
+                <div class="campaign-card__archive-button">
+                  <a href="#" class="button">contact us<span></span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- /.archive-campaign-cards__card .campaign-card -->
+          <article class="archive-campaign-cards__card campaign-card">
+            <figure class="campaign-card__image campaign-card__image--archive">
+              <picture>
+                <source srcset="./assets/images/common/Emerald-green-white-beach-and-boats.webp" type="image/webp" width="520" height="347">
+                <img src="./assets/images/common/Emerald-green-white-beach-and-boats.png" alt="エメラルドグリーンの白浜と船" width="520" height="347" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="campaign-card__content campaign-card__content--archive">
+              <div class="campaign-card__category"><span>体験ダイビング</span></div>
+              <div class="campaign-card__title campaign-card__title--archive">貸切体験ダイビング</div>
+              <p class="campaign-card__text campaign-card__text--archive">全部コミコミ(お一人様)</p>
+              <div class="campaign-card__price">
+                <p class="campaign-card__original-price">&yen;24,000</p>
+                <p class="campaign-card__discount-price campaign-card__discount-price--archive">&yen;18,000</p>
+              </div>
+              <div class="campaign-card__archive u-desktop">
+                <p class="campaign-card__archive-text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+                <time class="campaign-card__archive-date" datetime="2023-06-01">2023/6/1-9/30</time>
+                <a href="" class="campaign-card__archive-link">ご予約・お問い合わせはコチラ</a>
+                <div class="campaign-card__archive-button">
+                  <a href="#" class="button">contact us<span></span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- /.archive-campaign-cards__card .campaign-card -->
+          <article class="archive-campaign-cards__card campaign-card">
+            <figure class="campaign-card__image campaign-card__image--archive">
+              <picture>
+                <source srcset="./assets/images/common/School-of-jellyfish.webp" type="image/webp" width="520" height="347">
+                <img src="./assets/images/common/School-of-jellyfish.png" alt="クラゲの群れ" width="520" height="347" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="campaign-card__content campaign-card__content--archive">
+              <div class="campaign-card__category"><span>体験ダイビング</span></div>
+              <div class="campaign-card__title campaign-card__title--archive">ナイトダイビング</div>
+              <p class="campaign-card__text campaign-card__text--archive">全部コミコミ(お一人様)</p>
+              <div class="campaign-card__price">
+                <p class="campaign-card__original-price">&yen;10,000</p>
+                <p class="campaign-card__discount-price campaign-card__discount-price--archive">&yen;8,000</p>
+              </div>
+              <div class="campaign-card__archive u-desktop">
+                <p class="campaign-card__archive-text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+                <time class="campaign-card__archive-date" datetime="2023-06-01">2023/6/1-9/30</time>
+                <a href="" class="campaign-card__archive-link">ご予約・お問い合わせはコチラ</a>
+                <div class="campaign-card__archive-button">
+                  <a href="#" class="button">contact us<span></span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- /.archive-campaign-cards__card .campaign-card -->
+          <article class="archive-campaign-cards__card campaign-card">
+            <figure class="campaign-card__image campaign-card__image--archive">
+              <picture>
+                <source srcset="./assets/images/common/Divers-on-the-sea-surface.webp" type="image/webp" width="520" height="347">
+                <img src="./assets/images/common/Divers-on-the-sea-surface.png" alt="水面に浮かぶダイバーたち" width="520" height="347" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="campaign-card__content campaign-card__content--archive">
+              <div class="campaign-card__category"><span>ファンダイビング</span></div>
+              <div class="campaign-card__title campaign-card__title--archive">貸切ファンダイビング</div>
+              <p class="campaign-card__text campaign-card__text--archive">全部コミコミ(お一人様)</p>
+              <div class="campaign-card__price">
+                <p class="campaign-card__original-price">&yen;20,000</p>
+                <p class="campaign-card__discount-price campaign-card__discount-price--archive">&yen;16,000</p>
+              </div>
+              <div class="campaign-card__archive u-desktop">
+                <p class="campaign-card__archive-text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+                <time class="campaign-card__archive-date" datetime="2023-06-01">2023/6/1-9/30</time>
+                <a href="" class="campaign-card__archive-link">ご予約・お問い合わせはコチラ</a>
+                <div class="campaign-card__archive-button">
+                  <a href="#" class="button">contact us<span></span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- /.archive-campaign-cards__card .campaign-card -->
+        </div>
+        <!-- /.archive-campaign__cards .archive-campaign-cards -->
+        <div class="archive-campaign__page-navigation">
+          <div class="wp-pagenavi">
+            <a class="previouspostslink" rel="prev" href="#"></a>
+            <span class="current">1</span>
+            <a class="page smaller" href="#">2</a>
+            <a class="page smaller" href="#">3</a>
+            <a class="page larger" href="#">4</a>
+            <a class="page larger" href="#">5</a>
+            <a class="page larger" href="#">6</a>
+            <a class="nextpostslink" rel="next" href="#"></a>
+          </div>
+        </div>
+        <!-- /.archive-campaign__page-navigation -->
+      </div>
+      <!-- /.archive-campaign__inner .inner -->
+    </section>
+    <!-- /.archive-campaign -->
+
+    <section id="contact" class="contact layout-contact layout-contact--subpage">
+      <div class="contact__inner inner">
+        <div class="contact__body">
+          <div class="contact__left-body contact-left">
+            <div class="contact-left__upper">
+              <div class="contact-left__logo">
+                <img src="./assets/images/svg/CodeUps_accent.svg" alt="CodeUps" width="200" height="75" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="contact-left__content">
+              <p class="contact-left__address">沖縄県那覇市1-1<br>
+                TEL:0120-000-0000<br>
+                営業時間:8:30-19:00<br>
+                定休日:毎週火曜日
+              </p>
+              <div class="contact-left__map">
+                <div class="contact-left__map-inner">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d11953.626157735102!2d127.68305550218774!3d26.216620135949825!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1697440792418!5m2!1sja!2sjp" title="google maps" width="600" height="450" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.contact__left-body .contact-left -->
+          <div class="contact__right-body contact-right">
+            <div class="contact-right__header section-header">
+              <p class="section-header__title section-header__title--large">contact</p>
+              <h2 class="section-header__subtitle section-header__subtitle--large">お問い合わせ</h2>
+            </div>
+            <!-- /.section-header -->
+            <a href="" class="contact-right__link">ご予約・お問い合わせはコチラ</a>
+            <div class="contact-right__button">
+              <a href="#" class="button">contact us<span></span></a>
+            </div>
+          </div>
+          <!-- /.contact__right-body .contact-right -->
+        </div>
+        <!-- ./contact__body -->
+      </div>
+      <!-- /.price__inner .inner -->
+    </section>
+    <!-- /.contact -->
   </main>
   <!-- /.main -->
-
-  <!-- 下層ページのメインビュー -->
-  <div class="sub-mv">
-    <picture class="sub-mv__image">
-      <source media="(max-width: 767px)" srcset="./assets/images/common/head-campaign-sp.webp" type="image/webp">
-      <source media="(max-width: 767px)" srcset="./assets/images/common/head-campaign-sp.png" type="image/png">
-      <source srcset="./assets/images/common/head-campaign-pc.webp" type="image/webp">
-      <img src="./assets/images/common/head-campaign-pc.png" alt="" width="1440" height="548">
-    </picture>
-    <div class="sub-mv__content">
-      <h2 class="sub-mv__title">campaign</h2>
-    </div>
-  </div>
-
-  <!-- パンくず -->
-  <div class="breadcrumb">
-    <div class="inner">
-      <div>TOP > キャンペーン</div>
-    </div>
-  </div>
 
   <footer class="footer layout-footer js-footer">
     <div class="footer__inner inner">
       <div class="footer__upper">
         <figure class="footer__logo">
-          <img src="./assets/images/svg/CodeUps_logo.svg" alt="CodeUps" loading="lazy">
+          <img src="./assets/images/svg/CodeUps_logo.svg" alt="CodeUps" width="200" height="75" loading="lazy" decoding="async">
         </figure>
         <div class="footer__sns footer-sns">
           <ul class="footer-sns__items">
             <li class="footer-sns__item">
               <a class="footer-sns__item-link" href="">
-                <img src="./assets/images/sns/Facebook_Logo_Secondary.png" alt="facebook" loading="lazy">
+                <img src="./assets/images/sns/Facebook_Logo_Secondary.png" alt="facebook" width="26" height="26" loading="lazy" decoding="async">
               </a>
             </li>
             <li class="footer-sns__item">
               <a class="footer-sns__item-link" href="">
-                <img src="./assets/images/sns/Instagram_Glyph_White.png" alt="instagram" loading="lazy">
+                <img src="./assets/images/sns/Instagram_Glyph_White.png" alt="instagram" width="26" height="26" loading="lazy" decoding="async">
               </a>
             </li>
           </ul>
