@@ -5,10 +5,10 @@
   font-size: rem(16);
   font-weight: $bold;
   line-height: calc(24 / 16);
-  padding-bottom: rem(3.04);
+  padding-bottom: rem(3);
   border-bottom: 1px solid $accent;
   @include mq("md") {
-    padding-bottom: rem(3.2);
+    padding-bottom: rem(3);
   }
 }
 .price-menu__course {

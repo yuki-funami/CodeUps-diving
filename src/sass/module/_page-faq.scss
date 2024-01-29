@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.page-faq {
+  position: relative;
+}
+.page-faq::before {
+  content: "";
+  position: absolute;
+  top: rem(-25);
+  left: max(calc(50% - 38.7rem), rem(16));
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/svg/sea-goldie_accent.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(-1, 1);
+  @include mq("md") {
+    top: rem(-70);
+    width: rem(301);
+    height: rem(138);
+  }
+}
+.page-faq__inner {
+  position: relative;
+  max-width: rem(600);
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(750);
+  }
+}

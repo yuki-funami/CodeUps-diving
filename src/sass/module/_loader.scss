@@ -137,10 +137,10 @@
   font-weight: $regular;
   line-height: calc(48 / 40);
   letter-spacing: 0.54em;
+  text-indent: 0.54em;
   font-family: $sub-english-font-family;
   text-transform: uppercase;
   text-align: center;
-  text-indent: 0.54em;
   @include mq("md") {
     font-size: rem(80);
     line-height: calc(100 / 80);

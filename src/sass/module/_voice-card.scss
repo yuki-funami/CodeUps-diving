@@ -48,9 +48,9 @@
   font-weight: $regular;
   line-height: calc(22 / 12);
   border: 1px solid $accent;
-  padding: rem(3.2) rem(11.2);
+  padding: rem(3) rem(11);
   @include mq("md") {
-    padding: rem(5.12) rem(14.88);
+    padding: rem(5) rem(15);
   }
 }
 .voice-card__title {

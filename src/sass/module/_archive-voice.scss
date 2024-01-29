@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.archive-voice {
+  position: relative;
+}
+.archive-voice::before {
+  content: "";
+  position: absolute;
+  top: rem(-25);
+  left: max(calc(50% - 38.7rem), rem(16));
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/svg/sea-goldie_accent.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(-1, 1);
+  @include mq("md") {
+    top: rem(-70);
+    width: rem(301);
+    height: rem(138);
+  }
+}
+.archive-voice__inner {
+  max-width: rem(600);
+  width: 100%;
+  @include mq("md") {
+    max-width: $inner + strip-unit($padding-pc) * 2;
+  }
+}
+.archive-voice__category-list {
+  margin-top: rem(55.2);
+  @include mq("md") {
+    margin-top: rem(153.6);
+  }
+}
+.archive-voice__cards {
+  margin-top: rem(40);
+}
+.archive-voice__page-navigation {
+  margin-top: rem(80);
+  @include mq("md") {
+    margin-top: rem(72);
+  }
+}

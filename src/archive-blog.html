@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
   <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script defer src="./assets/js/jquery.inview.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
@@ -158,7 +159,7 @@
           <source media="(max-width: 767px)" srcset="./assets/images/common/head-blog-sp.webp" type="image/webp" width="375" height="460">
           <source media="(max-width: 767px)" srcset="./assets/images/common/head-blog-sp.png" type="image/png" width="375" height="460">
           <source srcset="./assets/images/common/head-blog-pc.webp" type="image/webp" width="1440" height="548">
-          <img src="./assets/images/common/head-blog-pc.png" alt="チョウハン" width="1440" height="548" loading="eager" decoding="async">
+          <img src="./assets/images/common/head-blog-pc.png" alt="水面近くの魚群" width="1440" height="548" loading="eager" decoding="async">
         </picture>
       </div>
       <div class="sub-mv__content">
@@ -274,7 +275,7 @@
                   </div>
                 </div>
               </a>
-              <!-- <a href="" class="blog-cards__item blog-card">
+              <a href="" class="blog-cards__item blog-card">
                 <div class="blog-card__inner">
                   <figure class="blog-card__image">
                     <picture>
@@ -337,10 +338,9 @@
                       ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
                   </div>
                 </div>
-              </a> -->
+              </a>
             </div>
             <!-- /.archive-blog__cards .blog-cards .blog-cards--archive -->
-
             <div class="archive-blog__page-navigation">
               <div class="wp-pagenavi">
                 <a class="previouspostslink" rel="prev" href="#"></a>
@@ -368,8 +368,8 @@
                     <div class="side-blog-card__inner">
                       <figure class="side-blog-card__image">
                         <picture>
-                          <source srcset="./assets/images/common/Apolemichthys-trimaculatus.webp" type="image/webp" width="301" height="201">
-                          <img src="./assets/images/common/Apolemichthys-trimaculatus.png" alt="シテンヤッコ" width="301" height="201" loading="lazy" decoding="async">
+                          <source srcset="./assets/images/common/Apolemichthys-trimaculatus.webp" type="image/webp" width="121" height="90">
+                          <img src="./assets/images/common/Apolemichthys-trimaculatus.png" alt="シテンヤッコ" width="121" height="90" loading="lazy" decoding="async">
                         </picture>
                       </figure>
                       <div class="side-blog-card__content">
@@ -382,8 +382,8 @@
                     <div class="side-blog-card__inner">
                       <figure class="side-blog-card__image">
                         <picture>
-                          <source srcset="./assets/images/common/Sea-turtle.webp" type="image/webp" width="301" height="201">
-                          <img src="./assets/images/common/Sea-turtle.png" alt="ウミガメ" width="301" height="201" loading="lazy" decoding="async">
+                          <source srcset="./assets/images/common/Sea-turtle.webp" type="image/webp" width="121" height="90">
+                          <img src="./assets/images/common/Sea-turtle.png" alt="ウミガメ" width="121" height="90" loading="lazy" decoding="async">
                         </picture>
                       </figure>
                       <div class="side-blog-card__content">
@@ -396,8 +396,8 @@
                     <div class="side-blog-card__inner">
                       <figure class="side-blog-card__image">
                         <picture>
-                          <source srcset="./assets/images/common/Clownfish.webp" type="image/webp" width="301" height="201">
-                          <img src="./assets/images/common/Clownfish.png" alt="カクレクマノミ" width="301" height="201" loading="lazy" decoding="async">
+                          <source srcset="./assets/images/common/Clownfish.webp" type="image/webp" width="121" height="90">
+                          <img src="./assets/images/common/Clownfish.png" alt="カクレクマノミ" width="121" height="90" loading="lazy" decoding="async">
                         </picture>
                       </figure>
                       <div class="side-blog-card__content">
@@ -431,7 +431,10 @@
                   </div>
                 </div>
                 <div class="side-voice__button">
-                  <a href="#" class="button">view more<span></span></a>
+                  <a href="#" class="button">
+                    <span>view more</span>
+                    <span></span>
+                  </a>
                 </div>
               </div>
               <!-- /.side-voice__inner .inner -->
@@ -453,10 +456,10 @@
                     </figure>
                     <div class="campaign-card__content campaign-card__content--side">
                       <div class="campaign-card__title campaign-card__title--side">ライセンス取得</div>
-                      <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                      <p class="campaign-card__text campaign-card__text--side">全部コミコミ(お一人様)</p>
                       <div class="campaign-card__price">
-                        <p class="campaign-card__original-price">&yen;56,000</p>
-                        <p class="campaign-card__discount-price">&yen;46,000</p>
+                        <p class="campaign-card__original-price campaign-card__original-price--side">&yen;56,000</p>
+                        <p class="campaign-card__discount-price campaign-card__discount-price--side">&yen;46,000</p>
                       </div>
                     </div>
                   </div>
@@ -469,17 +472,20 @@
                     </figure>
                     <div class="campaign-card__content campaign-card__content--side">
                       <div class="campaign-card__title campaign-card__title--side">貸切体験ダイビング</div>
-                      <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                      <p class="campaign-card__text campaign-card__text--side">全部コミコミ(お一人様)</p>
                       <div class="campaign-card__price">
-                        <p class="campaign-card__original-price">&yen;24,000</p>
-                        <p class="campaign-card__discount-price">&yen;18,000</p>
+                        <p class="campaign-card__original-price campaign-card__original-price--side">&yen;24,000</p>
+                        <p class="campaign-card__discount-price campaign-card__discount-price--side">&yen;18,000</p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- /.side-campaign__cards .side-campaign-cards -->
                 <div class="side-campaign-card__button">
-                  <a href="#" class="button">view more<span></span></a>
+                  <a href="#" class="button">
+                    <span>view more</span>
+                    <span></span>
+                  </a>
                 </div>
               </div>
               <!-- /.side-campaign__inner .inner -->
@@ -488,10 +494,38 @@
 
             <section class="side__archive side-archive">
               <div class="side-archive__inner inner">
-                <div class="side-campaign__header side-section-header">
+                <div class="side-archive__header side-section-header">
                   <h2 class="side-section-header__title">アーカイブ</h2>
                 </div>
-                
+                <ul class="side-archive__list side-archive-list">
+                  <li class="side-archive-list__year is-current is-open">2023
+                    <ul class="side-archive-list__child">
+                      <li class="side-archive-list__month">
+                        <a href="#">3月</a>
+                      </li>
+                      <li class="side-archive-list__month">
+                        <a href="#">2月</a>
+                      </li>
+                      <li class="side-archive-list__month">
+                        <a href="#">1月</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="side-archive-list__year">2022
+                    <ul class="side-archive-list__child">
+                      <li class="side-archive-list__month">
+                        <a href="#">12月</a>
+                      </li>
+                      <li class="side-archive-list__month">
+                        <a href="#">11月</a>
+                      </li>
+                      <li class="side-archive-list__month">
+                        <a href="#">10月</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <!-- /.side-archive__list .side-archive-list -->
               </div>
               <!-- /.side-archive__inner .inner -->
             </section>
@@ -537,7 +571,10 @@
             <!-- /.section-header -->
             <a href="" class="contact-right__link">ご予約・お問い合わせはコチラ</a>
             <div class="contact-right__button">
-              <a href="#" class="button">contact us<span></span></a>
+              <a href="#" class="button">
+                <span>contact us</span>
+                <span></span>
+              </a>
             </div>
           </div>
           <!-- /.contact__right-body .contact-right -->
@@ -573,74 +610,74 @@
         <!-- /.footer__sns -->
       </div>
       <!-- /.footer__upper -->
-      <div class="footer__nav footer-nav">
-        <ul class="footer-nav__items">
-          <li class="footer-nav__item">
+      <div class="footer__nav nav">
+        <ul class="nav__items">
+          <li class="nav__item">
             <a href="">キャンペーン</a>
-            <ul class="footer-nav__small-items">
-              <li class="footer-nav__small-item">
+            <ul class="nav__small-items">
+              <li class="nav__small-item">
                 <a href="">ライセンス取得</a>
               </li>
-              <li class="footer-nav__small-item">
+              <li class="nav__small-item">
                 <a href="">貸切体験ダイビング</a>
               </li>
-              <li class="footer-nav__small-item">
+              <li class="nav__small-item">
                 <a href="">ナイトダイビング</a>
               </li>
             </ul>
           </li>
-          <li class="footer-nav__item">
+          <li class="nav__item">
             <a href="">私たちについて</a>
           </li>
-          <li class="footer-nav__item">
+          <li class="nav__item">
             <a href="">ダイビング情報</a>
-            <ul class="footer-nav__small-items">
-              <li class="footer-nav__small-item">
+            <ul class="nav__small-items">
+              <li class="nav__small-item">
                 <a href="">ライセンス講習</a>
               </li>
-              <li class="footer-nav__small-item">
+              <li class="nav__small-item">
                 <a href="">体験ダイビング</a>
               </li>
-              <li class="footer-nav__small-item">
+              <li class="nav__small-item">
                 <a href="">ファンダイビング</a>
               </li>
             </ul>
           </li>
-          <li class="footer-nav__item">
+          <li class="nav__item">
             <a href="">ブログ</a>
           </li>
-          <li class="footer-nav__item">
+          <li class="nav__item">
             <a href="">お客様の声</a>
           </li>
-          <li class="footer-nav__item">
+          <li class="nav__item">
             <a href="">料金一覧</a>
-            <ul class="footer-nav__small-items">
-              <li class="footer-nav__small-item">
+            <ul class="nav__small-items">
+              <li class="nav__small-item">
                 <a href="">ライセンス講習</a>
               </li>
-              <li class="footer-nav__small-item">
+              <li class="nav__small-item">
                 <a href="">体験ダイビング</a>
               </li>
-              <li class="footer-nav__small-item">
+              <li class="nav__small-item">
                 <a href="">ファンダイビング</a>
               </li>
             </ul>
           </li>
-          <li class="footer-nav__item">
+          <li class="nav__item">
             <a href="">よくある質問</a>
           </li>
-          <li class="footer-nav__item">
+          <li class="nav__item">
             <a href="" target="_blank">プライバシー<br class="u-mobile">ポリシー</a>
           </li>
-          <li class="footer-nav__item">
+          <li class="nav__item">
             <a href="" target="_blank">利用規約</a>
           </li>
-          <li class="footer-nav__item">
+          <li class="nav__item">
             <a href="">お問い合わせ</a>
           </li>
         </ul>
       </div>
-      <!-- /.footer__nav .footer-nav -->
+      <!-- /.footer__nav .nav -->
       <p class="footer__copyrights">
         <small>Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
       </p>

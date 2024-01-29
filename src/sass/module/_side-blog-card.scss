@@ -33,9 +33,6 @@
   height: auto;
   object-fit: cover;
   transition: transform 0.6s;
-  @include mq("md") {
-    aspect-ratio: 301 / 201;
-  }
 }
 .side-blog-card__time {
   display: block;

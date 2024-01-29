@@ -85,12 +85,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   // campaign
   new Swiper('.js-campaign-swiper', {
     loop: true,
-    loopedSlides: 4,
-    speed: 500,
+    slidesPerView: 'auto',
+    speed: 2000,
     spaceBetween: 24,
-    width: 280,
     autoplay: {
-      delay: 5000,
+      delay: 3000,
       disableOnInteraction: false,
       waitForTransition: false,
     },
@@ -101,7 +100,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     breakpoints: {
       768: {
         spaceBetween: 40,
-        width: 333,
       },
     },
   });
@@ -235,5 +233,231 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
+  /*==========================
+  # form
+  ==========================*/
+  // Contactページのみで機能させたいので、HTMLの<script>に記述したい
+  // $(function () {
+  //   $(window).on('beforeunload', function (e) {
+  //     e.preventDefault();
+  //     e.returnValue = '';
+  //   });
+  //   $('button[type=submit]').on('click', function () {
+  //     $(window).off('beforeunload');
+  //   });
+  // });
+
+  $(document).ready(function () {
+    $('.contact-form__error').hide();
+    $.validator.addMethod(
+      'telNumber',
+      function (value, element) {
+        return this.optional(element) || /[\d\-]$/.test(value);
+      },
+      '※半角数字で入力してください。'
+    );
+
+    $('.js-form').validate({
+      rules: {
+        name: {
+          required: true,
+        },
+        email: {
+          required: true,
+          email: true,
+        },
+        tel: {
+          required: true,
+          telNumber: true,
+        },
+        kind: {
+          required: true,
+          minlength: 1,
+        },
+        contents: {
+          required: true,
+        },
+        'inquiries[]': {
+          required: true,
+        },
+        'privacy-policy[]': {
+          required: true,
+        },
+      },
+      messages: {
+        name: {
+          required: '※必須項目が入力されていません。<br class="u-mobile"><span class="u-mobile">&emsp;</span>入力してください。',
+        },
+        email: {
+          required: '※必須項目が入力されていません。<br class="u-mobile"><span class="u-mobile">&emsp;</span>入力してください。',
+          email: '※有効なメールアドレスを入力してください。',
+        },
+        tel: {
+          required: '※必須項目が入力されていません。<br class="u-mobile"><span class="u-mobile">&emsp;</span>入力してください。',
+        },
+        contents: {
+          required: '※必須項目が入力されていません。<br class="u-mobile"><span class="u-mobile">&emsp;</span>入力してください。',
+        },
+        'inquiries[]': {
+          required: '※必須項目が選択されていません。<br class="u-mobile"><span class="u-mobile">&emsp;</span>選択してください。',
+        },
+        'privacy-policy[]': {
+          required: '※個人情報の取り扱いについて同意が必要です。',
+        },
+      },
+      errorElement: 'span',
+      errorPlacement: function (error, element) { // error: 挿入対象要素, element: validation対象のinput要素
+        $('.js-error').html(error);
+        element.addClass('is-invalid');
+        $('.contact-form__error').show();
+      },
+    });
+
+    $('.js-form').submit(function () {
+      if (!$('.js-form').valid()) {
+        return false; //フォーム送信を停止
+      } else {
+        window.location.href = 'page-contact-thanks.html';
+      }
+    });
+  });
 
 });
+
+
+/* JavaScriptで記載 */
+/*==========================
+# accordion
+==========================*/
+document.addEventListener('DOMContentLoaded', function () {
+  setUpAccordion();
+});
+
+/*
+ブラウザの標準機能(Web Animations API)を使ってアコーディオンのアニメーションを制御します
+*/
+
+function setUpAccordion() {
+  const details = document.querySelectorAll('.js-details');
+  const RUNNING_VALUE = 'running'; // アニメーション実行中のときに付与する予定のカスタムデータ属性の値
+
+  details.forEach(function (element) {
+    const summary = element.querySelector('.js-summary');
+    const answer = element.querySelector('.js-answer');
+
+    summary.addEventListener('click', function (e) {
+      // デフォルトの挙動を無効化
+      e.preventDefault();
+
+      // 連打防止用。アニメーション中だったらクリックイベントを受け付けないでリターンする
+      if (element.dataset.animStatus === RUNNING_VALUE) {
+        return;
+      }
+
+      // detailsのopen属性を判定
+      if (element.open) {
+        // アコーディオンを閉じるときの処理
+
+        // アイコン操作用クラスを切り替える(クラスを取り除く)
+        element.classList.toggle('is-opened');
+        // アニメーションを実行
+        const closingAnim = answer.animate(closingAnimKeyframes(answer), animTiming);
+        // アニメーション実行中用の値を付与
+        element.dataset.animStatus = RUNNING_VALUE;
+
+        // アニメーションの完了後に
+        closingAnim.onfinish = function () {
+          // open属性を取り除く
+          element.removeAttribute('open');
+          // アニメーション実行中用の値を取り除く
+          element.dataset.animStatus = '';
+        };
+      } else {
+        // アコーディオンを開くときの処理
+
+        // open属性を付与
+        element.setAttribute('open', 'true');
+        // アイコン操作用クラスを切り替える(クラスを付与)
+        element.classList.toggle('is-opened');
+        // アニメーションを実行
+        const openingAnim = answer.animate(openingAnimKeyframes(answer), animTiming);
+        // アニメーション実行中用の値を入れる
+        element.dataset.animStatus = RUNNING_VALUE;
+
+        // アニメーション完了後にアニメーション実行中用の値を取り除く
+        openingAnim.onfinish = function () {
+          element.dataset.animStatus = '';
+        };
+      }
+    });
+  });
+}
+
+/*
+アニメーションの時間とイージング
+*/
+const animTiming = {
+  duration: 250,
+  easing: 'ease-out',
+};
+
+/*
+アコーディオンを閉じるときのキーフレーム
+*/
+function closingAnimKeyframes(answer) {
+  return [
+    {
+      height: answer.offsetHeight + 'px', // height: 'auto'だとうまく計算されないため要素の高さを指定する
+      opacity: 1,
+    },
+    {
+      height: 0,
+      opacity: 0,
+    },
+  ]
+}
+
+/*
+アコーディオンを開くときのキーフレーム
+*/
+function openingAnimKeyframes(answer) {
+  return [
+    {
+      height: 0,
+      opacity: 0,
+    },
+    {
+      height: answer.offsetHeight + 'px',
+      opacity: 1,
+    },
+  ];
+}
+
+
+/*==========================
+# form
+==========================*/
+// const form = document.querySelector('.js-form');
+// const inputElms = form.querySelectorAll('input');
+
+// form.addEventListener('submit', function (e) {
+//     e.preventDefault();
+//     inputElms.forEach(function (input) {
+//       const errorMessage = input.nextElementSibling;
+//       input.classList.remove('is-error');
+//       errorMessage.textContent = '';
+//     });
+//     const isValid = form.checkValidity(); // バリデーション実行
+//     if (isValid) {
+//       alert('submit!');
+//     }
+//   }, { passive: false }
+// );
+// inputElms.forEach(function (input) {
+//   input.addEventListener('invalid', function (e) {
+//     const currentTarget = e.currentTarget;
+//     currentTarget.classList.add('is-error');
+//     const errorMessage = currentTarget.nextElementSibling;
+//     errorMessage.textContent = currentTarget.validationMessage;
+//   });
+// });

@@ -11,7 +11,7 @@
   border: 1px solid $accent;
   border-radius: 50%;
   z-index: 2;
-  transition: background-color 0.2s;
+  transition: background-color 0.55s;
   @include mq("md") {
     bottom: rem(20);
     right: rem(20);
@@ -21,7 +21,7 @@
 }
 .to-top.is-active {
   position: absolute;
-  bottom: calc(rem(742) + rem(16));
+  bottom: calc(rem(739) + rem(16));
   @include mq("md") {
     bottom: calc(rem(559) + rem(20));
   }
@@ -29,33 +29,19 @@
 .to-top::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 18.5%;
-  transform: rotate(90deg) translateY(-50%);
-  width: rem(28);
-  height: rem(1.4);
-  background-color: $accent;
-  border-radius: rem(1);
+  top: 48%;
+  left: 6%;
+  transform: skew(-10deg, -50deg) rotate(80deg);
+  width: rem(36);
+  height: rem(5);
+  border-top: 1px solid $accent;
+  border-left: 2px solid $accent;
+  transition: border-color 0.35s;
   @include mq("md") {
-    left: 26%;
-    width: rem(40);
-    height: rem(1.4);
-  }
-}
-.to-top::after {
-  content: "";
-  position: absolute;
-  top: 27%;
-  left: 36%;
-  transform: rotate(-45deg);
-  width: rem(8);
-  height: rem(1);
-  background-color: $accent;
-  border-radius: rem(1);
-  @include mq("md") {
-    top: 28%;
-    left: 42%;
-    width: rem(10);
+    top: 50%;
+    left: 15%;
+    width: rem(50);
+    height: rem(7);
   }
 }
 @media (hover) {
@@ -63,8 +49,7 @@
     background-color: rgba($color: $accent, $alpha: 1);
     border: 1px solid $white;
   }
-  .to-top:hover::before, .to-top:hover::after {
-    background-color: $white;
-    height: rem(1.5);
+  .to-top:hover::before {
+    border-color: $white;
   }
 }

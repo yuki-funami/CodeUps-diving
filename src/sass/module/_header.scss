@@ -20,13 +20,10 @@
   max-width: rem(1440);
   width: 100%;
   height: inherit;
-  padding-left: rem(15);
-  padding-right: rem(15);
-  margin-left: auto;
-  margin-right: auto;
+  padding-inline: rem(15);
+  margin-inline: auto;
   @include mq("md") {
-    padding-left: rem(40);
-    padding-right: rem(40);
+    padding-inline: rem(40);
   }
 }
 .header__logo {

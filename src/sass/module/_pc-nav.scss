@@ -17,6 +17,7 @@
   position: relative;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   height: inherit;
 }
@@ -38,23 +39,24 @@
     transform: scale(1, 1);
   }
 }
-.pc-nav__item p {
+.pc-nav__item-english {
   color: $white;
   font-size: rem(18);
   font-weight: $regular;
   line-height: 1;
   font-family: $english-font-family;
+  margin-top: rem(-1);
 }
-.pc-nav__item p::first-letter {
+.pc-nav__item-english::first-letter {
   text-transform: uppercase;
 }
-.pc-nav__item:nth-child(7) p {
+.pc-nav__item:nth-child(7) .pc-nav__item-english {
   text-transform: uppercase;
 }
-.pc-nav__item span {
+.pc-nav__item-japanese {
   color: $white;
   font-size: rem(10);
   font-weight: $regular;
   line-height: calc(15 / 10);
-  margin-top: rem(3.2);
+  margin-top: rem(4);
 }

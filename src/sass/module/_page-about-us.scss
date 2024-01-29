@@ -6,7 +6,7 @@
 .page-about-us::before {
   content: "";
   position: absolute;
-  top: -5.8%;
+  top: rem(-25);
   left: max(calc(50% - 38.7rem), rem(16));
   width: rem(120);
   height: rem(55);
@@ -16,7 +16,7 @@
   transform: scale(-1, 1);
   z-index: 1;
   @include mq("md") {
-    top: -26%;
+    top: rem(-150);
     width: rem(301);
     height: rem(138);
     z-index: 0;
@@ -109,7 +109,7 @@
 }
 .page-about-us__button {
   text-align: center;
-  padding-bottom: rem(3.2);
+  padding-bottom: rem(4);
   margin-top: rem(50);
   @include mq("md") {
     margin-top: rem(40);

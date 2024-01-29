@@ -6,7 +6,7 @@
 .contact::before {
   content: "";
   position: absolute;
-  top: -4.2%;
+  top: rem(-26);
   right: calc(50% - 10.8rem);
   width: rem(109);
   height: rem(50);
@@ -14,7 +14,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   @include mq("md") {
-    top: -10%;
+    top: rem(-40);
     right: max(calc(50% - 41.9rem), rem(16));
     width: rem(301);
     height: rem(138);
@@ -28,11 +28,9 @@
   }
 }
 .contact__inner.inner {
-  padding-left: rem(40);
-  padding-right: rem(40);
+  padding-inline: rem(40);
   @include mq("md") {
-    padding-left: rem(25);
-    padding-right: rem(25);
+    padding-inline: rem(25);
   }
 }
 .contact__body {
@@ -41,20 +39,20 @@
     align-items: center;
     justify-content: left;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
-    padding: rem(80) rem(49.6);
+    padding: rem(81) rem(50);
   }
 }
 .contact__left-body {
   @include mq("md") {
     max-width: rem(522);
     border-right: 1px solid $accent;
-    padding-right: rem(82);
+    padding-right: rem(80);
   }
 }
 .contact__right-body {
   margin-top: rem(40);
   @include mq("md") {
-    margin-top: rem(6);
-    margin-left: rem(84.8);
+    margin-top: 0;
+    margin-left: rem(83);
   }
 }

@@ -7,8 +7,14 @@
   }
 }
 .layout-contact--subpage {
-  margin-top: rem(107.2);
+  margin-top: rem(107);
   @include mq("md") {
     margin-top: rem(140);
+  }
+}
+.layout-contact--sitemap {
+  margin-top: rem(70);
+  @include mq("md") {
+    margin-top: rem(104);
   }
 }

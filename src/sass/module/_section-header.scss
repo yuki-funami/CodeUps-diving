@@ -3,6 +3,9 @@
 .section-header {
   text-align: center;
 }
+.campaign__inner > .section-header {
+  padding-left: 10px; // swiperの余白調整
+}
 .section-header__title {
   text-transform: capitalize;
   font-size: rem(32);
@@ -41,7 +44,7 @@
   margin-left: rem(-9);
   @include mq("md") {
     font-size: rem(80);
-    margin-left: rem(-3.2);
+    margin-left: 0;
   }
 }
 .section-header__subtitle {
@@ -62,6 +65,6 @@
 .section-header__subtitle--large {
   margin-top: rem(-11);
   @include mq("md") {
-    margin-top: rem(-16);
+    margin-top: rem(-10);
   }
 }
