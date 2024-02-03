@@ -6,6 +6,12 @@
   align-items: center;
   gap: rem(12);
 }
+.wp-pagenavi--single {
+  gap: rem(82);
+  @include mq("md") {
+    margin-left: rem(-30);
+  }
+}
 .previouspostslink {
   position: relative;
   margin-right: rem(28);
@@ -14,49 +20,33 @@
   position: relative;
   margin-left: rem(28);
 }
+.wp-pagenavi--single > .previouspostslink {
+  margin-right: 0;
+}
+.wp-pagenavi--single > .nextpostslink {
+  margin-left: 0;
+}
 .previouspostslink::before {
   content: "";
   position: absolute;
-  top: 39%;
-  left: 30%;
-  transform: rotate(-45deg);
-  width: rem(12);
-  height: rem(1);
-  background-color: $accent;
-  border-radius: rem(1);
-}
-.previouspostslink::after {
-  content: "";
-  position: absolute;
-  top: 61%;
-  left: 30%;
+  top: rem(12);
+  left: rem(16);
   transform: rotate(45deg);
   width: rem(12);
-  height: rem(1);
-  background-color: $accent;
-  border-radius: rem(1);
+  height: rem(12);
+  border-bottom: 1px solid $accent;
+  border-left: 1px solid $accent;
 }
 .nextpostslink::before {
   content: "";
   position: absolute;
-  top: 39%;
-  left: 36%;
-  transform: rotate(45deg);
-  width: rem(12);
-  height: rem(1);
-  background-color: $accent;
-  border-radius: rem(1);
-}
-.nextpostslink::after {
-  content: "";
-  position: absolute;
-  top: 61%;
-  left: 36%;
+  top: rem(12);
+  left: rem(8);
   transform: rotate(-45deg);
   width: rem(12);
-  height: rem(1);
-  background-color: $accent;
-  border-radius: rem(1);
+  height: rem(12);
+  border-bottom: 1px solid $accent;
+  border-right: 1px solid $accent;
 }
 .wp-pagenavi a, .wp-pagenavi span {
   display: inline-flex;
@@ -77,14 +67,11 @@
     color: $white;
     background-color: $accent;
   }
-  .previouspostslink:hover::before, .previouspostslink:hover::after {
-    background-color: $white;
-    height: rem(1.3);
+  .previouspostslink:hover::before,
+  .nextpostslink:hover::before {
+    border-color: $white;
   }
-  .nextpostslink:hover::before, .nextpostslink:hover::after {
-    background-color: $white;
-    height: rem(1.3);
-  }
+
 }
 .wp-pagenavi .current {
   color: $white;

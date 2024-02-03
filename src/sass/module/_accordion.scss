@@ -22,7 +22,9 @@ summary::-webkit-details-marker {
   justify-content: space-between;
   align-items: center;
   background-color: $accent;
-  padding: rem(16);
+  padding-block: rem(17);
+  padding-left: rem(16);
+  padding-right: rem(18);
   @include mq("md") {
     padding-block: rem(28);
     padding-inline: rem(40);
@@ -42,7 +44,6 @@ summary::-webkit-details-marker {
 .accordion__icon {
   position: relative;
   width: rem(28);
-  margin-left: rem(16);
   @include mq("md") {
     width: rem(32);
   }
@@ -88,10 +89,9 @@ summary::-webkit-details-marker {
   font-size: rem(16);
   font-weight: $regular;
   line-height: calc(23 / 16);
-  padding-block: rem(24);
+  padding-block: rem(23);
   padding-inline: rem(16);
   @include mq("md") {
-    line-height: calc(22 / 16);
-    padding: rem(40);
+    padding: rem(39);
   }
 }

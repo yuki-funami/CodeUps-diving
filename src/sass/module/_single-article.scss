@@ -21,6 +21,8 @@
   margin-top: rem(13);
   @include mq("md") {
     font-size: rem(32);
+    padding-bottom: rem(6);
+    margin-top: rem(16);
   }
 }
 .single-article__text {
@@ -65,6 +67,8 @@
   font-weight: $regular;
   line-height: calc(24 / 16);
   padding-left: rem(27);
+}
+.single-article__list-item:not(:first-child) {
   margin-top: rem(4);
 }
 .single-article__list-item::before {

@@ -18,6 +18,12 @@
     margin-right: 0;
   }
 }
+.nav__items--sitemap {
+  column-gap: rem(50);
+  @include mq("md") {
+    column-gap: rem(139);
+  }
+}
 .nav__item {
   width: 100%;
   margin-top: rem(40);

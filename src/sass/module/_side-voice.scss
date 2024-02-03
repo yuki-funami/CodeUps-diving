@@ -4,7 +4,8 @@
   width: 100%;
 }
 .side-voice .side-voice__inner {
-  padding-inline: rem(25.6);
+  padding-left: rem(25);
+  padding-right: rem(26);
   @include mq("md") {
     padding-inline: 0;
   }

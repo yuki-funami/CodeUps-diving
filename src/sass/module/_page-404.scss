@@ -28,7 +28,7 @@
 }
 .page-404__content {
   text-align: center;
-  margin-top: rem(64);
+  margin-top: rem(63);
   @include mq("md") {
     margin-top: rem(137);
   }
@@ -51,7 +51,7 @@
   font-weight: $regular;
   line-height: calc(24 / 16);
   font-family: $sub-english-font-family;
-  margin-top: rem(3);
+  margin-top: rem(4);
   @include mq("md") {
     margin-top: rem(40);
   }

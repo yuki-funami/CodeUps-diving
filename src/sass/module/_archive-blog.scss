@@ -6,18 +6,18 @@
 .archive-blog::before {
   content: "";
   position: absolute;
-  top: rem(-25);
+  top: rem(-24);
   left: max(calc(50% - 38.7rem), rem(16));
   width: rem(120);
-  height: rem(55);
+  height: rem(56);
   background-image: url(../images/svg/sea-goldie_accent.svg);
   background-repeat: no-repeat;
   background-size: cover;
   transform: scale(-1, 1);
   @include mq("md") {
-    top: rem(-70);
+    top: rem(-71);
     width: rem(301);
-    height: rem(138);
+    height: rem(139);
     z-index: -1;
   }
 }
@@ -36,17 +36,19 @@
 }
 .archive-blog__main {
   max-width: rem(706);
+  width: 100%;
 }
 .archive-blog__cards {
   padding-inline: rem(6);
-  margin-top: rem(24);
   @include mq("md") {
     padding-inline: 0;
-    margin-top: 0;
   }
 }
 .archive-blog__page-navigation {
   margin-top: rem(80);
+  @include mq("md") {
+    margin-top: rem(79);
+  }
 }
 .archive-blog__side {
   margin-top: rem(80);

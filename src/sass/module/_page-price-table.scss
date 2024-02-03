@@ -1,5 +1,8 @@
 @use "global" as *;
 
+table {
+  border-spacing: 0;
+}
 .page-price-table {
   width: 100%;
   border-collapse: collapse;
@@ -25,7 +28,7 @@
   justify-content: center;
   align-items: center;
   width: inherit;
-  height: rem(38);
+  height: rem(39);
   background-color: $accent;
   border: 1px solid $accent;
   @include mq("md") {
@@ -39,7 +42,7 @@
   @include mq("md") {
     width: rem(62);
     height: rem(62);
-    margin-top: rem(8);
+    margin-top: rem(9);
   }
 }
 .page-price-table__head tr th p {
@@ -78,10 +81,10 @@
   @include mq("md") {
     text-align: left;
     width: calc(340 / 500 * 100%);
-    padding-left: rem(16);
+    padding-left: rem(14);
   }
 }
 .page-price-table__body tr td {
   text-align: right;
-  padding-right: rem(16);
+  padding-right: rem(15);
 }

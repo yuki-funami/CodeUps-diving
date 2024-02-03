@@ -219,6 +219,24 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   /*==========================
+  # category
+  ==========================*/
+  $('.js-category').on('click', function () {
+    const category = $(this).data('category');
+    
+    $('.campaign-card').hide();
+    $('.js-category').removeClass('is-current');
+    $(this).addClass('is-current');
+
+    if (category === 'all') {
+      $('.campaign-card').fadeIn();
+    } else {
+      $('.campaign-card').filter('[data-category="' + category + '"]').fadeIn();
+    }
+    return false;
+  });
+
+  /*==========================
   # tab
   ==========================*/
   $('.js-tab').on('click', function () {

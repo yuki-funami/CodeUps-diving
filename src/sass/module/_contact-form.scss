@@ -21,10 +21,16 @@
     padding-bottom: rem(39);
   }
 }
+.contact-form__row--radio {
+  padding-bottom: rem(26);
+  @include mq("md") {
+    padding-bottom: rem(39);
+  }
+}
 .contact-form__row.contact-form__row--textarea {
   padding-bottom: rem(18);
   @include mq("md") {
-    padding-bottom: rem(33);
+    padding-bottom: rem(34);
   }
 }
 .contact-form__row:not(:first-of-type) {
@@ -58,7 +64,7 @@
     letter-spacing: 0.4em;
     text-indent: 0.4em;
     background-color: $red;
-    padding: rem(5) rem(12);
+    padding: rem(5) rem(11);
   }
 }
 .contact-form__row dd {
@@ -79,9 +85,8 @@
 .contact-form__row.contact-form__row--select dd::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: rem(12);
   right: rem(8);
-  transform: translateY(-50%);
   width: rem(12);
   height: calc(rem(12) / 2 * tan(60deg));
   background-color: $accent;
@@ -94,7 +99,7 @@
   }
 }
 .contact-form__fieldset-item:not(:first-child) {
-  margin-top: rem(8);
+  margin-top: rem(7);
 }
 .contact-form__fieldset-item label {
   position: relative;
@@ -114,9 +119,10 @@
 }
 .contact-form__submit {
   text-align: center;
+  padding-bottom: rem(4);
   margin-top: rem(24);
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: rem(41);
   }
 }
 fieldset {

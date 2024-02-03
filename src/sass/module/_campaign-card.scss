@@ -46,9 +46,9 @@
   }
 }
 .campaign-card__content--side {
-  padding: rem(13) rem(24) rem(23);
+  padding: rem(13) rem(24) rem(24);
   @include mq("md") {
-    padding: rem(13) rem(24) rem(23);
+    padding: rem(12) rem(24) rem(25);
   }
 }
 .campaign-card__category {
@@ -76,11 +76,12 @@
 .campaign-card__title--archive {
   @include mq("md") {
     font-size: rem(24);
-    padding-bottom: rem(2.4);
+    padding-bottom: rem(3);
   }
 }
 .campaign-card__title--side {
   text-align: center;
+  margin-top: rem(3);
 }
 .campaign-card__text {
   text-align: center;
@@ -88,7 +89,7 @@
   font-size: rem(14);
   font-weight: $regular;
   line-height: calc(24 / 14);
-  margin-top: rem(6);
+  margin-top: rem(7);
   @include mq("md") {
     font-size: rem(16);
     line-height: calc(24 / 16);
@@ -98,14 +99,14 @@
 }
 .campaign-card__text--archive {
   @include mq("md") {
-    margin-top: rem(24);
+    margin-top: rem(23);
   }
 }
 .campaign-card__text--side {
   @include mq("md") {
     font-size: rem(14);
     line-height: calc(24 / 16);
-    margin-top: rem(10);
+    margin-top: rem(9);
     margin-left: 0;
   }
 }
@@ -118,6 +119,18 @@
   margin-top: rem(7);
   @include mq("md") {
     gap: rem(24);
+  }
+}
+.campaign-card__price--archive {
+  @include mq("md") {
+    gap: 0;
+  }
+}
+.campaign-card__price--side {
+  @include mq("md") {
+    gap: rem(2);
+    padding-inline: rem(19);
+    margin-top: rem(8);
   }
 }
 .campaign-card__original-price {
@@ -182,7 +195,7 @@
 }
 .campaign-card__archive {
   @include mq("md") {
-    margin-top: rem(24);
+    margin-top: rem(25);
   }
 }
 .campaign-card__archive-text {
@@ -198,10 +211,17 @@
     font-size: rem(16);
     font-weight: $bold;
     line-height: calc(18 / 16);
+    letter-spacing: 0.03em;
+    text-indent: 0.03em;
     font-family: $sub-english-font-family;
     text-align: center;
     margin-top: rem(32);
+    margin-left: rem(-12);
   }
+}
+.campaign-card__archive-date > span,
+.campaign-card__archive-date > time {
+  margin-left: rem(-3);
 }
 .campaign-card__archive-link {
   @include mq("md") {

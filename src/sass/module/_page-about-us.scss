@@ -6,19 +6,19 @@
 .page-about-us::before {
   content: "";
   position: absolute;
-  top: rem(-25);
+  top: rem(-24);
   left: max(calc(50% - 38.7rem), rem(16));
   width: rem(120);
-  height: rem(55);
+  height: rem(56);
   background-image: url(../images/svg/sea-goldie_accent.svg);
   background-repeat: no-repeat;
   background-size: cover;
   transform: scale(-1, 1);
   z-index: 1;
   @include mq("md") {
-    top: rem(-150);
+    top: rem(-151);
     width: rem(301);
-    height: rem(138);
+    height: rem(139);
     z-index: 0;
   }
 }
@@ -30,11 +30,15 @@
     max-width: $inner + strip-unit($padding-pc) * 2;
   }
 }
-.page-about-us__images {
-  position: relative;
-  margin-top: rem(50);
+.page-about-us__inner.inner {
   @include mq("md") {
-    margin-top: rem(116);
+    padding-left: rem(29);
+    padding-right: rem(21);
+  }
+}
+.page-about-us__images {
+  @include mq("md") {
+    position: relative;
   }
 }
 .page-about-us__images picture:first-of-type img {
@@ -64,7 +68,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    top: 20.7%;
+    top: 20.3%;
     left: calc(100% - ((840 / 1080) * 100%) - 25px);
     width: calc(100% - ((240 / 1080) * 100%));
     margin-top: 0;
@@ -80,10 +84,8 @@
 }
 .page-about-us__content-right {
   width: 100%;
-  margin-top: rem(16);
   @include mq("md") {
-    margin-top: 0;
-    margin-left: rem(43.2);
+    margin-left: rem(43);
     margin-right: rem(40);
   }
 }
