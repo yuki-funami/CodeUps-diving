@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .side-archive-list__year {
+  cursor: pointer;
   position: relative;
   color: $accent;
   font-size: rem(24);

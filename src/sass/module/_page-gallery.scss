@@ -43,6 +43,7 @@
   }
 }
 .page-gallery__images picture {
+  cursor: pointer;
   display: block;
   width: inherit;
 }

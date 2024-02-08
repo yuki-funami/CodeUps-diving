@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.layout-error {
+.layout-not-found {
   padding-top: rem(80);
   @include mq("md") {
     padding-top: rem(90);
