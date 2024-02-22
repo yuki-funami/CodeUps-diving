@@ -35,7 +35,7 @@
 </head>
 
 <body>
-  <header class="header layout-header js-header">
+  <header class="header layout-header">
     <div class="header__inner">
       <h1 class="header__logo">
         <a class="header__logo-link" href="./index.html">
@@ -55,13 +55,13 @@
             <a href="./archive-campaign.html">キャンペーン</a>
             <ul class="sp-nav__small-items">
               <li class="sp-nav__small-item">
-                <a href="./archive-campaign.html">ライセンス取得</a>
+                <a href="./archive-campaign.html?category=license">ライセンス取得</a>
               </li>
               <li class="sp-nav__small-item">
-                <a href="./archive-campaign.html">貸切体験ダイビング</a>
+                <a href="./archive-campaign.html?category=experience">貸切体験ダイビング</a>
               </li>
               <li class="sp-nav__small-item">
-                <a href="./archive-campaign.html">ナイトダイビング</a>
+                <a href="./archive-campaign.html?category=fun">ナイトダイビング</a>
               </li>
             </ul>
           </li>
@@ -72,13 +72,13 @@
             <a href="./page-information.html">ダイビング情報</a>
             <ul class="sp-nav__small-items">
               <li class="sp-nav__small-item">
-                <a href="./page-information.html">ライセンス講習</a>
+                <a href="./page-information.html?category=license">ライセンス講習</a>
               </li>
               <li class="sp-nav__small-item">
-                <a href="./page-information.html">体験ダイビング</a>
+                <a href="./page-information.html?category=experience">体験ダイビング</a>
               </li>
               <li class="sp-nav__small-item">
-                <a href="./page-information.html">ファンダイビング</a>
+                <a href="./page-information.html?category=fun">ファンダイビング</a>
               </li>
             </ul>
           </li>
@@ -92,13 +92,13 @@
             <a href="./page-price.html">料金一覧</a>
             <ul class="sp-nav__small-items">
               <li class="sp-nav__small-item">
-                <a href="./page-price.html">ライセンス講習</a>
+                <a href="./page-price.html#license">ライセンス講習</a>
               </li>
               <li class="sp-nav__small-item">
-                <a href="./page-price.html">体験ダイビング</a>
+                <a href="./page-price.html#experience">体験ダイビング</a>
               </li>
               <li class="sp-nav__small-item">
-                <a href="./page-price.html">ファンダイビング</a>
+                <a href="./page-price.html#fun">ファンダイビング</a>
               </li>
             </ul>
           </li>
@@ -198,7 +198,7 @@
       </div>
     </div>
 
-    <section id="page-contact" class="page-contact layout-page-contact">
+    <section class="page-contact layout-page-contact fish">
       <div class="page-contact__inner inner">
         <form action="" method="post" class="page-contact__form contact-form js-form" aria-labelledby="formTitle">
           <div class="contact-form__error">
@@ -228,25 +228,25 @@
               <input type="tel" name="tel" id="tel" autocomplete="tel" pattern="[\d\-]*" placeholder="000-0000-0000" required>
             </dd>
           </dl>
-          <div class="contact-form__row contact-form__row--radio">
+          <div class="contact-form__row contact-form__row--checkbox">
             <fieldset>
               <legend>お問合せ項目<span>必須</span></legend>
               <div class="contact-form__fieldset-content">
                 <div class="contact-form__fieldset-item">
                   <label for="course">
-                    <input type="radio" name="inquiries[]" id="course" value="ダイビング講習について">
+                    <input type="checkbox" name="inquiries[]" id="course" value="ダイビング講習について">
                     <span>ダイビング講習について</span>
                   </label>
                 </div>
                 <div class="contact-form__fieldset-item">
                   <label for="fun">
-                    <input type="radio" name="inquiries[]" id="fun" value="ファンダイビングについて">
+                    <input type="checkbox" name="inquiries[]" id="fun" value="ファンダイビングについて">
                     <span>ファンダイビングについて</span>
                   </label>
                 </div>
                 <div class="contact-form__fieldset-item">
                   <label for="experience">
-                    <input type="radio" name="inquiries[]" id="experience" value="体験ダイビングについて">
+                    <input type="checkbox" name="inquiries[]" id="experience" value="体験ダイビングについて">
                     <span>体験ダイビングについて</span>
                   </label>
                 </div>
@@ -323,13 +323,13 @@
             <a href="./archive-campaign.html">キャンペーン</a>
             <ul class="nav__small-items">
               <li class="nav__small-item">
-                <a href="./archive-campaign.html">ライセンス取得</a>
+                <a href="./archive-campaign.html?category=license">ライセンス取得</a>
               </li>
               <li class="nav__small-item">
-                <a href="./archive-campaign.html">貸切体験ダイビング</a>
+                <a href="./archive-campaign.html?category=experience">貸切体験ダイビング</a>
               </li>
               <li class="nav__small-item">
-                <a href="./archive-campaign.html">ナイトダイビング</a>
+                <a href="./archive-campaign.html?category=fun">ナイトダイビング</a>
               </li>
             </ul>
           </li>
@@ -340,13 +340,13 @@
             <a href="./page-information.html">ダイビング情報</a>
             <ul class="nav__small-items">
               <li class="nav__small-item">
-                <a href="./page-information.html">ライセンス講習</a>
+                <a href="./page-information.html?category=license">ライセンス講習</a>
               </li>
               <li class="nav__small-item">
-                <a href="./page-information.html">体験ダイビング</a>
+                <a href="./page-information.html?category=experience">体験ダイビング</a>
               </li>
               <li class="nav__small-item">
-                <a href="./page-information.html">ファンダイビング</a>
+                <a href="./page-information.html?category=fun">ファンダイビング</a>
               </li>
             </ul>
           </li>
@@ -360,13 +360,13 @@
             <a href="./page-price.html">料金一覧</a>
             <ul class="nav__small-items">
               <li class="nav__small-item">
-                <a href="./page-price.html">ライセンス講習</a>
+                <a href="./page-price.html#license">ライセンス講習</a>
               </li>
               <li class="nav__small-item">
-                <a href="./page-price.html">体験ダイビング</a>
+                <a href="./page-price.html#experience">体験ダイビング</a>
               </li>
               <li class="nav__small-item">
-                <a href="./page-price.html">ファンダイビング</a>
+                <a href="./page-price.html#fun">ファンダイビング</a>
               </li>
             </ul>
           </li>

@@ -1,23 +1,5 @@
 @use "global" as *;
 
-.page-gallery {
-  position: relative;
-}
-.page-gallery::before {
-  content: "";
-  display: none;
-  @include mq("md") {
-    display: block;
-    position: absolute;
-    top: rem(-81);
-    right: max(calc(50% - 40rem), rem(16));
-    width: rem(301);
-    height: rem(139);
-    background-image: url(../images/svg/sea-goldie_accent.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
 .page-gallery__inner {
   position: relative;
   max-width: rem(600);
@@ -39,7 +21,7 @@
   width: 100%;
   @include mq("md") {
     grid-template-columns: 1fr vw(1440, 80) 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: dense; // 隙間を埋めながら配置
   }
 }
 .page-gallery__images picture {
@@ -47,40 +29,20 @@
   display: block;
   width: inherit;
 }
-.page-gallery__images picture:nth-child(1) {
+.page-gallery__images picture:nth-child(6n + 1),
+.page-gallery__images picture:nth-child(6n + 6) {
   @include mq("md") {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+    grid-column: span 1;
+    grid-row: span 2;
   }
 }
-.page-gallery__images picture:nth-child(2) {
+.page-gallery__images picture:nth-child(6n + 2),
+.page-gallery__images picture:nth-child(6n + 3),
+.page-gallery__images picture:nth-child(6n + 4),
+.page-gallery__images picture:nth-child(6n + 5) {
   @include mq("md") {
-    grid-column: 2 / 4;
-    grid-row: 1 / 2;
-  }
-}
-.page-gallery__images picture:nth-child(3) {
-  @include mq("md") {
-    grid-column: 2 / 4;
-    grid-row: 2 / 3;
-  }
-}
-.page-gallery__images picture:nth-child(4) {
-  @include mq("md") {
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
-  }
-}
-.page-gallery__images picture:nth-child(5) {
-  @include mq("md") {
-    grid-column: 1 / 3;
-    grid-row: 4 / 5;
-  }
-}
-.page-gallery__images picture:nth-child(6) {
-  @include mq("md") {
-    grid-column: 3 / 4;
-    grid-row: 3 / 5;
+    grid-column: span 2;
+    grid-row: span 1;
   }
 }
 .page-gallery__images picture img {

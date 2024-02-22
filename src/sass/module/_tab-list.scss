@@ -99,24 +99,24 @@
     }
   }
 }
-.tab-list__item.is-current {
+.tab-list__item.is-active {
   color: $white;
   background-color: $accent;
   @include mq("md") {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
   }
 }
-.tab-list__item.is-current:nth-child(1)::before {
+.tab-list__item.is-active:nth-child(1)::before {
   @include mq("md") {
     background-image: url(../images/svg/whale.svg);
   }
 }
-.tab-list__item.is-current:nth-child(2)::before {
+.tab-list__item.is-active:nth-child(2)::before {
   @include mq("md") {
     background-image: url(../images/svg/shark.svg);
   }
 }
-.tab-list__item.is-current:nth-child(3)::before {
+.tab-list__item.is-active:nth-child(3)::before {
   @include mq("md") {
     background-image: url(../images/svg/fish.svg);
   }

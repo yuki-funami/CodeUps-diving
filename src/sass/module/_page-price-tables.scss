@@ -5,9 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: rem(38);
+  gap: rem(40);
   width: 100%;
   @include mq("md") {
-    gap: rem(81);
+    gap: rem(80);
   }
 }

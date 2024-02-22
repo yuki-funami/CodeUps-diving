@@ -21,7 +21,7 @@
     padding-bottom: rem(39);
   }
 }
-.contact-form__row--radio {
+.contact-form__row--checkbox {
   padding-bottom: rem(26);
   @include mq("md") {
     padding-bottom: rem(39);
@@ -172,7 +172,7 @@ textarea {
     background-color: rgba($color: $red, $alpha: 0.2);
   }
 }
-.contact-form__fieldset-item input[type="radio"] {
+.contact-form__fieldset-item input[type="checkbox"] {
   display: block;
   position: absolute;
   top: 0;
