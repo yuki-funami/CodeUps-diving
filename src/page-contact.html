@@ -209,7 +209,7 @@
               <label for="name">お名前<span>必須</span></label>
             </dt>
             <dd>
-              <input type="text" name="name" id="name" autocomplete="name" placeholder="沖縄&emsp;太郎" required>
+              <input type="text" name="name" id="name" autocomplete="name" placeholder="沖縄&emsp;太郎" enterkeyhint="done" required>
             </dd>
           </dl>
           <dl class="contact-form__row">
@@ -217,7 +217,7 @@
               <label for="email">メールアドレス<span>必須</span></label>
             </dt>
             <dd>
-              <input type="email" name="email" id="email" autocomplete="email" pattern="[\w\-.]+@[\w\-.]+\.[A-Za-z]+" placeholder="aaa000@ggmail.com" required>
+              <input type="email" name="email" id="email" autocomplete="email" pattern="[\w\-.]+@[\w\-.]+\.[A-Za-z]+" title="'@'を含んだメールアドレスの形式で入力してください" placeholder="aaa000@ggmail.com" enterkeyhint="done" required>
             </dd>
           </dl>
           <dl class="contact-form__row">
@@ -225,7 +225,7 @@
               <label for="tel">電話番号<span>必須</span></label>
             </dt>
             <dd>
-              <input type="tel" name="tel" id="tel" autocomplete="tel" pattern="[\d\-]*" placeholder="000-0000-0000" required>
+              <input type="tel" name="tel" id="tel" autocomplete="tel" pattern="[\d\-]*" title="半角数字で入力してください" placeholder="000-0000-0000" required>
             </dd>
           </dl>
           <div class="contact-form__row contact-form__row--checkbox">

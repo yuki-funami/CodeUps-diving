@@ -88,9 +88,9 @@
   top: rem(12);
   right: rem(8);
   width: rem(12);
-  height: calc(rem(12) / 2 * tan(60deg));
-  background-color: $accent;
+  aspect-ratio: 1/cos(30deg);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background-color: $accent;
 }
 .contact-form__fieldset-content {
   margin-top: rem(18);

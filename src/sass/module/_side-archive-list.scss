@@ -12,25 +12,23 @@
 .side-archive-list__year.is-open::before {
   content: "";
   position: absolute;
-  top: 9%;
   top: rem(14);
   left: rem(-30);
-  width: 0;
-  height: 0;
-  border-top: 18px solid $accent;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
+  width: rem(20);
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background-color: $accent;
 }
 .side-archive-list__year:not(.is-open)::before {
   content: "";
   position: absolute;
-  top: rem(10);
-  left: rem(-26);
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 18px solid $accent;
+  top: rem(14);
+  left: rem(-30);
+  width: rem(20);
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background-color: $accent;
+  transform: rotate(30deg);
 }
 .side-archive-list__child {
   margin-left: rem(24);
@@ -44,13 +42,13 @@
 .side-archive-list__month::before {
   content: "";
   position: absolute;
-  top: rem(10);
-  left: rem(-26);
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 18px solid $accent;
+  top: rem(12);
+  left: rem(-32);
+  width: rem(20);
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background-color: $accent;
+  transform: rotate(30deg);
 }
 .side-archive-list__month > a {
   color: $accent;
