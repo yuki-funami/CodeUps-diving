@@ -44,6 +44,11 @@
     height: rem(7);
   }
 }
+.to-top a {
+  display: block;
+  width: inherit;
+  height: inherit;
+}
 @media (hover) {
   .to-top:hover {
     background-color: rgba($color: $accent, $alpha: 1);

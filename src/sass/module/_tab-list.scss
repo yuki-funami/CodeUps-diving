@@ -10,7 +10,9 @@
   }
 }
 .tab-list__item {
-  cursor: pointer;
+  width: 100%;
+}
+.tab-list__item button {
   position: relative;
   width: 100%;
   color: $accent;
@@ -19,12 +21,13 @@
   line-height: calc(20 / 14);
   text-align: center;
   background-color: $pastel;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-  padding-top: rem(10);
-  padding-bottom: rem(10);
+  box-shadow: 2px 2px 4px rgba($shadow, 0.25);
+  padding-block: rem(10);
+  padding-inline: 0;
   transition: color 0.2s, background-color 0.2s;
   @include mq("md") {
     max-width: rem(300);
+    min-width: rem(200);
     font-size: rem(24);
     line-height: 1;
     box-shadow: none;
@@ -33,7 +36,7 @@
     padding-left: rem(72);
   }
 }
-.tab-list__item:nth-child(1)::before {
+.tab-list__item:nth-child(1) > button::before {
   @include mq("md") {
     content: "";
     position: absolute;
@@ -48,7 +51,7 @@
     transition: background-image 0.2s;
   }
 }
-.tab-list__item:nth-child(2)::before {
+.tab-list__item:nth-child(2) > button::before {
   @include mq("md") {
     content: "";
     position: absolute;
@@ -63,7 +66,7 @@
     transition: background-image 0.2s;
   }
 }
-.tab-list__item:nth-child(3)::before {
+.tab-list__item:nth-child(3) > button::before {
   @include mq("md") {
     content: "";
     position: absolute;
@@ -79,44 +82,44 @@
   }
 }
 @media (hover) {
-  .tab-list__item:hover {
+  .tab-list__item button:hover {
     color: $white;
     background-color: $accent;
   }
-  .tab-list__item:nth-child(1):hover::before {
+  .tab-list__item:nth-child(1) > button:hover:before {
     @include mq("md") {
       background-image: url(../images/svg/whale.svg);
     }
   }
-  .tab-list__item:nth-child(2):hover::before {
+  .tab-list__item:nth-child(2) > button:hover::before {
     @include mq("md") {
       background-image: url(../images/svg/shark.svg);
     }
   }
-  .tab-list__item:nth-child(3):hover::before {
+  .tab-list__item:nth-child(3) > button:hover::before {
     @include mq("md") {
       background-image: url(../images/svg/fish.svg);
     }
   }
 }
-.tab-list__item.is-active {
+.tab-list__item button.is-active {
   color: $white;
   background-color: $accent;
   @include mq("md") {
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 8px rgba($shadow, 0.25);
   }
 }
-.tab-list__item.is-active:nth-child(1)::before {
+.tab-list__item:nth-child(1) > button.is-active::before {
   @include mq("md") {
     background-image: url(../images/svg/whale.svg);
   }
 }
-.tab-list__item.is-active:nth-child(2)::before {
+.tab-list__item:nth-child(2) > button.is-active::before {
   @include mq("md") {
     background-image: url(../images/svg/shark.svg);
   }
 }
-.tab-list__item.is-active:nth-child(3)::before {
+.tab-list__item:nth-child(3) > button.is-active::before {
   @include mq("md") {
     background-image: url(../images/svg/fish.svg);
   }

@@ -113,17 +113,22 @@ textarea {
   border: none;
   border-radius: 0;
   font: inherit;
-  outline: none;
+
+  // キーボード操作 "以外"でフォーカスされた際はoutlineを消す
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
 }
 
 textarea {
   resize: vertical;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  display: none;
-}
+/* アクセシビリティの観点から除外する */
+// input[type="checkbox"],
+// input[type="radio"] {
+//   display: none;
+// }
 
 input[type="submit"],
 input[type="button"],
@@ -133,6 +138,7 @@ select {
   cursor: pointer;
 }
 
+/* IE用 */
 select::-ms-expand {
   display: none;
 }

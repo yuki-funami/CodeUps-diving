@@ -2,6 +2,7 @@
 
 .campaign {
   overflow: hidden;
+  // overflow: clip; //ページ内リンクでscroll-margin-topを使用する際は、overflow:clipを使用する
 }
 .campaign__inner {
   @include mq("md") {

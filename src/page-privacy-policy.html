@@ -43,13 +43,13 @@
         </a>
       </h1>
       <!-- /.header__logo -->
-      <div class="header__hamburger hamburger js-hamburger u-mobile">
+      <button type="button" class="header__hamburger hamburger js-hamburger u-mobile" aria-label="メインのナビゲーションメニューを開く">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
       <!-- /.header__hamburger .hamburger -->
-      <nav class="header__sp-nav sp-nav u-mobile">
+      <nav class="header__sp-nav sp-nav u-mobile" aria-label="メインのナビゲーションメニュー">
         <ul class="sp-nav__items">
           <li class="sp-nav__item">
             <a href="./archive-campaign.html">キャンペーン</a>
@@ -117,7 +117,7 @@
         </ul>
       </nav>
       <!-- /.header__sp-nav .sp-nav -->
-      <nav class="header__pc-nav pc-nav u-desktop">
+      <nav class="header__pc-nav pc-nav u-desktop" aria-label="トップのナビゲーションメニュー">
         <ul class="pc-nav__items">
           <li class="pc-nav__item">
             <a href="./archive-campaign.html">
@@ -337,12 +337,12 @@
         <div class="footer__sns footer-sns">
           <ul class="footer-sns__items">
             <li class="footer-sns__item">
-              <a class="footer-sns__item-link" href="" target="_blank">
+              <a class="footer-sns__item-link" href="" target="_blank" rel="noopener noreferrer">
                 <img src="./assets/images/sns/Facebook_Logo_Secondary.png" alt="facebook" width="26" height="26" loading="lazy">
               </a>
             </li>
             <li class="footer-sns__item">
-              <a class="footer-sns__item-link" href="" target="_blank">
+              <a class="footer-sns__item-link" href="" target="_blank" rel="noopener noreferrer">
                 <img src="./assets/images/sns/Instagram_Glyph_White.png" alt="instagram" width="26" height="26" loading="lazy">
               </a>
             </li>
@@ -428,7 +428,7 @@
   <!-- /.footer -->
 
   <div class="to-top js-to-top">
-    <a href="#"></a>
+    <a href="#" role="button" aria-label="ページトップへ戻る">&nbsp;</a>
   </div>
 </body>
 

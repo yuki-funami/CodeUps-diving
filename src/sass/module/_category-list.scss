@@ -11,8 +11,9 @@
   }
 }
 .category-list__item {
-  cursor: pointer;
-  display: inline-block;
+  width: 100%;
+}
+.category-list__item button {
   position: relative;
   min-width: rem(162);
   width: 100%;
@@ -24,17 +25,17 @@
   text-align: center;
   background-color: $white;
   border: 1px solid $accent;
-  padding-top: rem(5);
-  padding-bottom: rem(5);
+  padding-block: rem(5);
+  padding-inline: 0;
   transition: color 0.2s, background-color 0.2s;
 }
 @media (hover) {
-  .category-list__item:hover {
+  .category-list__item button:hover {
     color: $white;
     background-color: $accent;
   }
 }
-.category-list__item.is-active {
+.category-list__item button.is-active {
   color: $white;
   background-color: $accent;
 }

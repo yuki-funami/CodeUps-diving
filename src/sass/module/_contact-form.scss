@@ -173,11 +173,13 @@ textarea {
   }
 }
 .contact-form__fieldset-item input[type="checkbox"] {
-  display: block;
   position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
   + span {
     position: relative;
     display: block;
@@ -220,13 +222,20 @@ textarea {
       }
     }
   }
+  &:focus-visible + span {
+    &::before {
+      box-shadow: 0 0 0 2px rgba($accent, 0.6);
+    }
+  }
 }
 .contact-form__privacy input[type="checkbox"] {
-  display: block;
   position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
   + span {
     position: relative;
     display: block;
@@ -269,6 +278,11 @@ textarea {
         border-bottom: 2px solid $red;
         opacity: 1;
       }
+    }
+  }
+  &:focus-visible + span {
+    &::before {
+      box-shadow: 0 0 0 3px rgba($accent, 0.6);
     }
   }
 }
