@@ -167,6 +167,7 @@ textarea {
   width: 100%;
   height: rem(200);
   border: 1px solid $accent;
+  padding: rem(8);
   &.is-invalid {
     border: 1px solid $red;
     background-color: rgba($color: $red, $alpha: 0.2);

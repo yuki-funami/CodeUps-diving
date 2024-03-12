@@ -13,11 +13,6 @@
     gap: rem(80);
   }
 }
-.archive-blog__body--single {
-  @include mq("md") {
-    gap: rem(86);
-  }
-}
 .archive-blog__main {
   max-width: rem(706);
   width: 100%;

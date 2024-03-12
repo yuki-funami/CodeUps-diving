@@ -81,12 +81,12 @@ table {
   text-align: center;
   width: calc(240 / 345 * 100%);
   border-right: 1px solid $accent;
-  padding-block: rem(5);
+  padding: rem(5);
   @include mq("md") {
     text-align: left;
     width: calc(340 / 500 * 100%);
     padding-block: rem(17);
-    padding-left: rem(15);
+    padding-inline: rem(15);
   }
 }
 .page-price-table__body tr:first-child th {

@@ -214,65 +214,71 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   /*==========================
   # category
   ==========================*/
-  // ページロード時にURLからカテゴリーを取得して表示を切り替える
-  $(document).ready(function () {
-    // URLからcategoryパラメータを取得
-    const urlParams = new URLSearchParams(window.location.search);
-    const categoryParam = urlParams.get('category');
-    // もしcategoryが存在すれば、それに基づいてカードをフィルタリング
-    if (!categoryParam || categoryParam === 'all') {
-      $('.js-card').show();
-      $('.js-category[data-category="all"]').addClass('is-active');
-    } else {
-      $('.js-card').hide();
-      $('.js-category').removeClass('is-active');
-      $('.js-card').filter('[data-category="' + categoryParam + '"]').show();
-      $('.js-category[data-category="' + categoryParam + '"]').addClass('is-active');
-    }
-  });
-
-  // カテゴリータブをクリックした時の処理
   $('.js-category').on('click', function () {
-    // カテゴリー取得
-    const category = $(this).data('category');
-    // カテゴリーに応じて表示を切り替え
-    $('.js-card').hide();
     $('.js-category').removeClass('is-active');
     $(this).addClass('is-active');
-    if (category === 'all') {
-      $('.js-card').fadeIn('fast');
-    } else {
-      $('.js-card').filter('[data-category="' + category + '"]').fadeIn('fast');
-    }
-
-    // URLを更新
-    if (window.location.pathname == '/archive-campaign.html') {
-      const newUrl = category === 'all' ? './archive-campaign.html' : './archive-campaign.html?category=' + category;
-      history.pushState(null, null, newUrl);
-    }
-    if (window.location.pathname == '/archive-voice.html') {
-      const newUrl = category === 'all' ? './archive-voice.html' : './archive-voice.html?category=' + category;
-      history.pushState(null, null, newUrl);
-    }
     return false;
   });
+  
+  // // ページロード時にURLからカテゴリーを取得して表示を切り替える
+  // $(document).ready(function () {
+  //   // URLからcategoryパラメータを取得
+  //   const urlParams = new URLSearchParams(window.location.search);
+  //   const categoryParam = urlParams.get('category');
+  //   // もしcategoryが存在すれば、それに基づいてカードをフィルタリング
+  //   if (!categoryParam || categoryParam === 'all') {
+  //     $('.js-card').show();
+  //     $('.js-category[data-category="all"]').addClass('is-active');
+  //   } else {
+  //     $('.js-card').hide();
+  //     $('.js-category').removeClass('is-active');
+  //     $('.js-card').filter('[data-category="' + categoryParam + '"]').show();
+  //     $('.js-category[data-category="' + categoryParam + '"]').addClass('is-active');
+  //   }
+  // });
 
-  // 戻るボタンをクリックした時の処理
-  $(window).on('popstate', function () {
-    // URLからcategoryパラメータを取得
-    const urlParams = new URLSearchParams(window.location.search);
-    const categoryParam = urlParams.get('category');
-    if (!categoryParam || categoryParam === 'all') {
-      $('.js-card').show();
-      $('.js-category').removeClass('is-active');
-      $('.js-category[data-category="all"]').addClass('is-active');
-    } else {
-      $('.js-card').hide();
-      $('.js-category').removeClass('is-active');
-      $('.js-card').filter('[data-category="' + categoryParam + '"]').show();
-      $('.js-category[data-category="' + categoryParam + '"]').addClass('is-active');
-    }
-  });
+  // // カテゴリータブをクリックした時の処理
+  // $('.js-category').on('click', function () {
+  //   // カテゴリー取得
+  //   const category = $(this).data('category');
+  //   // カテゴリーに応じて表示を切り替え
+  //   $('.js-card').hide();
+  //   $('.js-category').removeClass('is-active');
+  //   $(this).addClass('is-active');
+  //   if (category === 'all') {
+  //     $('.js-card').fadeIn('fast');
+  //   } else {
+  //     $('.js-card').filter('[data-category="' + category + '"]').fadeIn('fast');
+  //   }
+
+  //   // URLを更新
+  //   if (window.location.pathname == '/archive-campaign.html') {
+  //     const newUrl = category === 'all' ? './archive-campaign.html' : './archive-campaign.html?category=' + category;
+  //     history.pushState(null, null, newUrl);
+  //   }
+  //   if (window.location.pathname == '/archive-voice.html') {
+  //     const newUrl = category === 'all' ? './archive-voice.html' : './archive-voice.html?category=' + category;
+  //     history.pushState(null, null, newUrl);
+  //   }
+  //   return false;
+  // });
+
+  // // 戻るボタンをクリックした時の処理
+  // $(window).on('popstate', function () {
+  //   // URLからcategoryパラメータを取得
+  //   const urlParams = new URLSearchParams(window.location.search);
+  //   const categoryParam = urlParams.get('category');
+  //   if (!categoryParam || categoryParam === 'all') {
+  //     $('.js-card').show();
+  //     $('.js-category').removeClass('is-active');
+  //     $('.js-category[data-category="all"]').addClass('is-active');
+  //   } else {
+  //     $('.js-card').hide();
+  //     $('.js-category').removeClass('is-active');
+  //     $('.js-card').filter('[data-category="' + categoryParam + '"]').show();
+  //     $('.js-category[data-category="' + categoryParam + '"]').addClass('is-active');
+  //   }
+  // });
 
   /*==========================
   # tab
